@@ -1,0 +1,26 @@
+bookdown::gitbook:
+  css: css/style.css
+  config:
+    toc:
+      collapse: section
+      before: |
+        <li><a href="./"><b>GEOS4499 Workbook</b></a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    download: [["Exercise_1A_Answer_Sheet.docx", "Exercise 1A Answer Sheet"],
+              ["Exercise_1B_Answer_Sheet.docx", "Exercise 1B Answer Sheet"]]
+    search: yes
+    fontsettings:
+      theme: white
+      family: sans
+      size: 2
+    sharing:
+      facebook: no
+      github: no
+      twitter: no
+      linkedin: no
+      weibo: no
+      instapaper: no
+      vk: no
+      all: no
+    info: yes

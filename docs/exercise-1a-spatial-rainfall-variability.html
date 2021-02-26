@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Exercise 1A – Spatial rainfall variability | GEOS4499 Workbook</title>
+  <meta name="description" content="Exercise 1A – Spatial rainfall variability | GEOS4499 Workbook" />
+  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Exercise 1A – Spatial rainfall variability | GEOS4499 Workbook" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Exercise 1A – Spatial rainfall variability | GEOS4499 Workbook" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="exercise-1b-sourcing-rainfall-and-flow-data.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><b>GEOS4499 Workbook</b></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="part"><span><b>I Exercises</b></span></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html"><i class="fa fa-check"></i>Exercise 1A – Spatial rainfall variability</a>
+<ul>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_1"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_2"><i class="fa fa-check"></i>Methods</a>
+<ul>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_3"><i class="fa fa-check"></i>Arithmetic Average</a></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_4"><i class="fa fa-check"></i>Theisson Polygon Method</a></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_5"><i class="fa fa-check"></i>Isohyetal Method</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_6"><i class="fa fa-check"></i>Activity</a>
+<ul>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_7"><i class="fa fa-check"></i>Thiessen Polygons: Sketch the polygons</a></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_8"><i class="fa fa-check"></i>Contoured Rainfall (Isohyets)</a></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_9"><i class="fa fa-check"></i>Calculate Catchment Discharge</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_10"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exercise-1b-sourcing-rainfall-and-flow-data.html"><a href="exercise-1b-sourcing-rainfall-and-flow-data.html"><i class="fa fa-check"></i>Exercise 1B - Sourcing rainfall and flow data</a>
+<ul>
+<li class="chapter" data-level="" data-path="exercise-1b-sourcing-rainfall-and-flow-data.html"><a href="exercise-1b-sourcing-rainfall-and-flow-data.html#E1B_1"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="exercise-1b-sourcing-rainfall-and-flow-data.html"><a href="exercise-1b-sourcing-rainfall-and-flow-data.html#E1B_2"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="exercise-1b-sourcing-rainfall-and-flow-data.html"><a href="exercise-1b-sourcing-rainfall-and-flow-data.html#E1B_3"><i class="fa fa-check"></i>Statistical Properties of Rainfall Data</a></li>
+</ul></li>
+<li class="part"><span><b>II Assessments</b></span></li>
+<li class="chapter" data-level="" data-path="assessment-2a-rainfall-and-streamflow-data-analysis.html"><a href="assessment-2a-rainfall-and-streamflow-data-analysis.html"><i class="fa fa-check"></i>Assessment 2A - Rainfall and streamflow data analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="assessment-2a-rainfall-and-streamflow-data-analysis.html"><a href="assessment-2a-rainfall-and-streamflow-data-analysis.html#A2A_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="assessment-2a-rainfall-and-streamflow-data-analysis.html"><a href="assessment-2a-rainfall-and-streamflow-data-analysis.html#A2A_2"><i class="fa fa-check"></i>Temporal trends in rainfall</a></li>
+<li class="chapter" data-level="" data-path="assessment-2a-rainfall-and-streamflow-data-analysis.html"><a href="assessment-2a-rainfall-and-streamflow-data-analysis.html#A2A_3"><i class="fa fa-check"></i>Spatial patterns in rainfall</a></li>
+<li class="chapter" data-level="" data-path="assessment-2a-rainfall-and-streamflow-data-analysis.html"><a href="assessment-2a-rainfall-and-streamflow-data-analysis.html#A2A_4"><i class="fa fa-check"></i>Interannual variability in rainfall</a></li>
+<li class="chapter" data-level="" data-path="assessment-2a-rainfall-and-streamflow-data-analysis.html"><a href="assessment-2a-rainfall-and-streamflow-data-analysis.html#A2A_5"><i class="fa fa-check"></i>Relationship between rainfall and runoff</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">GEOS4499 Workbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="exercise-1a-spatial-rainfall-variability" class="section level1 unnumbered">
+<h1>Exercise 1A – Spatial rainfall variability</h1>
+<div id="E1A_1" class="section level2 unnumbered">
+<h2>Introduction</h2>
+<p>Many factors affect the extent to which the measured rainfall amount at one rain-gauge can be extended to
+the surrounding area:</p>
+<ul>
+<li>the distance from the rain-gauge to the centre of the representative area,</li>
+<li>the size of the area,</li>
+<li>the topography,</li>
+<li>the nature of the rainfall quantity (storm event, daily, monthly),</li>
+<li>the characteristics of the local storm patterns (convective versus low intensity events).</li>
+</ul>
+<p>Most hydrological analysis at the catchment scale requires knowledge of the areal distribution of precipitation in the form of an average depth (mm) of water for the entire catchment over a specified time period, using information from a set of unevenly placed rain-gauges spread around the area. In order to calculate the flow discharge produced by a large storm (convective type) in the catchment in, it is necessary to calculate the <strong>average depth of rainfall</strong> (<strong>ADR</strong>) over the catchment.</p>
+<p>Three approaches are currently used for estimating the total rainfall:</p>
+<ol type="a">
+<li>
+an arithmetic average of gauged quantities,
+</li>
+<li>
+the isohyetal method, and
+</li>
+<li>
+the Thiessen polygon method.
+</li>
+</ol>
+<p>In this exercise you will compare these three different approaches for calculating the ADR and runoff generated by a single rainfall event.</p>
+</div>
+<div id="E1A_2" class="section level2 unnumbered">
+<h2>Methods</h2>
+<p>In this exercise you are required to calculate the average rainfall (ADR) over the entire catchment using:</p>
+<ol type="a">
+<li>
+the arithmetic mean (considering only stations within the catchment boundary),
+</li>
+<li>
+the Thiessen polygon weighting system, and
+</li>
+<li>
+the Isohyetal method. Rainfall data for each station in the catchment is provide in Table <a href="exercise-1a-spatial-rainfall-variability.html#tab:table1">3</a>.
+</li>
+</ol>
+<p>You are then required to produce an estimate of <strong>catchment runoff</strong>, which we will assume is equal to the stream <strong>discharge out of the catchment</strong> (<span class="math inline">\(Q\)</span>). Recall from lecture slides that a rough estimate of runoff may be estimated using the total rainfall over the catchment during a given period of time, and a <strong>runoff coefficient</strong>.</p>
+<center>
+<div class="figure"><span id="fig:image5"></span>
+<img src="images/exercise1A/image1.png" alt="A depth of rain ($P$, mm/day) is falling over a catchment area ($A$, km^2^) to produce stream discharge ($Q$, m^3^/day)." width="80%" />
+<p class="caption">
+Figure 1: A depth of rain (<span class="math inline">\(P\)</span>, mm/day) is falling over a catchment area (<span class="math inline">\(A\)</span>, km<sup>2</sup>) to produce stream discharge (<span class="math inline">\(Q\)</span>, m<sup>3</sup>/day).
+</p>
+</div>
+</center>
+<p><strong>Download the answer sheet for this exercise by clicking the download button in the tool bar</strong> <i class="fa fa-download" aria-hidden="true"></i>.</p>
+<div id="E1A_3" class="section level3 unnumbered">
+<h3>Arithmetic Average</h3>
+<p>The most basic measure of average rainfall depth is the arthimetic average, whereby you sum the observed rainfall at each rain gauge inside the catchment and divide by the number of gauges.</p>
+</div>
+<div id="E1A_4" class="section level3 unnumbered">
+<h3>Theisson Polygon Method</h3>
+<p>The average depth of rainfall (ADR) over the entire catchment can be calculated using:</p>
+<center>
+<span class="math display" id="eq:exercise1-1">\[\begin{equation}
+\mathrm{ADR\ (mm)\ =\ }\frac{\sum{A_i\ast P_i}}{\sum A_i}
+\tag{1}
+\end{equation}\]</span>
+</center>
+<p>Where <span class="math inline">\(A_{i}\)</span> is the polygon area (km<sup>2</sup>), <span class="math inline">\(P_{i}\)</span> is the rainfall (mm) corresponding to the <span class="math inline">\(i\)</span> polygon, and <span class="math inline">\(\sum{A_{i}}\)</span> is the catchment area (km<sup>2</sup>).</p>
+</div>
+<div id="E1A_5" class="section level3 unnumbered">
+<h3>Isohyetal Method</h3>
+<p>The average depth of rainfall over the entire catchment can be calculated using:</p>
+<center>
+<span class="math display" id="eq:exercise1-2">\[\begin{equation}
+\mathrm{ADR\ (mm)\ =\ }\frac{\sum{A_i\ast P_i}}{\sum A_i}
+\tag{2}
+\end{equation}\]</span>
+</center>
+<p>where in this method <span class="math inline">\(A_{i}\)</span> is the area between isohyets <span class="math inline">\(P_{i}\)</span> and <span class="math inline">\(P_{i+1}\)</span> (km<sup>2</sup>), <span class="math inline">\(P_{i}\)</span> is the average rainfall (mm) corresponding to the area <span class="math inline">\(A_{i}\)</span> between the isohyets, and <span class="math inline">\(\sum{A_{i}}\)</span> is the total catchment area (km<sup>2</sup>).</p>
+</div>
+</div>
+<div id="E1A_6" class="section level2 unnumbered">
+<h2>Activity</h2>
+<p>You are given the measured data for each rainfall gauge in Table <a href="exercise-1a-spatial-rainfall-variability.html#tab:table2">1</a>. Calculate the arithmetic mean and write this in your summary table (Table <a href="exercise-1a-spatial-rainfall-variability.html#tab:table1">3</a>). Next work out the ADR based on the other two methods.</p>
+<p>Once we have computed ADR, we can now estimate the likely amount of runoff. Remember the relationship between rainfall and discharge as outlined in the lecture. You’ll need to choose an appropriate runoff coefficient, and calculate the stream discharge at the bottom of the catchment - rember to watch out for unit conversions!</p>
+<center>
+<div class="figure"><span id="fig:image1"></span>
+<img src="images/exercise1A/image2.jpg" alt="Catchment map, station locations, and isohyetal map for a storm event. Isoheytal map corresponds to rainfall total over a 24hr period." width="80%" />
+<p class="caption">
+Figure 2: Catchment map, station locations, and isohyetal map for a storm event. Isoheytal map corresponds to rainfall total over a 24hr period.
+</p>
+</div>
+</center>
+<div id="E1A_7" class="section level3 unnumbered">
+<h3>Thiessen Polygons: Sketch the polygons</h3>
+To construct the Thiessen polygons, first draw dashed straight lines between the gauges. Next, find the mid-points of each of these lines and draw another solid line, perpendicular to the dashed line. These solid lines drawn perpendicular to the dashed lines will meet to form irregular polygons
+<center>
+<video width="85%" height="85%" controls>
+<source src="images/exercise1A/video2.mp4" type="video/mp4">
+</video>
+</center>
+<br>
+<center>
+<div class="figure"><span id="fig:image2"></span>
+<img src="images/exercise1A/image3.jpg" alt="Gridded map for polygon construction and area estimates." width="80%" />
+<p class="caption">
+Figure 3: Gridded map for polygon construction and area estimates.
+</p>
+</div>
+</center>
+<br>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
+<table class="table table-hover" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:table2">Table 1: </span>Rainfall data for Thiessen polygon method. Use your answer sheet to sedit this table!
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+Station Number
+</th>
+<th style="text-align:center;">
+Polygon area (km<sup>2</sup>)
+</th>
+<th style="text-align:center;">
+% Area
+</th>
+<th style="text-align:center;">
+Rainfall (mm)
+</th>
+<th style="text-align:center;">
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+5028
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+39.6
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+5035
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+74.9
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+5049
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+87.4
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+5038
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+73.9
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+5033
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+105.4
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+5089
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+106.9
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+5055
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+68.6
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+5050
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+62.2
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+5096
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+98.6
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+5082
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+101.1
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+5075
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+63.8
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: lightgrey !important;">
+Catchment Area =
+</td>
+<td style="text-align:center;min-width: 12em; background-color: lightgrey !important;">
+106.3
+</td>
+<td style="text-align:center;min-width: 12em; background-color: lightgrey !important;">
+1
+</td>
+<td style="text-align:center;min-width: 12em; background-color: lightgrey !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: lightgrey !important;">
+ADR =
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="E1A_8" class="section level3 unnumbered">
+<h3>Contoured Rainfall (Isohyets)</h3>
+<center>
+<div class="figure"><span id="fig:image3"></span>
+<img src="images/exercise1A/image4.png" alt="Isohyets on catchment with inter-isohyetal areas." width="71%" />
+<p class="caption">
+Figure 4: Isohyets on catchment with inter-isohyetal areas.
+</p>
+</div>
+</center>
+<br>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
+<table class="table table-hover" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:table3">Table 2: </span>Iso-hyetal method data.
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+Rainfall interval
+</th>
+<th style="text-align:center;">
+Isohyetal area (km<sup>2</sup>)
+</th>
+<th style="text-align:center;">
+% Area (or fraction)
+</th>
+<th style="text-align:center;">
+<span class="math inline">\(P_{i}\)</span> (mm)
+</th>
+<th style="text-align:center;">
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+P_100-105 mm
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+P_90-100 mm
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+P_80-90 mm
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+P_70-80 mm
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+P_60-70 mm
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+P_50-60 mm
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: white !important;">
+P_40_50 mm
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 15em; background-color: lightgrey !important;">
+Catchment Area =
+</td>
+<td style="text-align:center;min-width: 12em; background-color: lightgrey !important;">
+106.3
+</td>
+<td style="text-align:center;min-width: 12em; background-color: lightgrey !important;">
+100%
+</td>
+<td style="text-align:center;min-width: 12em; background-color: lightgrey !important;">
+</td>
+<td style="text-align:center;min-width: 10em; background-color: lightgrey !important;">
+ADR =
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="E1A_9" class="section level3 unnumbered">
+<h3>Calculate Catchment Discharge</h3>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
+<table class="table table-hover" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:table1">Table 3: </span>ADR and catchment discharge using three different rainfall averaging methods.
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+Averaging method
+</th>
+<th style="text-align:center;">
+ADR (m)
+</th>
+<th style="text-align:center;">
+Runoff coefficient
+</th>
+<th style="text-align:center;">
+Catchment discharge(m<sup>3</sup>/d)
+</th>
+<th style="text-align:center;">
+Catchment discharge (m<sup>3</sup>/s)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;min-width: 7em; background-color: white !important;">
+Arithmetic average
+</td>
+<td style="text-align:center;min-width: 7em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 7em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 7em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 7em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 7em; background-color: white !important;">
+Theissen Polygons
+</td>
+<td style="text-align:center;min-width: 7em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 7em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 7em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 7em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 7em; background-color: white !important;">
+Isohyets
+</td>
+<td style="text-align:center;min-width: 7em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 7em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 7em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 7em; background-color: white !important;">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="E1A_10" class="section level2 unnumbered">
+<h2>Conclusions</h2>
+<p>What conclusions can you draw from these results? You should always go back to your original objectives (or aims) and see what you have learnt from your analysis. Do this now and briefly summarise the aims of this exercise, your conclusions after doing this analysis, the limitations of your approach, and any recommendations.</p>
+<ul>
+<li>The aim(s) of this exercise was:</li>
+<li>After doing this exercise I have been able to conclude:</li>
+<li>Limitations, assumptions and sources of error:</li>
+<li>Based on this study I would recommend:</li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="exercise-1b-sourcing-rainfall-and-flow-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["Exercise_1A_Answer_Sheet.docx", "Exercise 1A Answer Sheet"], ["Exercise_1B_Answer_Sheet.docx", "Exercise 1B Answer Sheet"]],
+"toc": {
+"collapse": "section"
+},
+"search": true,
+"info": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Assessment 2A - Rainfall and streamflow data analysis | GEOS4499 Workbook</title>
+  <meta name="description" content="Assessment 2A - Rainfall and streamflow data analysis | GEOS4499 Workbook" />
+  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Assessment 2A - Rainfall and streamflow data analysis | GEOS4499 Workbook" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Assessment 2A - Rainfall and streamflow data analysis | GEOS4499 Workbook" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="exercise-1b-sourcing-rainfall-and-flow-data.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><b>GEOS4499 Workbook</b></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="part"><span><b>I Exercises</b></span></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html"><i class="fa fa-check"></i>Exercise 1A – Spatial rainfall variability</a>
+<ul>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_1"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_2"><i class="fa fa-check"></i>Methods</a>
+<ul>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_3"><i class="fa fa-check"></i>Arithmetic Average</a></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_4"><i class="fa fa-check"></i>Theisson Polygon Method</a></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_5"><i class="fa fa-check"></i>Isohyetal Method</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_6"><i class="fa fa-check"></i>Activity</a>
+<ul>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_7"><i class="fa fa-check"></i>Thiessen Polygons: Sketch the polygons</a></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_8"><i class="fa fa-check"></i>Contoured Rainfall (Isohyets)</a></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_9"><i class="fa fa-check"></i>Calculate Catchment Discharge</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_10"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exercise-1b-sourcing-rainfall-and-flow-data.html"><a href="exercise-1b-sourcing-rainfall-and-flow-data.html"><i class="fa fa-check"></i>Exercise 1B - Sourcing rainfall and flow data</a>
+<ul>
+<li class="chapter" data-level="" data-path="exercise-1b-sourcing-rainfall-and-flow-data.html"><a href="exercise-1b-sourcing-rainfall-and-flow-data.html#E1B_1"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="exercise-1b-sourcing-rainfall-and-flow-data.html"><a href="exercise-1b-sourcing-rainfall-and-flow-data.html#E1B_2"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="exercise-1b-sourcing-rainfall-and-flow-data.html"><a href="exercise-1b-sourcing-rainfall-and-flow-data.html#E1B_3"><i class="fa fa-check"></i>Statistical Properties of Rainfall Data</a></li>
+</ul></li>
+<li class="part"><span><b>II Assessments</b></span></li>
+<li class="chapter" data-level="" data-path="assessment-2a-rainfall-and-streamflow-data-analysis.html"><a href="assessment-2a-rainfall-and-streamflow-data-analysis.html"><i class="fa fa-check"></i>Assessment 2A - Rainfall and streamflow data analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="assessment-2a-rainfall-and-streamflow-data-analysis.html"><a href="assessment-2a-rainfall-and-streamflow-data-analysis.html#A2A_1"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="assessment-2a-rainfall-and-streamflow-data-analysis.html"><a href="assessment-2a-rainfall-and-streamflow-data-analysis.html#A2A_2"><i class="fa fa-check"></i>Temporal trends in rainfall</a></li>
+<li class="chapter" data-level="" data-path="assessment-2a-rainfall-and-streamflow-data-analysis.html"><a href="assessment-2a-rainfall-and-streamflow-data-analysis.html#A2A_3"><i class="fa fa-check"></i>Spatial patterns in rainfall</a></li>
+<li class="chapter" data-level="" data-path="assessment-2a-rainfall-and-streamflow-data-analysis.html"><a href="assessment-2a-rainfall-and-streamflow-data-analysis.html#A2A_4"><i class="fa fa-check"></i>Interannual variability in rainfall</a></li>
+<li class="chapter" data-level="" data-path="assessment-2a-rainfall-and-streamflow-data-analysis.html"><a href="assessment-2a-rainfall-and-streamflow-data-analysis.html#A2A_5"><i class="fa fa-check"></i>Relationship between rainfall and runoff</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">GEOS4499 Workbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="assessment-2a---rainfall-and-streamflow-data-analysis" class="section level1 unnumbered">
+<h1>Assessment 2A - Rainfall and streamflow data analysis</h1>
+<p>Throughout the assignment we should remember that rainfall will be influenced by a number of processes that operate on different space and time scales (see Figure <a href="assessment-2a-rainfall-and-streamflow-data-analysis.html#fig:image6">5</a>). We will examine these during this exercise.</p>
+<center>
+<div class="figure"><span id="fig:image6"></span>
+<img src="images/exercise1A/image5.png" alt="A guide to the timescales applicable to weather, climate variability and climate change [Pacific Climate Futures](www.pacificclimatefutures.net)." width="80%" />
+<p class="caption">
+Figure 5: A guide to the timescales applicable to weather, climate variability and climate change <a href="www.pacificclimatefutures.net">Pacific Climate Futures</a>.
+</p>
+</div>
+</center>
+<div id="A2A_1" class="section level2 unnumbered">
+<h2>Objectives</h2>
+<p>By the end of this assignment, you should:</p>
+<ol style="list-style-type: decimal">
+<li>Understand how and why rainfall may be changing over time and use statistics and regression to test hypothesis.</li>
+<li>Know how different modes of climate variability such as IOD and ENSO affect annual rainfall.</li>
+<li>Be able to elucidate the nature of the relationship between rainfall and streamflow</li>
+</ol>
+</div>
+<div id="A2A_2" class="section level2 unnumbered">
+<h2>Temporal trends in rainfall</h2>
+<ol start="7" style="list-style-type: decimal">
+<li><p>Calculate the trend in rainfall for the <strong>last 5 years.</strong> Copy and paste the annual totals from the PIVOT table (include the year and amount columns) into another sheet. Select the last 5 years of data and in DATA ANALYSIS start a REGRESSION. Input the data range. Select “<strong>Line Fit Plots</strong>.” What did you find and what were you expecting? Is this long enough for a reliable trend? Is the relationship really linear – discuss?</p></li>
+<li><p>Calculate the trend in rainfall for <strong>all</strong> years available at the site. Copy and paste the annual totals from the PIVOT table (include the year and amount columns) into another sheet. Select the all years of data and INSERT a SCATTER plot. Add a trend line and “<strong>display the equation</strong>” on the chart. Add the Pearson correlation coefficient (r<sup>2</sup>) value as well. Add the information for your site into Table <a href="assessment-2a-rainfall-and-streamflow-data-analysis.html#tab:table5">5</a> (and insert the other class data when you can).</p></li>
+</ol>
+<center>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-y: scroll; height:515px; overflow-x: scroll; width:100%; ">
+<table class="table table-hover" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:table5">Table 5: </span>Bureau of Meteorology Automatic Weather Station data and station ID across WA and SWWA. Complete the table for each site.
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+Station
+</th>
+<th style="text-align:center;">
+Station ID
+</th>
+<th style="text-align:center;">
+Years of data
+</th>
+<th style="text-align:center;">
+Sign of trend
+</th>
+<th style="text-align:center;">
+Trend rate (mm/decade)
+</th>
+<th style="text-align:center;">
+T-value
+</th>
+<th style="text-align:center;">
+Significance (p value)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Swanbourne
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9215
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Perth
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9225
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Perth Airport
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9021
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Bickley
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9240
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Mundaring
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9030
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Chidlow
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9007
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Northam
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+10111
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Kellerberrin
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+10073
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Merredin
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+10092
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Kalgoorlie-Boulder
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+12038
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Leonora
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+12241
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Cape Leeuwin
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9518
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Busselton
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9515
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Geraldton Town
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+8050
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Carnarvon
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+6011
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Exmouth Gulf
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+5004
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Broome
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+3003
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Wyndham
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+1006
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Bridgetown Comparison
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9510
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Wagin
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+10647
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Hyden
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+10568
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Albany
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9500
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Esperance Downs
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9631
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Manjimup
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+9573
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+Narrogin
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+10614
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 9em; background-color: white !important;">
+</td>
+<td style="text-align:center;background-color: white !important;">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</center>
+<p><br></p>
+<ol start="9" style="list-style-type: decimal">
+<li><p>What hypothesis can we make about changes in rainfall amount over time? How do we frame the hypothesis? What statistical test can we use to test the significance of the hypothesis? Describe the results and conclusions of this analysis. Calculate the appropriate t-value and p-value and enter them also into Table <a href="assessment-2a-rainfall-and-streamflow-data-analysis.html#tab:table5">5</a>.</p></li>
+<li><p>Break into small groups of about 5 and discuss the results of Table <a href="assessment-2a-rainfall-and-streamflow-data-analysis.html#tab:table5">5</a>. Choose a rapporteur to report back at the end of the discussion. Highlight the station where there is a statistically significant slope. Are there statistically significant changes in rainfall? Are they consistent across WA? What may be causing the changes?</p></li>
+</ol>
+</div>
+<div id="A2A_3" class="section level2 unnumbered">
+<h2>Spatial patterns in rainfall</h2>
+<ol start="11" style="list-style-type: decimal">
+<li>Take the information in Table <a href="exercise-1b-sourcing-rainfall-and-flow-data.html#tab:table4">4</a> and record your values onto the locations of each site on the large class map (whiteboard). Use the maps below to locate your site. When everyone is finished break back into your groups and discuss the results. Choose a new rapporteur to report back at the end of the discussion. Think about the spatial patterns not the temporal ones (i.e climate modes). What spatial patterns might you expect and what do you notice? What may be causing these spatial patterns?</li>
+</ol>
+<center>
+<img src="images/exercise1A/image6.png" width="90%" />
+</center>
+</div>
+<div id="A2A_4" class="section level2 unnumbered">
+<h2>Interannual variability in rainfall</h2>
+<p>Here we determine how rainfall correlates with known modes of climate variability (i.e. Indian Ocean Dipole (IOD) and El Nino Southern Oscillation (ENSO)).</p>
+<p>Other indicators of temporal variability (look for cyclic patterns). Does rainfall correlate with known modes of climate variability (i.e. IOD and ENSO using the Southern Oscillation Index (SOI)). SOI is calculated as follows.</p>
+<center>
+<span class="math display" id="eq:exercise-3">\[\begin{equation}
+\text{SOI} = 10 \frac{P_{\text{diff}} - P_{\text{diffav}}}{SD(P_{\text{diff}})}
+\tag{3}
+\end{equation}\]</span>
+</center>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(P_{\text{diff}}\)</span> = (average Tahiti MSLP for the month) - (average Darwin MSLP for the month)</li>
+<li><span class="math inline">\(P_{\text{diffav}}\)</span> = long term average of <span class="math inline">\(P_{\text{diff}}\)</span> for the month in question, and</li>
+<li><span class="math inline">\(SD(P_{\text{diff}})\)</span> = long term standard deciation of <span class="math inline">\(P_{\text{diff}}\)</span> for the month in question.</li>
+</ul>
+<p>IOD is calculated by anomalous Sea Surface Temperature gradient between the western equatorial Indian Ocean (50E-70E and 10S-10N) and the south eastern equatorial Indian Ocean (90E-110E and 10S-0N) in units of degrees Kelvin.</p>
+<p>We will use the extremely useful <a href="https://climexp.knmi.nl/start.cgi?id=someone@somewhere">Climate Explorer</a> for the next section. First you will need to register so you can save data series. Access the rainfall from the previous site that you used in the previous section. Click on “<strong>Monthly Station Data</strong>” (right hand menu), select “precipitation” from the “GHCN-M (all)” column, search for your station (e.g. type BROOME in the “Select stations” section), and then press “Get stations.” If the selection works you will see relevant stations listed, and then click “<strong>get data</strong>.” You will then see graphs and options for further integrating the data. Make a name to save the data (the default should be fine). Click “<strong>Add to list</strong>.”</p>
+<center>
+<video width="85%" height="85%" controls>
+<source src="images/exercise1A/video4.mp4" type="video/mp4">
+</video>
+</center>
+<p>Now get the first climate index for the IOD called the DMI. Go to “<strong>Monthly climate indices</strong>” and then select DMI. Note any trend and variability in the index.</p>
+<p>To correlate the index and rainfall select “<strong>Correlate with other time series</strong>.” And tick your previously saved rainfall timeseries and then press “<strong>Correlate</strong>” and copy the results into Table <a href="assessment-2a-rainfall-and-streamflow-data-analysis.html#tab:table6">6</a>.</p>
+<center>
+<video width="85%" height="85%" controls>
+<source src="images/exercise1A/video5.mp4" type="video/mp4">
+</video>
+</center>
+<p><br></p>
+<center>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
+<table class="table table-hover" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:table6">Table 6: </span>Rainfall and climate indices (DMI for IOD and SOI for ENSO) correlations.
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+Month
+</th>
+<th style="text-align:center;">
+DMI Corr
+</th>
+<th style="text-align:center;">
+DMI p-value
+</th>
+<th style="text-align:center;">
+SOI Corr
+</th>
+<th style="text-align:center;">
+SOI p-value
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+Jan
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+Feb
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+Mar
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+Apr
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+May
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+Jun
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+Jul
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+Aug
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+Sep
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+Oct
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+Nov
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+Dec
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+<td style="text-align:center;min-width: 12em; background-color: white !important;">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</center>
+<p><br></p>
+<ol start="12" style="list-style-type: decimal">
+<li>Break into small groups of about 5 and discuss the results of your correlations. Choose a new rapporteur to report back at the end of the discussion. Highlight any months that have a significant p-value (&lt;0.05). What relationships do you see between rainfall and climate mode and why? Do they correlate in specific seasons? How strong are these correlations really? How are they consistent or different across WA?</li>
+</ol>
+<p>We can do the same exercise except using gridded data (climate data divided into say 0.5 degree spacing using reanalysis information). Click on “<strong>Monthly observations</strong>” and go to <strong>Precipitation CRU TS 0.5</strong>.</p>
+<center>
+<video width="85%" height="85%" controls>
+<source src="images/exercise1A/video6.mp4" type="video/mp4">
+</video>
+</center>
+<p>We then want to correlate each grid cell on the earth with our climate index (SOI and DMI) to see how the correlations very spatially. Click on “Correlate with a time series” and choose either SOI or DMI. Then click correlate at the bottom and wait (the calculations are being done online and the graph returned for viewing). Do the same for both SOI and DMI.</p>
+<ol start="13" style="list-style-type: decimal">
+<li>Break into small groups of about 5 and discuss the results of your plots. Choose a new rapporteur to report back at the end of the discussion. For DMI which month had the highest (negative) correlation (copy that plot to your results). What areas of Australia have significant correlations and what time of year? For SOI which month had the highest (positive) correlation (copy that plot to your results). What areas of Australia have significant correlations and what time of year? Does this match with your own rainfall station correlations?</li>
+</ol>
+</div>
+<div id="A2A_5" class="section level2 unnumbered">
+<h2>Relationship between rainfall and runoff</h2>
+<p>Examine the relationship between annual rainfall and annual Runoff. Go the <a href="http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx">Department of Water</a> web site. Use this tool to locate a gauging station near your rainfall site. Add the site to your cart and submit a data request - check that the data is being delivered as a “package of pre-computed reports.” You will then be emailed a zip file of the station’s data. Ensure the station has 10-20 years of available data for this exercise.</p>
+<center>
+<video width="85%" height="85%" controls>
+<source src="images/exercise1A/video3.mp4" type="video/mp4">
+</video>
+</center>
+<ol start="14" style="list-style-type: decimal">
+<li>Plot a scatter plot of discharge and annual rainfall, add a line to the chart. Break into small groups of about 5 and discuss the results of your plots. Choose a new rapporteur to report back at the end of the discussion. What are the relationships between rainfall and discharge? Are they linear or non- linear and why? Are they consistent across WA?</li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="exercise-1b-sourcing-rainfall-and-flow-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["Exercise_1A_Answer_Sheet.docx", "Exercise 1A Answer Sheet"], ["Exercise_1B_Answer_Sheet.docx", "Exercise 1B Answer Sheet"]],
+"toc": {
+"collapse": "section"
+},
+"search": true,
+"info": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

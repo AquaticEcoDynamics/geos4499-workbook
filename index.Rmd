@@ -1,0 +1,14 @@
+--- 
+title: "GEOS4499 Workbook"
+#author: "Sarah Bourke"
+date: "Last updated: `r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography:  ["references/references.bib"]
+biblio-style: apalike
+link-citations: yes
+description: ""
+---
+
+# Introduction {-}
+

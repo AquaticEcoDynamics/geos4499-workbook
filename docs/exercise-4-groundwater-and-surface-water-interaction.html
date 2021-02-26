@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Exercise 4 - Groundwater and surface water interaction | hydro-workbook</title>
+  <meta name="description" content="Exercise 4 - Groundwater and surface water interaction | hydro-workbook" />
+  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Exercise 4 - Groundwater and surface water interaction | hydro-workbook" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Exercise 4 - Groundwater and surface water interaction | hydro-workbook" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="exercise-3b-visualising-groundwater-flow.html"/>
+<link rel="next" href="exercise-6-simple-lake-model.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><b>hydro-workbook</b></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="part"><span><b>I Exercises</b></span></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html"><i class="fa fa-check"></i>Exercise 1A – Spatial rainfall variability</a>
+<ul>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1_3"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1_4"><i class="fa fa-check"></i>Methods</a>
+<ul>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1_5"><i class="fa fa-check"></i>Arithmetic Average</a></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1_6"><i class="fa fa-check"></i>Theisson Polygon Method</a></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1_7"><i class="fa fa-check"></i>Isohyetal Method</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1_8"><i class="fa fa-check"></i>Activity</a>
+<ul>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1_9"><i class="fa fa-check"></i>Thiessen Polygons: Sketch the polygons</a></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1_10"><i class="fa fa-check"></i>Contoured Rainfall (Isohyets)</a></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1_11"><i class="fa fa-check"></i>Calculate Catchment Discharge</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1_12"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exercise-1b-sourcing-rainfall-and-flow-data.html"><a href="exercise-1b-sourcing-rainfall-and-flow-data.html"><i class="fa fa-check"></i>Exercise 1B - Sourcing rainfall and flow data</a>
+<ul>
+<li class="chapter" data-level="" data-path="exercise-1b-sourcing-rainfall-and-flow-data.html"><a href="exercise-1b-sourcing-rainfall-and-flow-data.html#E1_14"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="exercise-1b-sourcing-rainfall-and-flow-data.html"><a href="exercise-1b-sourcing-rainfall-and-flow-data.html#E1_15"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="exercise-1b-sourcing-rainfall-and-flow-data.html"><a href="exercise-1b-sourcing-rainfall-and-flow-data.html#E1_16"><i class="fa fa-check"></i>Statistical Properties of Rainfall Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="exercise-2-streamflow-analysis.html"><a href="exercise-2-streamflow-analysis.html"><i class="fa fa-check"></i>Exercise 2 - Streamflow analysis</a></li>
+<li class="chapter" data-level="" data-path="exercise-3a-characterising-soil-moisture.html"><a href="exercise-3a-characterising-soil-moisture.html"><i class="fa fa-check"></i>Exercise 3A - Characterising soil moisture</a></li>
+<li class="chapter" data-level="" data-path="exercise-3b-visualising-groundwater-flow.html"><a href="exercise-3b-visualising-groundwater-flow.html"><i class="fa fa-check"></i>Exercise 3B - Visualising groundwater flow</a></li>
+<li class="chapter" data-level="" data-path="exercise-4-groundwater-and-surface-water-interaction.html"><a href="exercise-4-groundwater-and-surface-water-interaction.html"><i class="fa fa-check"></i>Exercise 4 - Groundwater and surface water interaction</a></li>
+<li class="chapter" data-level="" data-path="exercise-6-simple-lake-model.html"><a href="exercise-6-simple-lake-model.html"><i class="fa fa-check"></i>Exercise 6 - Simple lake model</a></li>
+<li class="chapter" data-level="" data-path="exercise-7-environmental-flow-assessment.html"><a href="exercise-7-environmental-flow-assessment.html"><i class="fa fa-check"></i>Exercise 7 - Environmental flow assessment</a></li>
+<li class="chapter" data-level="" data-path="exercise-8-climate-futures.html"><a href="exercise-8-climate-futures.html"><i class="fa fa-check"></i>Exercise 8 - Climate futures</a></li>
+<li class="part"><span><b>II Assessments</b></span></li>
+<li class="chapter" data-level="" data-path="assessment-2a-rainfall-and-streamflow-data-analysis.html"><a href="assessment-2a-rainfall-and-streamflow-data-analysis.html"><i class="fa fa-check"></i>Assessment 2A - Rainfall and streamflow data analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="exercise-1b-sourcing-rainfall-and-flow-data.html"><a href="exercise-1b-sourcing-rainfall-and-flow-data.html#E1_15"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="assessment-2a-rainfall-and-streamflow-data-analysis.html"><a href="assessment-2a-rainfall-and-streamflow-data-analysis.html#E1_17"><i class="fa fa-check"></i>Temporal trends in rainfall</a></li>
+<li class="chapter" data-level="" data-path="assessment-2a-rainfall-and-streamflow-data-analysis.html"><a href="assessment-2a-rainfall-and-streamflow-data-analysis.html#E1_18"><i class="fa fa-check"></i>Spatial patterns in rainfall</a></li>
+<li class="chapter" data-level="" data-path="assessment-2a-rainfall-and-streamflow-data-analysis.html"><a href="assessment-2a-rainfall-and-streamflow-data-analysis.html#E1_19"><i class="fa fa-check"></i>Interannual variability in rainfall</a></li>
+<li class="chapter" data-level="" data-path="assessment-2a-rainfall-and-streamflow-data-analysis.html"><a href="assessment-2a-rainfall-and-streamflow-data-analysis.html#E1_20"><i class="fa fa-check"></i>Relationship between rainfall and runoff</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="assessment-2b-groundwater-and-surface-water-interaction.html"><a href="assessment-2b-groundwater-and-surface-water-interaction.html"><i class="fa fa-check"></i>Assessment 2B - Groundwater and surface water interaction</a></li>
+<li class="chapter" data-level="" data-path="assessment-3a-modelling-responses-to-climate-change.html"><a href="assessment-3a-modelling-responses-to-climate-change.html"><i class="fa fa-check"></i>Assessment 3A - Modelling responses to climate change</a></li>
+<li class="chapter" data-level="" data-path="assessment-3b-group-video-on-water-management-issue.html"><a href="assessment-3b-group-video-on-water-management-issue.html"><i class="fa fa-check"></i>Assessment 3B - Group video on water management issue</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">hydro-workbook</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="exercise-4---groundwater-and-surface-water-interaction" class="section level1 unnumbered">
+<h1>Exercise 4 - Groundwater and surface water interaction</h1>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="exercise-3b-visualising-groundwater-flow.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="exercise-6-simple-lake-model.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["Exercise_1A_Part_1_Answer_Sheet.docx", "Exercise 1A Part 1 Answer Sheet"], ["Exercise_1A_Part_2_Answer_Sheet.docx", "Exercise 1A Part 2 Answer Sheet"]],
+"toc": {
+"collapse": "section"
+},
+"search": true,
+"info": true
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

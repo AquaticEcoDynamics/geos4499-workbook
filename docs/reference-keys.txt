@@ -1,0 +1,14 @@
+fig:image5
+eq:exercise1-1
+eq:exercise1-2
+fig:image1
+fig:image2
+tab:table2
+fig:image3
+tab:table3
+tab:table1
+tab:table4
+fig:image6
+tab:table5
+eq:exercise-3
+tab:table6
