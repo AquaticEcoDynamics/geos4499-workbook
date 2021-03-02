@@ -2,7 +2,9 @@
 
 # Assessment 2A - Rainfall and streamflow data analysis {.unnumbered}
 
-In this assessment we will explore the nature of rainfall and runoff data. Rainfall is influenced by a number of processes that operate on different space and time scales (see Figure \@ref(fig:image6)). We first examine these during this exercise and then we explore how different modes of climate variability affect patterns in annual rainfall.  Lastly, we look to see if we can find a relationship between rainfall and runoff.  To achieve this, we use a large number of weather stations across WA to quantify the variability of rainfall in space and time. 
+In this assessment we will explore the nature of rainfall and runoff data. Rainfall is influenced by a number of processes that operate on different space and time scales (see Figure \@ref(fig:image6)). We first examine these during this exercise and then we explore how different modes of climate variability affect patterns in annual rainfall. Lastly, we look to see if we can find a relationship between rainfall and streamflow (assumed equal to runoff). To achieve this, we use a large number of weather stations across WA to quantify the variability of rainfall in space and time.
+
+In this assignment you will work to explore data from an individual site. You will then share with class members the results from your site so we can build a more complete picture. We will be sharing our data using an online spreadsheet. Please make sure that you upload your data as soon as possible so that others can include it in their analysis.
 
 <center>
 
@@ -14,11 +16,11 @@ knitr::include_graphics("images/exercise1A/image5.png")
 
 ## Objectives {#A2A_1 .unnumbered}
 
-In this assignment you will work to explore data from an individual site. You will then share with class members the results from your site so we can build a more complete picture. By the end of this assignment, you should:
+By the end of this assignment, you should:
 
--  Understand how and why rainfall may be changing over time and use statistics and regression to test this hypothesis.
--  Know how different modes of climate variability such as IOD and ENSO can affect annual rainfall.
--  Be able to elucidate the nature of the relationship between rainfall and streamflow.
+-   Understand how and why rainfall may be changing over time and use statistics and regression to test this hypothesis.
+-   Know how different modes of climate variability such as IOD and ENSO can affect annual rainfall.
+-   Be able to elucidate the nature of the relationship between rainfall and streamflow.
 
 ## Temporal trends in rainfall {#A2A_2 .unnumbered}
 
@@ -57,11 +59,11 @@ kable(table5,"html", escape = F, align = rep('c', 5), caption = "Bureau of Meteo
 
 3)  What hypothesis can we make about changes in rainfall amount over time? How do we frame the hypothesis? What statistical test can we use to test the significance of the hypothesis? Describe the results and conclusions of this analysis. Calculate the appropriate t-value and p-value and enter them also into Table \@ref(tab:table5).
 
-4)  Break into small groups of about 5 and discuss the results of Table \@ref(tab:table5). Choose a rapporteur to report back at the end of the discussion. Highlight the station where there is a statistically significant slope. Are there statistically significant changes in rainfall? Are they consistent across WA? What may be causing the changes?
+4)  Inspect the results of Table \@ref(tab:table5). Which station(s) have a statistically significant slope. Are there statistically significant changes in rainfall? Are they consistent across WA? What may be causing the changes?
 
 ## Spatial patterns in rainfall {#A2A_3 .unnumbered}
 
-5)  Take the information in Table \@ref(tab:table4) and record your values onto the locations of each site on the large class map (whiteboard). Use the maps below to locate your site. When everyone is finished break back into your groups and discuss the results. Choose a new rapporteur to report back at the end of the discussion. Think about the spatial patterns not the temporal ones (i.e climate modes). What spatial patterns might you expect and what do you notice? What may be causing these spatial patterns?
+5)  Take the information in Table \@ref(tab:table4) and record the values onto a map of Western Australia. Now think about the spatial patterns rather than the temporal ones (i.e climate modes). What spatial patterns might you expect and what do you notice? What may be causing these spatial patterns?
 
 <center>
 
@@ -79,11 +81,12 @@ Other indicators of temporal variability (look for cyclic patterns). Does rainfa
 
 <center>
 
+```{=tex}
 \begin{equation}
 \text{SOI} = 10 \frac{P_{\text{diff}} - P_{\text{diffav}}}{SD(P_{\text{diff}})}
 (\#eq:exercise-3)
 \end{equation}
-
+```
 </center>
 
 Where:
@@ -148,7 +151,7 @@ kable(table6,"html", escape = F, align = rep('c', 5), caption = "Rainfall and cl
 
 <br>
 
-6)  Break into small groups of about 5 and discuss the results of your correlations. Choose a new rapporteur to report back at the end of the discussion. Highlight any months that have a significant p-value (\<0.05). What relationships do you see between rainfall and climate mode and why? Do they correlate in specific seasons? How strong are these correlations really? How are they consistent or different across WA?
+6)  Highlight any months that have a significant p-value (\<0.05). What relationships do you see between rainfall and climate mode and why? Do they correlate in specific seasons? How strong are these correlations really? How are they consistent or different across WA?
 
 We can do the same exercise except using gridded data (climate data divided into say 0.5 degree spacing using reanalysis information). Click on "**Monthly observations**" and go to **Precipitation CRU TS 0.5**.
 
@@ -164,14 +167,14 @@ We can do the same exercise except using gridded data (climate data divided into
 
 We then want to correlate each grid cell on the earth with our climate index (SOI and DMI) to see how the correlations very spatially. Click on "Correlate with a time series" and choose either SOI or DMI. Then click correlate at the bottom and wait (the calculations are being done online and the graph returned for viewing). Do the same for both SOI and DMI.
 
-7)  Break into small groups of about 5 and discuss the results of your plots. Choose a new rapporteur to report back at the end of the discussion. For DMI which month had the highest (negative) correlation (copy that plot to your results). What areas of Australia have significant correlations and what time of year? For SOI which month had the highest (positive) correlation (copy that plot to your results). What areas of Australia have significant correlations and what time of year? Does this match with your own rainfall station correlations?
+7)  For DMI which month had the highest (negative) correlation (copy that plot to your results). What areas of Australia have significant correlations and what time of year? For SOI which month had the highest (positive) correlation (copy that plot to your results). What areas of Australia have significant correlations and what time of year? Does this match with your own rainfall station correlations?
 
 ## Relationship between rainfall and runoff {#A2A_5 .unnumbered}
 
-Now lets examine the relationship between annual rainfall and annual Runoff. Go the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site. Refer to the Exercise 1B activity for details on how to source the data.
+Now lets examine the relationship between annual rainfall and annual streamflow (also called discharge by surface hydrologists). Go to the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site and download the streamflow data closest to your rainfall stations to examine this relationship (Refer to the Exercise 1B activity for details on how to source the data).
 
-8)  Plot a scatter plot of annual discharge (y-axis) and annual rainfall (x-axis). Add a trendline to the chart. Break into small groups of about 5 and discuss the results of your plots. Choose a new rapporteur to report back at the end of the discussion. What are the relationships between rainfall and discharge? Are they linear or non- linear and why? Are they consistent across WA?
+8)  Plot a scatter plot of annual streamflow (y-axis) and annual rainfall (x-axis). Add a trendline to the chart. What are the relationships between rainfall and streamflow? Are they linear or non- linear and why? Are they consistent across WA?
 
 ## Submission {#A2A_6 .unnumbered}
 
-Your submission for this assessment is a report outlining the results of the analysis and questions posed in questions 1-8, above. This should include the figures and tables you created, summarising the data from your chosen site and the broader class data-set.
+Your submission for this assessment is a summary report outlining the results of the analysis and questions posed in questions 1-8, above. This should include the figures and tables you created, summarising the data from your chosen site and the broader class data-set.
