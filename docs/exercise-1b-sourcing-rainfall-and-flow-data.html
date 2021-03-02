@@ -78,18 +78,8 @@
 <li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html"><i class="fa fa-check"></i>Exercise 1A – Spatial rainfall variability</a>
 <ul>
 <li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_1"><i class="fa fa-check"></i>Introduction</a></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_2"><i class="fa fa-check"></i>Methods</a>
-<ul>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_3"><i class="fa fa-check"></i>Arithmetic Average</a></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_4"><i class="fa fa-check"></i>Theisson Polygon Method</a></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_5"><i class="fa fa-check"></i>Isohyetal Method</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_6"><i class="fa fa-check"></i>Activity</a>
-<ul>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_7"><i class="fa fa-check"></i>Thiessen Polygons: Sketch the polygons</a></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_8"><i class="fa fa-check"></i>Contoured Rainfall (Isohyets)</a></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_9"><i class="fa fa-check"></i>Calculate Catchment Discharge</a></li>
-</ul></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_2"><i class="fa fa-check"></i>Methods</a></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_6"><i class="fa fa-check"></i>Activity</a></li>
 <li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_10"><i class="fa fa-check"></i>Conclusions</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="exercise-1b-sourcing-rainfall-and-flow-data.html"><a href="exercise-1b-sourcing-rainfall-and-flow-data.html"><i class="fa fa-check"></i>Exercise 1B - Sourcing rainfall and flow data</a>
@@ -107,7 +97,6 @@
 <li class="chapter" data-level="" data-path="assessment-2a-rainfall-and-streamflow-data-analysis.html"><a href="assessment-2a-rainfall-and-streamflow-data-analysis.html#A2A_4"><i class="fa fa-check"></i>Interannual variability in rainfall</a></li>
 <li class="chapter" data-level="" data-path="assessment-2a-rainfall-and-streamflow-data-analysis.html"><a href="assessment-2a-rainfall-and-streamflow-data-analysis.html#A2A_5"><i class="fa fa-check"></i>Relationship between rainfall and runoff</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -140,10 +129,10 @@
 <ol style="list-style-type: decimal">
 <li>Be able to source rainfall and flow data, understand the nature of that data and describe it using simple statistics in Excel.</li>
 </ol>
-<p><strong>Download the answer sheet for this exercise by clicking the download button in the tool bar</strong> <i class="fa fa-download" aria-hidden="true"></i>.</p>
 </div>
 <div id="E1B_3" class="section level2 unnumbered">
 <h2>Statistical Properties of Rainfall Data</h2>
+<p><strong>Download the answer sheet for this exercise by clicking the download button in the tool bar</strong> <i class="fa fa-download" aria-hidden="true"></i>.</p>
 <ol style="list-style-type: decimal">
 <li>Individually (make sure you have at least one person per station but you can have more than one if needed). Start by downloading the daily rainfall data for your site from the <a href="http://www.bom.gov.au/climate/data/">Bureau of Meteorology</a> web site. Use the site ID to get the data as below. Download and extract the zipped file to get a CSV file that can be opened in Excel.</li>
 </ol>
@@ -156,7 +145,11 @@
 <li><p>First, let’s plot the time series of DAILY rainfall. Clean up the plot as required and submit on your answer sheet. Describe the main features of this data set. What is the most appropriate type of graph for rainfall data?</p></li>
 <li><p>Calculate the annual SUM of rainfall. We want to ensure that there are only whole years to calculate the sums or else they will be in error. Delete the rows of data for the last partial year (2019) and any partial years at the start. Select the required data across multiple columns (year C to rainfall amount F). Then insert PIVOT table (Create a new tab). Select Year and Rainfall amount as the FIELDS. Drag the Year FIELD into the ROWS box. Left click on the “Sum of Year” in the VALUES box and remove it. Plot the annual sums as a timeseries. Clean up the plot as required and submit on your answer sheet. What are the main features of this annual data set? What variability can you see?</p></li>
 <li><p>Use the Data Analysis add-in to calculate descriptive statistics (mean annual rainfall, max annual rainfall, min annual rainfall, Standard deviation of annual rainfall, Skewness) for the whole data (you can install by going to <em>Tools-&gt;Add-ins-&gt;Analysis ToolPack</em>).
-Copy the results <a href="https://docs.google.com/spreadsheets/d/10mHrNWEHoqWif96e7SwvowfQ7sMg_qMxFtw6POr7sG4/edit?usp=sharing">here</a> and complete Table <a href="exercise-1b-sourcing-rainfall-and-flow-data.html#tab:table4">4</a> for your site (and others when they are done). Describe the values you got and what they mean. How “useful” are these statistics for your understanding of the system? What if any assumptions are there about these statistics?</p></li>
+Copy the results <a href="https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing">here</a> and complete Table <a href="exercise-1b-sourcing-rainfall-and-flow-data.html#tab:table4">4</a> for your site (and others when they are done). Describe the values you got and what they mean. How “useful” are these statistics for your understanding of the system? What if any assumptions are there about these statistics?</p></li>
+</ol>
+<!-- Old link: -->
+<!-- https://docs.google.com/spreadsheets/d/10mHrNWEHoqWif96e7SwvowfQ7sMg_qMxFtw6POr7sG4/edit?usp=sharing -->
+<ol start="5" style="list-style-type: decimal">
 <li><p>Next, let’s look at the distribution of the rainfall data. Do this by plotting a histogram of the rainfall data (you will need to decide on a reasonable bin size) and plotting the cumulative probability distribution (you can ask Excel to generate this automatically when it makes the histogram, or generate it manually – each data point represents a probability of 1/#data points). What do these plots tell you about the rainfall data? Are the data normally distributed?</p></li>
 <li><p>Plot the seasonal (monthly average) rainfall. Use a PIVOT table again. Insert PIVOT table (select OK to create a new tab). Select <strong>Month</strong> and <strong>Rainfall</strong> amount as the FIELDS; drag the Month FIELD into the ROWS box. Left click on the “Sum of Month” in the VALUES box and remove it. Plot the annual sums as a timeseries. Clean up the plot as required and submit on your answer sheet.
 How would you describe the seasonal pattern of rainfall (hint look at the climate type)? What factors may influence it (hint, think about earth orbit)?</p></li>
@@ -165,7 +158,7 @@ How would you describe the seasonal pattern of rainfall (hint look at the climat
 <div style="border: 1px solid #ddd; padding: 5px; overflow-y: scroll; height:515px; overflow-x: scroll; width:100%; ">
 <table class="table table-hover" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:table4">Table 4: </span>Bureau of Meteorology Automatic Weather Station data and station ID across WA and SWWA. Complete the table for each site.
+<span id="tab:table4">Table 4: </span>Bureau of Meteorology Automatic Weather Station data and station ID across WA and SWWA. Complete the table for each site <a href="https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing">here</a>.
 </caption>
 <thead>
 <tr>

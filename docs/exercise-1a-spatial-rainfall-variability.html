@@ -78,18 +78,8 @@
 <li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html"><i class="fa fa-check"></i>Exercise 1A – Spatial rainfall variability</a>
 <ul>
 <li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_1"><i class="fa fa-check"></i>Introduction</a></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_2"><i class="fa fa-check"></i>Methods</a>
-<ul>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_3"><i class="fa fa-check"></i>Arithmetic Average</a></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_4"><i class="fa fa-check"></i>Theisson Polygon Method</a></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_5"><i class="fa fa-check"></i>Isohyetal Method</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_6"><i class="fa fa-check"></i>Activity</a>
-<ul>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_7"><i class="fa fa-check"></i>Thiessen Polygons: Sketch the polygons</a></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_8"><i class="fa fa-check"></i>Contoured Rainfall (Isohyets)</a></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_9"><i class="fa fa-check"></i>Calculate Catchment Discharge</a></li>
-</ul></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_2"><i class="fa fa-check"></i>Methods</a></li>
+<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_6"><i class="fa fa-check"></i>Activity</a></li>
 <li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_10"><i class="fa fa-check"></i>Conclusions</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="exercise-1b-sourcing-rainfall-and-flow-data.html"><a href="exercise-1b-sourcing-rainfall-and-flow-data.html"><i class="fa fa-check"></i>Exercise 1B - Sourcing rainfall and flow data</a>
@@ -107,7 +97,6 @@
 <li class="chapter" data-level="" data-path="assessment-2a-rainfall-and-streamflow-data-analysis.html"><a href="assessment-2a-rainfall-and-streamflow-data-analysis.html#A2A_4"><i class="fa fa-check"></i>Interannual variability in rainfall</a></li>
 <li class="chapter" data-level="" data-path="assessment-2a-rainfall-and-streamflow-data-analysis.html"><a href="assessment-2a-rainfall-and-streamflow-data-analysis.html#A2A_5"><i class="fa fa-check"></i>Relationship between rainfall and runoff</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -179,13 +168,12 @@ Figure 1: A depth of rain (<span class="math inline">\(P\)</span>, mm/day) is fa
 </p>
 </div>
 </center>
-<p><strong>Download the answer sheet for this exercise by clicking the download button in the tool bar</strong> <i class="fa fa-download" aria-hidden="true"></i>.</p>
-<div id="E1A_3" class="section level3 unnumbered">
-<h3>Arithmetic Average</h3>
+<div id="E1A_3" class="section level4 unnumbered">
+<h4>Arithmetic Average</h4>
 <p>The most basic measure of average rainfall depth is the arthimetic average, whereby you sum the observed rainfall at each rain gauge inside the catchment and divide by the number of gauges.</p>
 </div>
-<div id="E1A_4" class="section level3 unnumbered">
-<h3>Theisson Polygon Method</h3>
+<div id="E1A_4" class="section level4 unnumbered">
+<h4>Theisson Polygon Method</h4>
 <p>The average depth of rainfall (ADR) over the entire catchment can be calculated using:</p>
 <center>
 <span class="math display" id="eq:exercise1-1">\[\begin{equation}
@@ -195,8 +183,8 @@ Figure 1: A depth of rain (<span class="math inline">\(P\)</span>, mm/day) is fa
 </center>
 <p>Where <span class="math inline">\(A_{i}\)</span> is the polygon area (km<sup>2</sup>), <span class="math inline">\(P_{i}\)</span> is the rainfall (mm) corresponding to the <span class="math inline">\(i\)</span> polygon, and <span class="math inline">\(\sum{A_{i}}\)</span> is the catchment area (km<sup>2</sup>).</p>
 </div>
-<div id="E1A_5" class="section level3 unnumbered">
-<h3>Isohyetal Method</h3>
+<div id="E1A_5" class="section level4 unnumbered">
+<h4>Isohyetal Method</h4>
 <p>The average depth of rainfall over the entire catchment can be calculated using:</p>
 <center>
 <span class="math display" id="eq:exercise1-2">\[\begin{equation}
@@ -209,8 +197,8 @@ Figure 1: A depth of rain (<span class="math inline">\(P\)</span>, mm/day) is fa
 </div>
 <div id="E1A_6" class="section level2 unnumbered">
 <h2>Activity</h2>
+<p><strong>Download the answer sheet for this exercise by clicking the download button in the tool bar</strong> <i class="fa fa-download" aria-hidden="true"></i>.</p>
 <p>You are given the measured data for each rainfall gauge in Table <a href="exercise-1a-spatial-rainfall-variability.html#tab:table2">1</a>. Calculate the arithmetic mean and write this in your summary table (Table <a href="exercise-1a-spatial-rainfall-variability.html#tab:table1">3</a>). Next work out the ADR based on the other two methods.</p>
-<p>Once we have computed ADR, we can now estimate the likely amount of runoff. Remember the relationship between rainfall and discharge as outlined in the lecture. You’ll need to choose an appropriate runoff coefficient, and calculate the stream discharge at the bottom of the catchment - rember to watch out for unit conversions!</p>
 <center>
 <div class="figure"><span id="fig:image1"></span>
 <img src="images/exercise1A/image2.jpg" alt="Catchment map, station locations, and isohyetal map for a storm event. Isoheytal map corresponds to rainfall total over a 24hr period." width="80%" />
@@ -219,8 +207,8 @@ Figure 2: Catchment map, station locations, and isohyetal map for a storm event.
 </p>
 </div>
 </center>
-<div id="E1A_7" class="section level3 unnumbered">
-<h3>Thiessen Polygons: Sketch the polygons</h3>
+<div id="E1A_7" class="section level4 unnumbered">
+<h4>Thiessen Polygons: Sketch the polygons</h4>
 To construct the Thiessen polygons, first draw dashed straight lines between the gauges. Next, find the mid-points of each of these lines and draw another solid line, perpendicular to the dashed line. These solid lines drawn perpendicular to the dashed lines will meet to form irregular polygons
 <center>
 <video width="85%" height="85%" controls>
@@ -435,8 +423,8 @@ ADR =
 </table>
 </div>
 </div>
-<div id="E1A_8" class="section level3 unnumbered">
-<h3>Contoured Rainfall (Isohyets)</h3>
+<div id="E1A_8" class="section level4 unnumbered">
+<h4>Contoured Rainfall (Isohyets)</h4>
 <center>
 <div class="figure"><span id="fig:image3"></span>
 <img src="images/exercise1A/image4.png" alt="Isohyets on catchment with inter-isohyetal areas." width="71%" />
@@ -581,8 +569,9 @@ ADR =
 </table>
 </div>
 </div>
-<div id="E1A_9" class="section level3 unnumbered">
-<h3>Calculate Catchment Discharge</h3>
+<div id="E1A_9" class="section level4 unnumbered">
+<h4>Calculate Catchment Discharge</h4>
+<p>Once we have computed ADR, we can now estimate the likely amount of runoff. Remember the relationship between rainfall and discharge as outlined in the lecture. You’ll need to choose an appropriate runoff coefficient, and calculate the stream discharge at the bottom of the catchment - remember to watch out for unit conversions!</p>
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
 <table class="table table-hover" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">

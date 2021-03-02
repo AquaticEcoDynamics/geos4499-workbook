@@ -11,9 +11,10 @@ rmd_files: ["index.Rmd",
             #"exercise_6.Rmd",
             #"exercise_7.Rmd",
             #"exercise_8.Rmd",
-            "assessment_2A.Rmd",
+            "assessment_2A.Rmd"
             #"assessment_2B.Rmd",
             #"assessment_3A.Rmd",B
             #"assessment_3B.Rmd",
-            "references.Rmd"]
+            #"references.Rmd"
+            ]
 new_session: no
