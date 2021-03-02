@@ -152,3 +152,24 @@ body {font-family: Arial;}
   border: 1px solid #ccc;
   border-top: none;
 }
+
+.book .book-summary ul.summary li span {
+  cursor: not-allowed;
+  color: #364149;
+  opacity: 1;
+  filter: alpha(opacity=30);
+}
+
+.book .book-header .btn {
+  display: block;
+  height: 50px;
+  padding: 0 15px;
+  border-bottom: none;
+  color: #364149;
+  text-transform: uppercase;
+  line-height: 50px;
+  -webkit-box-shadow: none!important;
+  box-shadow: none!important;
+  position: relative;
+  font-size: 14px;
+  }
