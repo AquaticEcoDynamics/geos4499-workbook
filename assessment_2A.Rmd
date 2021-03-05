@@ -1,6 +1,10 @@
 # (PART) Assessments {.unnumbered}
 
-# Assessment 2A - Rainfall and streamflow data analysis {.unnumbered}
+# Assessment 2 Data Analysis  {.unnumbered}
+
+This assessment consists of two parts. Part A focusses on rainfall and streamflow data, and you will complete this during week 1 and 2 of the unit. Part B extends our focus to the subsurface, linking surface water and groundwater hydrology.
+
+# Part A - Rainfall and streamflow data analysis {.unnumbered}
 
 In this assessment we will explore the nature of rainfall and runoff data. Rainfall is influenced by a number of processes that operate on different space and time scales (see Figure \@ref(fig:image6)). We first examine these during this exercise and then we explore how different modes of climate variability affect patterns in annual rainfall. Lastly, we look to see if we can find a relationship between rainfall and streamflow (assumed equal to runoff). To achieve this, we use a large number of weather stations across WA to quantify the variability of rainfall in space and time.
 
