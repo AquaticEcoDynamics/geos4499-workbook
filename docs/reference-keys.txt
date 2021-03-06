@@ -8,6 +8,17 @@ fig:image3
 tab:table3
 tab:table1
 tab:table4
+eq:exercise2-1
+fig:image03-1
+fig:image03-2
+eq:exercise2-2
+fig:image03-5
+fig:image03-6
+eq:exercise2-3
+fig:image03-7
+tab:table03-1
+eq:exercise2-4
+eq:exercise2-5
 fig:image6
 tab:table5
 eq:exercise-3

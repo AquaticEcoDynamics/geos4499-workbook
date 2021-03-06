@@ -4,7 +4,7 @@ delete_merged_file: true
 rmd_files: ["index.Rmd",
             "exercise_1A.Rmd",
             "exercise_1B.Rmd",
-            #"exercise_2.Rmd",
+            "exercise_2.Rmd",
             #"exercise_3A.Rmd",
             #"exercise_3B.Rmd",
             #"exercise_4.Rmd",
