@@ -99,7 +99,9 @@ knitr::include_graphics("images/surface_hydrology/picture2.png")
 
 **Activity:** Watch the videos below showing the principles of how to
 measure the velocity of water. Then calculate the streamflow at the two
-sites in Table.
+sites in Table. The "section" column tells you nominally where you are 
+across the x-section, the "width" column is the actual width of flow you 
+should use in your calculations.
 
 -   Does the wider stream section have more streamflow? Is this what you
     would have expected?
