@@ -178,10 +178,10 @@ flow velocity is measured using a current meter (i.e. propeller,
 electromagnetic, ultrasonic, and Doppler).</p>
 <p>The discharge is computed using:</p>
 <center>
-<p><span class="math display" id="eq:exercise2-1">\[\begin{equation}
+<span class="math display" id="eq:exercise2-1">\[\begin{equation}
 Q = \sum^{n}_{i=0} (V_{i} * \text{Area}_{i})
 \tag{3}
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 </center>
 <p>where <span class="math inline">\(n\)</span> is the number of vertical for measuring velocities, <span class="math inline">\(V_{i}\)</span> is
 the mean velocity value for vertical <span class="math inline">\(i\)</span> (m/s) and <span class="math inline">\(\text{Area}_i\)</span> is
@@ -240,8 +240,7 @@ downstream? What might have caused this change in flow?</p></li>
 <p><br></p>
 <center>
 <table style="width:94%;">
-<caption>Measured data for velocity-area method of calculating
-streamfllow</caption>
+<caption>Measured data for velocity-area method of calculating streamfllow</caption>
 <colgroup>
 <col width="16%" />
 <col width="11%" />
@@ -255,7 +254,7 @@ streamfllow</caption>
 <td><strong>Site</strong></td>
 <td><strong>
 Total
-Width
+width
 (m)</strong></td>
 <td><strong>Section
 (m)</strong></td>
@@ -264,7 +263,7 @@ Width
 <td><strong>Width
 (m)</strong></td>
 <td><strong>Velocity
-(m/s)</strong></td>
+(m s<sup>-1</sup>)</strong></td>
 </tr>
 <tr class="even">
 <td>Site 01</td>
@@ -369,46 +368,41 @@ Width
 </div>
 <div id="E2_4" class="section level3 unnumbered">
 <h3>Flow Rate: Manning’s Formula</h3>
-<p>Manning’s formula for estimating runoff (in m<sup>3</sup>s<sup>-1</sup>) from basic
+<p>Manning’s formula for estimating streamflow (in m<sup>3</sup>s<sup>-1</sup>) from basic
 channel geometry, slope and roughness is:</p>
 <center>
-<p><span class="math display" id="eq:exercise2-2">\[\begin{equation}
+<span class="math display" id="eq:exercise2-2">\[\begin{equation}
 Q = \frac{1}{n}(A\space{}R^{\frac{2}{3}}\space{}S^{\frac{1}{2}})
 \tag{4}
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 </center>
 <p>Where: <span class="math inline">\(A\)</span> is the channel cross-sectional area (m<sup>2</sup>) ; <span class="math inline">\(R\)</span> is the
 hydraulic radius given by <span class="math inline">\(\frac{A}{P}\)</span> ; <span class="math inline">\(P\)</span> is the wetted perimeter
 (i.e. bed plus banks; m); <span class="math inline">\(S\)</span> is the channel slope (m/m); <span class="math inline">\(n\)</span> is
 Manning’s ‘n’ (which is an empirical roughness coefficient).</p>
-<p>In the field:</p>
-<ul>
-<li>The bottom slope (<span class="math inline">\(S\)</span>) will be estimated by using a differential GPS
-(DGPS). Conduct this by averaging the slope (m/m) for two reaches,
-one upstream and one downstream of the measurement point</li>
-<li>Estimate the ‘wetted perimeter’ (<span class="math inline">\(P\)</span>) of the channel and cross
-sectional area (<span class="math inline">\(A\)</span>)</li>
-<li>The roughness coefficient (<span class="math inline">\(n\)</span>) should be assumed from the
-literature, based on your observations and using a photograph of the
-channel. Then use the table below:</li>
-</ul>
+<p>In practice, when you are in the field the bottom slope (<span class="math inline">\(S\)</span>) will be
+measured by using a differential GPS (DGPS). You also need to measure
+the ‘wetted perimeter’ (<span class="math inline">\(P\)</span>) of the channel and the cross sectional area
+(<span class="math inline">\(A\)</span>). The roughness coefficient (<span class="math inline">\(n\)</span>) should be assumed from the
+literature, based on your observations or the stream and a table like
+the one below:</p>
 <center>
 <p><img src="images/surface_hydrology/picture3.png" width="70%" /></p>
 </center>
 <p><br></p>
-<p><strong>Activity:</strong> Look at the demonstration models in the lab of the two
-example river/floodplain cross-sections. Assuming these are a scale
-model of a real-world river channel, compute the discharge.</p>
+<p><strong>Activity:</strong> For this activity we will use some of the same measured
+data that we used for the velocity-area method. Those measurements were
+taken on Carey Brook, a tributary to the Donnelly River in south-west
+Western Australia (near Pemberton). Sketch the geometry of one of these
+cross-sections and calculate the total area and wetted perimeter. Use
+the slope over the 5.2 km of Carey Bk between the main highway (25 m
+AHD) and where it flows into the Donnelly River (7 m AHD). Now you just
+need a roughness parameter, Manning’s <span class="math inline">\(n\)</span>, and you can solve Equation
+<a href="exercise-2-streamflow-analysis.html#eq:exercise2-2">(4)</a>.</p>
 <ul>
-<li>Sketch and use the scale to get the channel dimensions</li>
-<li>Estimate the “wetted perimeter”</li>
-<li>Compute a slope parameter, <span class="math inline">\(S\)</span>, assume for every 1km of stream
-length, the stream bed drops by 1m</li>
-<li>Estimate the cross-sectional area; the area “normal” (perpendicular)
-to the flow velocity</li>
-<li>Estimate a roughness parameter, Manning’s <span class="math inline">\(n\)</span>, and solve Equation
-<a href="exercise-2-streamflow-analysis.html#eq:exercise2-2">(4)</a></li>
-<li>Repeat the above, assuming the water level was at “bankfull” height</li>
+<li><p>How does this streamflow estimate compare to the answer you got
+using the velocity-area method above?</p></li>
+<li><p>How sensitive is your answer to the value of Manning’s <span class="math inline">\(n\)</span>?</p></li>
 </ul>
 </div>
 </div>
@@ -497,10 +491,10 @@ values.</p>
 for the largest daily discharge value.</p>
 <p><strong>Step 3:</strong> Calculate exceedence probability (<span class="math inline">\(P\)</span>) as follows:</p>
 <center>
-<p><span class="math display" id="eq:exercise2-3">\[\begin{equation}
+<span class="math display" id="eq:exercise2-3">\[\begin{equation}
 P = 100 * [\frac{M}{n+1}]
 \tag{5}
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 </center>
 <p>Where, <span class="math inline">\(P\)</span> = the probability that a given flow will be equaled or
 exceeded (% of time), <span class="math inline">\(M\)</span> = the ranked position on the listing
@@ -849,24 +843,24 @@ Recurrence Interval, <span class="math inline">\(R\)</span>
 recurrence interval for each peak discharge. The recurrence interval,
 <span class="math inline">\(R\)</span>, is given by the Weibull Equation:</p>
 <center>
-<p><span class="math display" id="eq:exercise2-4">\[\begin{equation}
+<span class="math display" id="eq:exercise2-4">\[\begin{equation}
 R = \frac{n+1}{m}
 \tag{6}
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 </center>
 <p>where <span class="math inline">\(n\)</span> is the number of years over which the data was collected (20
 years in this case), and <span class="math inline">\(m\)</span> is the rank of each peak discharge. Use
 this equation to calculate the recurrence interval for each peak
 discharge.</p>
-<p>Next, use the graph below (or Excel) to plot a graph of discharge (on the y-axis)
-versus recurrence interval (on the x-axis). Note that the x-axis must be a
-logarithmic scale. If drawig by hand you should try to estimate as best you can
-where the data point will fall between the lines on the graph. Once you
-have plotted the points use a ruler to draw the best fit straight line
-through the data points (lay a ruler on the graph and try to draw a line
-that most closely approximates all of the data points). Do not draw
-lines that connect individual data points. If you are plotting in Excel you
-will fit a linear trendline.</p>
+<p>Next, use the graph below (or Excel) to plot a graph of discharge (on
+the y-axis) versus recurrence interval (on the x-axis). Note that the
+x-axis must be a logarithmic scale. If drawig by hand you should try to
+estimate as best you can where the data point will fall between the
+lines on the graph. Once you have plotted the points use a ruler to draw
+the best fit straight line through the data points (lay a ruler on the
+graph and try to draw a line that most closely approximates all of the
+data points). Do not draw lines that connect individual data points. If
+you are plotting in Excel you will fit a linear trendline.</p>
 <center>
 <p><img src="images/surface_hydrology/picture4.png" width="70%" /></p>
 </center>
@@ -878,10 +872,10 @@ year flood.</p>
 given discharge will occur in a given year. It is calculated as the
 inverse of the recurrence interval, <span class="math inline">\(R\)</span>:</p>
 <center>
-<p><span class="math display" id="eq:exercise2-5">\[\begin{equation}
+<span class="math display" id="eq:exercise2-5">\[\begin{equation}
 P_{e} = \frac{1}{R}
 \tag{7}
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 </center>
 <p>Thus, the probability that a flood with a 10 year recurrence interval
 will occur in any year is 1/10 = 0.1 or 10%. What are the probabilities
