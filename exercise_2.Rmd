@@ -139,21 +139,36 @@ column.
 
 <center>
 
-|         |                 |             |              |           |           |                |
-|---------|-----------------|-------------|--------------|-----------|-----------|----------------|
-| Site    | Total Width (m) | Section (m) | Distance (m) | Depth (m) | Width (m) | Velocity (m/s) |
-| Site 01 | 3.8             | 0-0.5       | 0.5          | 0.29      | 0.75      | 0.044          |
-|         |                 | 0.5-1       | 1            | 0.34      | 0.5       | 0.215          |
-|         |                 | 1-1.5       | 1.5          | 0.26      | 0.5       | 0.227          |
-|         |                 | 1.5-2       | 2            | 0.3       | 0.5       | 0.247          |
-|         |                 | 2-2.5       | 2.5          | 0.25      | 0.5       | 0.232          |
-|         |                 | 2.5-3       | 3            | 0.2       | 0.5       | 0.091          |
-|         |                 | 3-3.8       | 3.5          | 0.11      | 0.55      | 0.06           |
-| Site 02 | 3               | 0-0.5       | 0.5          | 0.33      | 0.75      | 0.445          |
-|         |                 | 0.5-1       | 1            | 0.33      | 0.5       | 0.399          |
-|         |                 | 1-1.5       | 1.5          | 0.35      | 0.5       | 0.277          |
-|         |                 | 1.5-2       | 2            | 0.29      | 0.5       | 0.388          |
-|         |                 | 2-3         | 2.5          | 0.23      | 0.75      | 0.424          |
++------+------------+---------+----------+-------+-------+-----------+
+| Site | Total      | Section | Distance | Depth | Width | Velocity  |
+|      | Width (m)  | (m)     | (m)      | (m)   | (m)   | (m/s)     |
++------+------------+---------+----------+-------+-------+-----------+
+| Site | 3.8        | 0-0.5   | 0.5      | 0.29  | 0.75  | 0.044     |
+| 01   |            |         |          |       |       |           |
++------+------------+---------+----------+-------+-------+-----------+
+|      |            | 0.5-1   | 1        | 0.34  | 0.5   | 0.215     |
++------+------------+---------+----------+-------+-------+-----------+
+|      |            | 1-1.5   | 1.5      | 0.26  | 0.5   | 0.227     |
++------+------------+---------+----------+-------+-------+-----------+
+|      |            | 1.5-2   | 2        | 0.3   | 0.5   | 0.247     |
++------+------------+---------+----------+-------+-------+-----------+
+|      |            | 2-2.5   | 2.5      | 0.25  | 0.5   | 0.232     |
++------+------------+---------+----------+-------+-------+-----------+
+|      |            | 2.5-3   | 3        | 0.2   | 0.5   | 0.091     |
++------+------------+---------+----------+-------+-------+-----------+
+|      |            | 3-3.8   | 3.5      | 0.11  | 0.55  | 0.06      |
++------+------------+---------+----------+-------+-------+-----------+
+| Site | 3          | 0-0.5   | 0.5      | 0.33  | 0.75  | 0.445     |
+| 02   |            |         |          |       |       |           |
++------+------------+---------+----------+-------+-------+-----------+
+|      |            | 0.5-1   | 1        | 0.33  | 0.5   | 0.399     |
++------+------------+---------+----------+-------+-------+-----------+
+|      |            | 1-1.5   | 1.5      | 0.35  | 0.5   | 0.277     |
++------+------------+---------+----------+-------+-------+-----------+
+|      |            | 1.5-2   | 2        | 0.29  | 0.5   | 0.388     |
++------+------------+---------+----------+-------+-------+-----------+
+|      |            | 2-3     | 2.5      | 0.23  | 0.75  | 0.424     |
++------+------------+---------+----------+-------+-------+-----------+
 
 : Measured data for velocity-area method of calculating streamfllow
 
@@ -204,12 +219,13 @@ knitr::include_graphics("images/surface_hydrology/picture3.png")
 **Activity:** For this activity we will use some of the same measured
 data that we used for the velocity-area method. Those measurements were
 taken on Carey Brook, a tributary to the Donnelly River in south-west
-Western Australia (near Pemberton). Sketch the geometry of one of these
-cross-sections and calculate the total area and wetted perimeter. Use
-the slope over the 5.2 km of Carey Bk between the main highway (25 m
-AHD) and where it flows into the Donnelly River (7 m AHD). Now you just
-need a roughness parameter, Manning's $n$, and you can solve Equation
-\@ref(eq:exercise2-2).
+Western Australia (near Pemberton). You have already calculated the
+total area (sum the individual areas calculated in the velocity-area
+method). Draw a scale diagram of your chosen cross-section to estimate
+the wetted perimeter. Use the slope over the 5.2 km of Carey Bk between
+the main highway (25 m AHD) and where it flows into the Donnelly River
+(7 m AHD). Now you just need a roughness parameter, Manning's $n$, and
+you can solve Equation \@ref(eq:exercise2-2).
 
 -   How does this streamflow estimate compare to the answer you got
     using the velocity-area method above?
