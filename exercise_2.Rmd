@@ -99,8 +99,8 @@ knitr::include_graphics("images/surface_hydrology/picture2.png")
 
 **Activity:** Watch the videos below showing the principles of how to
 measure the velocity of water. Then calculate the streamflow at the two
-sites in Table. The "section" column tells you nominally where you are 
-across the x-section, the "width" column is the actual width of flow you 
+sites in Table. The "section" column tells you nominally where you are
+across the x-section, the "width" column is the actual width of flow you
 should use in your calculations.
 
 -   Does the wider stream section have more streamflow? Is this what you
@@ -138,11 +138,11 @@ should use in your calculations.
 <center>
 
 +-----------+-------+-----------+-----------+-----------+-----------+
-| **Site**  | **    | **Section | **Depth   | **Width   |**Velocity |
-|           | Total |    (m)**  |   (m)**   |   (m)**   |(m s^-1^)**|
-|           | width |           |           |           |           |
+| **Site**  |       | **Section | **Depth   | **Width   | *         |
+|           | **    | (m)**     | (m)**     | (m)**     | *Velocity |
+|           | Total |           |           |           | (m        |
+|           | width |           |           |           | s^-1^)**  |
 |           | (m)** |           |           |           |           |
-|           |       |           |           |           |           |
 +-----------+-------+-----------+-----------+-----------+-----------+
 | Site 01   | 3.8   | 0-0.5     | 0.29      | 0.75      | 0.044     |
 +-----------+-------+-----------+-----------+-----------+-----------+
@@ -200,7 +200,10 @@ measured by using a differential GPS (DGPS). You also need to measure
 the 'wetted perimeter' ($P$) of the channel and the cross sectional area
 ($A$). The roughness coefficient ($n$) should be assumed from the
 literature, based on your observations or the stream and a table like
-the one below:
+the one below, or [here](https://pubs.usgs.gov/wsp/2339/report.pdf), or
+[here](https://www.agric.wa.gov.au/water-management/mannings-roughness-coefficient),
+or
+[here](https://www.brisbane.qld.gov.au/sites/default/files/ncd_appendixc_part3.pdf).
 
 <center>
 
