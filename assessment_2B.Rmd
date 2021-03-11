@@ -1,1 +1,259 @@
 # Assessment 2B - Groundwater and surface water interaction {-}
+
+
+# Helena River Site Visit {#E4_13 -}
+
+
+
+### Background {#E4_14 -}
+
+The degradation of freshwater systems by increasing salinity is a major challenge facing Western Australia. Salinisation of the Avon river, which enters the Upper Swan river at Walyunga National Park, arose due to poor land-management leading to secondary salinity in the inland wheatbelt catchments. Whilst secondary salinity is not an issue in the Swan Coastal Plain where our study site is, the salt loads from the Avon in addition to rising sea levels and decreasing rainfall trend have been driving changes in the seasonal movement of marine waters, with increasing penetration of the salt wedge further inland from the ocean (Huang et al. 2018).
+
+The City of Swan has identified our focus site as an area of concern due to the decline of Eucalyptus rudis. Your site assessment report will give context to the investigation and summarise your findings and observations for use by their Environmental Management team. You will use this information to develop a conceptual model of the site hydrology. 
+
+
+###Objectives
+
+This assessment requires students to understand how hydrologic monitoring of surface- and ground-water systems can help us build a conceptual understanding of how ecosystems are working, and to link this to management challenges that require a solution. The data being analysed will help us understand the drivers of decline of *E. rudis* in relation to the changing hydrology regime at the Guildford floodplains along the Helena river. This site is part of a long-term research investigation being undertaken with the WA Department of Biodiversity, Conservation and Attractions (DBCA) and UWA and your data will contribute to our database.  
+
+During this assessment you will describe the site by considering hydrologic pathways (surface and sub-surface), and present data to describe the pattern of water and salt distribution in this floodplain system.  
+
+Specifcally you will:
+
+- Identify the surface water flow regime.
+- Observe soils and their hydraulic properties.
+- Undertake salinity data collection from groundwater wells (piezometers) and surface waters, and from soils within the tree root zone.
+- Conceptualise the hydrologic processes influencing salt movement and accumulation across the site
+- Identify the distressed and dead trees and consider how hydrology may or may not be abel to explain this issue
+
+
+<center>
+```{r image04-7, echo=FALSE, fig.cap="High-resolution LIDAR image of the surface topography of the Helena River study site in Guildford. The red-circles indicate groundwater observation wells.", out.width='90%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture7.png")
+```
+</center>
+
+
+###The problem
+
+Salinisation of river systems can cause shifts in floodplain vegetation which arise because of river water interaction with the floodplain. Depending on the salinity increase and the salt tolerance of the floodplain tree species, this can cause shifts in community structure. One important species that has a natural range along the Swan river and its tributaries is the *Eucalyptus rudis*. This species has been reported to be in decline for over 15 years along the Swan river (Clay & Majer 2001), and more recently along one of the tributaries of the Swan river: the Guildford floodplains of the Helena river (Dundas 2011). It is currently unknown the exact role of water availability and salinity in the observed decline, and alternate hypothesis related to tree pathogens (e.g. Phytophthora) are also as drivers of decline are also under investigation.
+
+
+<center>
+```{r image04-6, echo=FALSE, fig.cap="", out.width='95%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture6.png")
+```
+</center>
+
+*E. rudis* plays a vital role in the riparian ecosystem. Riparian woodland species are important filters that reduce nutrient transfers from the land into the river, which is a significant issue in the Swan river and its tributaries (excessive nutrients have historically resulted in noxious algal blooms). There is therefore a need to better understand what drives decline and if projected drying conditions for the region will make the pressures worse.
+
+
+Learn about the site by reviewing prior analyses that have been undertaken and looking at a historical investigation of the site.  Make a summary of the past investigations by reading through the recent report on the site:
+
+<center>
+```{r image04-14, echo=FALSE, fig.cap="", out.width='55%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture17.png")
+```
+</center>
+
+
+### Helena River Floodplain Self-paced site inspection (optional) {#E4_15 -}
+
+#### On arrival {#E4_16 -} 
+
+Arrive at the carpark near King’s Meadow Oval, and get your bearings
+<center>
+```{r image04-8, echo=FALSE, fig.cap="", out.width='65%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture8.png")
+```
+</center>
+
+- Explore the site, considering the surface water pathways. 
+- Can you identify flow direction in the main waterways bounding the site (Swan River to the west and Helena River to the south-east).
+- Can you identify water accumulation areas within the site itself.
+- Consider the horizontal and vertical movement pathways of this water.
+- Identify *Eucalyptus rudis* trees and their health in context of the landscape.
+
+<center>
+```{r image04-9, echo=FALSE, fig.cap="",out.width='45%', out.height='25%', fig.show='hold'}
+knitr::include_graphics(c("images/surface_ground_water_interaction/picture9.png",
+                          "images/surface_ground_water_interaction/picture10.png"))
+```
+```{r image04-10, echo=FALSE, fig.cap="", out.width='45%', out.height='25%', fig.show='hold'}
+knitr::include_graphics(c(
+                          "images/surface_ground_water_interaction/picture11.png",
+                          "images/surface_ground_water_interaction/picture12.png"))
+```
+</center>
+
+
+<center>
+```{r image04-11, echo=FALSE, fig.cap="Example inundation pattern. Which way is the water flowing?", out.width='65%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture13.png")
+```
+</center>
+
+
+Navigate to the Helena River, where it flows under the Bridge. Here it would be possible to make a stream gauging measurement to determine the river flow. Refer to the Streamflow lab “Velocity-Area method”. 
+
+
+Seek out one of the existing piezometer wells (refer to map below, consult instructor for locations if you cant find them). Note the Well Identification Number. 
+
+<center>
+```{r image04-12, echo=FALSE, fig.cap="", out.width='45%', out.height='25%', fig.show='hold'}
+knitr::include_graphics(c(
+                          "images/surface_ground_water_interaction/picture14.png",
+                          "images/surface_ground_water_interaction/picture15.png"))
+```
+</center>
+
+<center>
+```{r image04-13, echo=FALSE, fig.cap="", out.width='65%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture16.png")
+```
+</center>
+
+### Vegetation changes
+
+Aerial imagery: 
+Nearmap : http://maps.au.nearmap.com (login via UWA library/onesearch). Use the time- split feature to show changes over time! 
+
+
+### Mapping EC in QGIS {#E4_25 -}
+
+Previously, many surface water samples from across the site were analysed for salinity. Let's create a map to visualise the variation in EC over the study site. We will need QGIS for this exercise, if you don't already have it installed on your computer you can download it [here](https://qgis.org/en/site/).
+
+1) Let’s start by importing our EC point data. Go to *Layer -> Add Layer -> Add Delimited Text Layer*.
+2) Under *File name* navigate to your csv of the EC data
+    - Make sure under *File Format* 'CSV' is selected
+    - Under *Geometry Definition* set the *X field* to the Easting column of you EC data and the *Y field* to the Northing column
+    - Set the *Geometry CRS* to “EPSG:32750 - WGS84/UTM zone 50S”
+    - Click *Add*
+
+<center>
+```{r image04-16, echo=FALSE, fig.cap="Importing your EC data.", out.width='100%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture19.png")
+```
+</center>
+
+```{block2, hint04-3, type='rmdnote2'}
+Make sure your data takes this form in Excel. Save it as a CSV:
+<center>
+![](images/surface_ground_water_interaction/picture22.png){width=45%}
+</center>
+```
+
+You’ll now see the point data added to your screen, however, we have no spatial context - let’s add a basemap.
+
+3) Go to the QuickMapServices (QMS) button in the toolbar and browse/search for a basemap that you think would be appropriate (e.g. search “satellite” and browse the different satellite basemap providers).
+
+4) Add one to the map.
+
+<center>
+```{r image04-17, echo=FALSE, fig.cap="The QMS buttons in the QGIS toolbar.", out.width='50%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture20.png")
+```
+</center>
+
+```{block2, hint04-2, type='rmdnote2'}
+If you do not have the QMS button in your toolbar go *Plugins -> Manage and Install Plugins* and search ‘QuickMapServices’ to install it.
+```
+
+Now we have a basemap and our points - let's change the symbology of the points to better communicate the variation in EC.
+
+5) Right click on the point data in the layer window and go *Properties -> Symbology*.
+6) Set the symbol type to *Graduated* and specifying the values to graduate by as our EC column.
+7) Now set the *Method* to *Size*, and the *Mode* to *Natural Breaks (Jenks)*, click *Classify*.
+
+<center>
+```{r image04-18, echo=FALSE, fig.cap="Changing the symbology of our point data.", out.width='100%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture21.png")
+```
+</center>
+
+Now when you click *Apply* the point size is weighted to the EC. You can further refine your symbology by changing the point colours and size - think about how best to communicate variation in EC. 
+
+8) Finally, create a map output by clicking the *New Layout* button in the toolbar. If you aren't familiar with creating maps in QGIS work with one of your classmates who is, or read through the second half of this [tutorial](https://www.polarmicrobes.org/tutorial-on-qgis-how-to-make-a-map/).
+
+<center>
+```{r image04-15, echo=FALSE, fig.cap="Example map from your QGIS output.", out.width='100%'}
+knitr::include_graphics("images/surface_ground_water_interaction/picture18.jpg")
+```
+</center>
+
+
+### Assessing groundwater levels and salinity
+Local Logger Data
+The zip file of locally collected data has time-series collected by UWA and DWER (via WIR). This includes:
+
+•	Baro: This was a UWA logger measuring atmospheric pressure, in kPa. We measure this as the water levels in the piezometers may vary due to atmospheric pressure fluctatations. For your report you do not need to present this, just bear in mind it was used to correct the piezometer water level data.
+•	Level: This includes the UWA piezometer level data (converted into mAHD) for HW1, HW2, and HW3. Bore 7 is also included which is denoted as Jeremy on the map. Column G River Corrected is the water level of Helena River where we did Task B – under the Bridge. So you can think of this as the water level at the river-end of the piezometer transect.
+•	Salinity: This has the UWA salinity measurements from inside the Piezometers (and occasional river samples). These data are in mS/cm, and you can compare our class measurements to these.
+•	MSB and PoisonLease: This includes the WIR data from “MSB” (in the main Swan River, to the west of our site) and “Poison Lease” (upstream in Helena River to the east of our site). Note that Column E has the discharge (Q) at this site, based on the above rating curve. 
+•	MSB levels: This has the same MSB data as above, but includes the daily min and mix, show the tidal amplitude of the Swan River over time.
+•	Rain: This has daily rainfall data from the nearby DPIRD South-Perth weather station.
+•	SwanRiver Vitox Salinity: This has data from the WIR website for the “Vitox” location which is just to the west of our site (on the other side of Kings Meadow Oval). This data indicates the river/estuary salinity and would be similar to the salinity of the surface water in Helena River near our site also. Note its seasonality, compared to the groundwater.
+
+However, for the samples we measured in TASK C and TASK D the data is relative to Ground Level. We must therefore correct the measurements to be consistent with AHD so it can be compared with the prior data and WIR data. To do this we need to know the ground level elevation at the measurement point, in mAHD.
+
+### Conceptualising Surface-Groundwater interaction.
+
+
+
+
+
+
+
+### Submission {#E4_23 -} 
+
+When trying to make sense of all this data from different locations and time-periods, think of some guiding questions that can help focus your analyses / plots:
+
+•	How does salinity vary across the surface water sites? How does this relate to sources of water (Helen River, Stormwater from nearby suburbs, Swan estuary, Rain)
+•	How does salinity vary in the groundwater based on distance from the river? 
+•	Do these patterns in groundwater salinity change seasonally?
+•	Which flow pathways drive the changes we see? Is water moving vertically or laterally? Consider how water levels in the piezometers vary relative to surface water. Think here Darcy’s Law and Hydraulic gradient.
+•	Are is the unsaturated zone (vadose zone) adequate for the tree roots? Ie is the water table depth deep enough to contain non-salty soil moisture for them, or must they rely on water from salty groundwater? Look here at areas in nearmap where tree loss has occurred. 
+•	What are the salinity tolerances reported for E. rudis, based on lab/field trials? And how does our data compare to sort of data (historical and our class data).
+
+
+:::: {.redbox2}
+
+
+    
+ Site Assessment report (**12 marks**):
+    - **Note: the Site Assessment report is due to be uploaded by xxxx see LMS **
+
+Introduction [1 page maximum] 
+•	-  Background and context – why are we interested in this site? 
+•	-  Map of site – where specifically are we looking at? 
+•	-  Scope of the investigation – what is this report about? 
+Assessment methodology [1 page : be concise!] 
+•	-  Desktop assessment, historical data sources – external data/info we referred to 
+•	-  Data analysis approach, as relevant – any processing or “higher” analysis we did to the data
+Results and findings [3 pages max] 
+•	-  Map of surface water salinity – refer to workbook 
+•	-  Time-series graphs of water levels, flows and salinities (or EC) 
+•	-  Conceptual model of surface and groundwater flow and salt pathways; consider all information in this, including past data and reports and nearmap imagery. Consider how summer may be different to winter! 
+Discussion and conclusions [<1 page] 
+•	-  Interpretation of the above data in light of the observed tree-decline locations 
+•	-  Suggestions for improved monitoring and further investigations; dot-points OK here. 
+
+Please refer to the marking rubric at the end of this attachment. The report will be assessed according to : 
+- Scientific content 
+- The quality of Tables, Charts and Equations 
+- The writing structure and style 
+- The reading and references used to demonstrate your broader knowledge 
+
+Please consult the unit style guide for expectations on the submission formatting. 
+
+
+::::
+
+
+### Refs
+
+Clay, R., Majer, J. (2001). Flooded Gum (Eucalyptus rudis) Decline in the Perth Metropolitan Area: A Preliminary Assessment. 
+Hipsey, M.R., Alilou, H., Bourke, S., Bunting, C., Busch, B.D., Job, M., Whitwell, C., and Zhai, S., (2020). Understanding and predicting riparian decline: Ecohydrology and hydro-climatological change in the Upper Swan estuary. The University of Western Australia, Perth, Australia. 51pp. 
+
+
+
