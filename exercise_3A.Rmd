@@ -1,47 +1,53 @@
-# Exercise 3A - Characterising soil moisture {#E3A_1 -}
+# Exercise 3A - Characterising soil moisture {#E3A_1 .unnumbered}
 
-This is a simple introductory experiment to learn how to compute the essential characteristics of soil, relevant to hydrology. *We will refer again to this data when doing subsequent activities*. 
+This is a simple introductory experiment to learn how to compute the essential characteristics of soil, relevant to hydrology. *We will refer again to this data when doing subsequent activities*.
 
 For this activity we will collect soil from the locations and make three replicates at each.
 
 <center>
+
 ```{r image05-1, echo=FALSE, fig.cap="Equipment required for collecting soil samples.", out.width = '80%'}
 knitr::include_graphics("images/exercise_3A/picture1.jpg")
 ```
+
 </center>
 
-### Computing Soil Porosity and Soil Moisture {#E3A_2 -}
+### Computing Soil Porosity and Soil Moisture {#E3A_2 .unnumbered}
 
 Referring to the above collected soils. For each we will measure the soil mass before and after drying in the oven. The mass difference after oven drying is the weight of water contained in that soil volume. Based on this water mass we can work out the gravimetric and/or volumetric water content of that soil. We can also look at the mass and volume and work out the soil bulk density and porosity. These are essential measures for assessing water holding capacity of soils.
 
-For the soils indicated, we will take samples and measure the moisture content. Taking the mass before placing in an oven gives an estimate of the initial amount of water in the soil matrix prior to the drying. 
+For the soils indicated, we will take samples and measure the moisture content. Taking the mass before placing in an oven gives an estimate of the initial amount of water in the soil matrix prior to the drying.
 
 The volumetric water content (VWC, $\theta$, theta), is calculated from the mass of wet and oven dried samples and taking into account the total sample volume:
 
 <center>
+
 \begin{equation}
 \theta=\frac{V_w}{V_T}=\frac{\left(M_{\text{sample}}-M_{\text{dry}}\right)}{V_T\ \rho_w}
 (\#eq:exercise5-1)
 \end{equation}
+
 </center>
 
-We can also calculate the bulk density of the soil, and therefore the porosity of the soil. Bulk density $\rho_b$ is the mass of dry soil per unit volume. To determine the bulk density you need to know the volume of the column ($\pi r^2 h$) where $r$ is radius and $h$ is height of soil in the sample. Remember that clayey soil contains considerable amounts of water under air dry conditions. 
-From the bulk density and particle density $\rho_p$ (2.65 g cm^-3^) one can calculate the porosity $\phi=\ \left(1-\frac{\rho_b}{\rho_p}\right)$.
+We can also calculate the bulk density of the soil, and therefore the porosity of the soil. Bulk density $\rho_b$ is the mass of dry soil per unit volume. To determine the bulk density you need to know the volume of the column ($\pi r^2 h$) where $r$ is radius and $h$ is height of soil in the sample. Remember that clayey soil contains considerable amounts of water under air dry conditions. From the bulk density and particle density $\rho_p$ (2.65 g cm^-3^) one can calculate the porosity $\phi=\ \left(1-\frac{\rho_b}{\rho_p}\right)$.
 
 Repeat the above for each soil for three replicates. Enter data into the Table \@ref(tab:table3A-1), and the online [Google sheet](https://docs.google.com/spreadsheets/d/1GgQBiI7hPVGUm3E9uXW8aHima0BIPgoXSg63Havb60o/edit#gid=0).
 
-You can estimate the water storage potential, $S_{\text{max}}$ of a region by multiplying the soil volume by the porosity:	
+You can estimate the water storage potential, $S_{\text{max}}$ of a region by multiplying the soil volume by the porosity:
 
 <center>
+
 \begin{equation}
 S_{max}=\ \phi{\ V}_{soil}
 (\#eq:exercise5-2)
 \end{equation}
+
 </center>
 
 Using a large sample of soil, estimate the infiltration of the soil using the Decagon infiltrometer, enter the data into the sheet supplied.
 
 <center>
+
 ```{r table3A-1, echo=FALSE, message=FALSE, warning=FALSE}
 library(knitr)
 library(kableExtra)
@@ -60,9 +66,12 @@ kable(table1,"html", escape = F, align = rep('l'), caption = "Summary of soil pr
   scroll_box(width = "100%", #height = "515px",
              fixed_thead = FALSE) 
 ```
+
 </center>
 
-```{block2, hint05-1, type='bluebox'}
+<!-- This ```{block2, hint05-1, type='bluebox'} chunk below creates a blue info box when rendered. Edit the text as usual inside it (note: text won't appear rendered in the visual editor mode) -->
+
+```{block2, hint3A-1, type='bluebox'}
 **Total Moisture Content:** measured by oven drying wet samples at 103-105˚C for 1-2hrs.
 
 **Air Dried Moisture Content:** measured by evaporation and loss of mass by air drying (e.g. at ~40˚C)
