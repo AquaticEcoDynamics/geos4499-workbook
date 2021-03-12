@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Assessment 2 Data Analysis | GEOS4499 Workbook</title>
-  <meta name="description" content="Assessment 2 Data Analysis | GEOS4499 Workbook" />
+  <title>Exercise 3A - Characterising soil moisture | GEOS4499 Workbook</title>
+  <meta name="description" content="Exercise 3A - Characterising soil moisture | GEOS4499 Workbook" />
   <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Assessment 2 Data Analysis | GEOS4499 Workbook" />
+  <meta property="og:title" content="Exercise 3A - Characterising soil moisture | GEOS4499 Workbook" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Assessment 2 Data Analysis | GEOS4499 Workbook" />
+  <meta name="twitter:title" content="Exercise 3A - Characterising soil moisture | GEOS4499 Workbook" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="E3A-1.html"/>
-<link rel="next" href="part-a-rainfall-and-streamflow-data-analysis.html"/>
+<link rel="prev" href="exercise-2-streamflow-analysis.html"/>
+<link rel="next" href="assessment-2-data-analysis.html"/>
 <script src="libs/header-attrs-2.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -142,17 +142,216 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="assessment-2-data-analysis" class="section level1 unnumbered">
-<h1>Assessment 2 Data Analysis</h1>
-<p>This assessment consists of two parts. Part A focusses on rainfall and streamflow data, and you will complete this during week 1 and 2 of the unit. Part B extends our focus to the subsurface, linking surface water and groundwater hydrology.</p>
+<div id="E3A_1" class="section level1 unnumbered">
+<h1>Exercise 3A - Characterising soil moisture</h1>
+<p>This is a simple introductory experiment to learn how to compute the essential characteristics of soil, relevant to hydrology. <em>We will refer again to this data when doing subsequent activities</em>.</p>
+<p>For this activity we will collect soil from the locations and make three replicates at each.</p>
+<center>
+<div class="figure"><span id="fig:image05-1"></span>
+<img src="images/exercise_3A/picture1.jpg" alt="Equipment required for collecting soil samples." width="80%" />
+<p class="caption">
+Figure 10: Equipment required for collecting soil samples.
+</p>
 </div>
+</center>
+<div id="E3A_2" class="section level3 unnumbered">
+<h3>Computing Soil Porosity and Soil Moisture</h3>
+<p>Referring to the above collected soils. For each we will measure the soil mass before and after drying in the oven. The mass difference after oven drying is the weight of water contained in that soil volume. Based on this water mass we can work out the gravimetric and/or volumetric water content of that soil. We can also look at the mass and volume and work out the soil bulk density and porosity. These are essential measures for assessing water holding capacity of soils.</p>
+<p>For the soils indicated, we will take samples and measure the moisture content. Taking the mass before placing in an oven gives an estimate of the initial amount of water in the soil matrix prior to the drying.</p>
+<p>The volumetric water content (VWC, <span class="math inline">\(\theta\)</span>, theta), is calculated from the mass of wet and oven dried samples and taking into account the total sample volume:</p>
+<center>
+<span class="math display" id="eq:exercise5-1">\[\begin{equation}
+\theta=\frac{V_w}{V_T}=\frac{\left(M_{\text{sample}}-M_{\text{dry}}\right)}{V_T\ \rho_w}
+\tag{8}
+\end{equation}\]</span>
+</center>
+<p>We can also calculate the bulk density of the soil, and therefore the porosity of the soil. Bulk density <span class="math inline">\(\rho_b\)</span> is the mass of dry soil per unit volume. To determine the bulk density you need to know the volume of the column (<span class="math inline">\(\pi r^2 h\)</span>) where <span class="math inline">\(r\)</span> is radius and <span class="math inline">\(h\)</span> is height of soil in the sample. Remember that clayey soil contains considerable amounts of water under air dry conditions.
+From the bulk density and particle density <span class="math inline">\(\rho_p\)</span> (2.65 g cm<sup>-3</sup>) one can calculate the porosity <span class="math inline">\(\phi=\ \left(1-\frac{\rho_b}{\rho_p}\right)\)</span>.</p>
+<p>Repeat the above for each soil for three replicates. Enter data into the Table <a href="E3A-1.html#tab:table3A-1">6</a>, and the online <a href="https://docs.google.com/spreadsheets/d/1GgQBiI7hPVGUm3E9uXW8aHima0BIPgoXSg63Havb60o/edit#gid=0">Google sheet</a>.</p>
+<p>You can estimate the water storage potential, <span class="math inline">\(S_{\text{max}}\)</span> of a region by multiplying the soil volume by the porosity:</p>
+<center>
+<span class="math display" id="eq:exercise5-2">\[\begin{equation}
+S_{max}=\ \phi{\ V}_{soil}
+\tag{9}
+\end{equation}\]</span>
+</center>
+<p>Using a large sample of soil, estimate the infiltration of the soil using the Decagon infiltrometer, enter the data into the sheet supplied.</p>
+<center>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
+<table class="table table-hover" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:table3A-1">Table 6: </span>Summary of soil properties. Click <a href="https://docs.google.com/spreadsheets/d/1GgQBiI7hPVGUm3E9uXW8aHima0BIPgoXSg63Havb60o/edit#gid=0">here</a> for the Google Sheets version.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Soil Sample ID (inc. replicates)
+</th>
+<th style="text-align:left;">
+Location (UTM, m)
+</th>
+<th style="text-align:left;">
+Fresh Weight (g)
+</th>
+<th style="text-align:left;">
+Dry Weight (g)
+</th>
+<th style="text-align:left;">
+Soil sample volume (V cm<sup>2</sup>)
+</th>
+<th style="text-align:left;">
+Bulk density (<span class="math inline">\(\rho_p\)</span>)
+</th>
+<th style="text-align:left;">
+Porosity (<span class="math inline">\(\varphi\)</span>)
+</th>
+<th style="text-align:left;">
+Volumetric water content (<span class="math inline">\(\theta\)</span>)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+ID:
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+ID:
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+ID:
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+ID:
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+ID:
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+ID:
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+<td style="text-align:left;background-color: white !important;font-size: largepx;">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</center>
+
+<div class="bluebox">
+<p><strong>Total Moisture Content:</strong> measured by oven drying wet samples at 103-105˚C for 1-2hrs.</p>
+<p><strong>Air Dried Moisture Content:</strong> measured by evaporation and loss of mass by air drying (e.g. at ~40˚C)</p>
+<p><strong>Saturated Water Content:</strong> Where all pore space in the soil is occupied by water and no further absorption of rainfall is possible. This is waterlogged soil.</p>
+<p><strong>Field capacity:</strong> moisture content remaining in soil subjected to -0.033MPa (0.3Bar) pressure
+(i.e. slight vacuum). Capillary action, osmotic pressure and gravity are balanced at this point. Excess water has moved to lower layers as groundwater recharge.</p>
+<p><strong>Permanent Wilting Point:</strong> moisture content remaining in soil subjected to -1.50MPa (15 Bar) pressure (i.e. moderate vacuum). Plant roots can’t extract any more water (i.e. apply a suction stronger than -1.5 MPa) from this soil and begin to die.</p>
+<strong>Available Water Content</strong> = Field Capacity – Permanent Wilting Point. This is the amount moisture available for plants to extract.
+</div>
+
+</div>
+</div>
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="E3A-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="part-a-rainfall-and-streamflow-data-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="exercise-2-streamflow-analysis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="assessment-2-data-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
