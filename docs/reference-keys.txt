@@ -19,11 +19,10 @@ fig:image03-7
 tab:table03-1
 eq:exercise2-4
 eq:exercise2-5
-fig:image05-1
 eq:exercise5-1
 eq:exercise5-2
 tab:table3A-1
-fig:image6
-tab:table5
-eq:exercise-3
-tab:table6
+fig:A2Aimage1
+tab:A2Atable1
+eq:A2Aequation1
+tab:A2Atable2

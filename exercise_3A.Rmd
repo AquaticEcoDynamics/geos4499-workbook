@@ -2,15 +2,23 @@
 
 This is a simple introductory experiment to learn how to compute the essential characteristics of soil, relevant to hydrology. *We will refer again to this data when doing subsequent activities*.
 
-For this activity we will collect soil from the locations and make three replicates at each.
+For this activity we will collect soil from different locations and make three replicates at each.
 
-<center>
+### Methods {-}
 
-```{r image05-1, echo=FALSE, fig.cap="Equipment required for collecting soil samples.", out.width = '80%'}
-knitr::include_graphics("images/exercise_3A/picture1.jpg")
-```
+Please seek to find three locations nearby to you where you can easily access surface soil to a depth of 10cm. Using a trowel, clear the ground surface and use a small “core” (e.g. measuring cup or inverted can) to collect your samples. You will need to know your sample size and volume. Place into a small tray or bag that is suitable for going into the oven. 
 
-</center>
+For each sample use a kitchen balance to record the sample weight. Make sure you correctly blank the balance to account for the sample container weight. 
+Then place into the oven for drying at ~105˚C. Leave in the oven for 1-2 hours and then re-weigh. Use the data to compute soil moisture and porosity of each sample following the instructions below.
+
+<!-- <center> -->
+
+<!-- ```{r image05-1, echo=FALSE, fig.cap="Equipment required for collecting soil samples.", out.width = '80%'} -->
+<!-- knitr::include_graphics("images/exercise_3A/picture1.jpg") -->
+<!-- ``` -->
+
+<!-- </center> -->
+
 
 ### Computing Soil Porosity and Soil Moisture {#E3A_2 .unnumbered}
 
