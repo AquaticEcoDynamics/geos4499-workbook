@@ -20,7 +20,9 @@ During this exercise you will measure some of the key properties for soil hydrol
 
 ### Sample Collection {.unnumbered}
 
-First, start by collecting your soil samples. Find three locations nearby to you where you can easily access surface soil to a depth of 10cm. Using a trowel, clear the ground surface and use a small "core" (e.g. measuring cup or inverted can) to collect your samples. At each site you should collect three replicate samples. You may want to wrap these in foil to keep them from falling apart and then place them in a zip-lock bag (sealed tight to stop the sample drying out) with the sample ID recorded in permanent marker ready for transport back to "the lab" (i.e. your kitchen). While you are in the field make sure you record the coordinates (or location) where you collected the samples.
+First, start by collecting your soil samples. After reading these instructions, be sure to make a list of everything you will need to take to the field so that you have everything you need.
+
+Find three locations nearby to you where you can easily access surface soil to a depth of 10cm. Using a trowel, clear the ground surface and use a small "core" (e.g. measuring cup or inverted can) to collect your samples. At each site you should collect three replicate samples. You will probably want to wrap these in foil to keep them from falling apart and then place them in a zip-lock bag (sealed tight to stop the sample drying out) with the sample ID recorded in permanent marker ready for transport back to "the lab" (i.e. your kitchen). While you are in the field make sure you record the coordinates (or location) where you collected the samples.
 
 You should also make a brief description of the soil - what colour is it (in real scientific studies we use colour charts to make sure colour descriptions are robust and repeatable). Would you describe your soil sample as sand? Or is it silty, making it feel with finer grains because of the finer grains. Sometimes it's difficult to tell just by touch whether a sample contains silt or clay because these are both fine-grained. To test for clay you can roll a sample in your palm, if it holds a cylindrical sausage shape then it contains clay. Does your sample seem to have a lot of dark brown organic matter, or not much?
 
@@ -76,7 +78,7 @@ S_{max}=\ \phi{\ V}_{soil}
 
 ### Estimating Field Capacity  {.unnumbered}
 
-Let's now estimate the field capacity of our soils and see how that compares to porosity. To do this we need to wet our soils to field capacity by filling it with water (try placing it in a jug or bucket to wet the sample up and then letting the water drain out under gravity. You may need to secure the edges with foil (or similar) so that the core doesn't collapse as it soaks, but make sure to have drainage holes at the bottom.
+Let's now estimate the field capacity of our soils and see how that compares to porosity. To do this we need to wet our soils to field capacity by filling it with water (try placing it in a jug or bucket to wet the sample up and then letting the water drain out under gravity. You may need to secure the edges with foil (or similar) so that the core doesn't collapse as it soaks, but make sure to allow for water to drain out the bottom.
 
 Once all the drips have stopped, weigh your sample and then oven dry it and re-weigh to work out the volumetric water content of the sample at field capacity using Eq (8).
 
@@ -92,4 +94,4 @@ Once all the drips have stopped, weigh your sample and then oven dry it and re-w
 
 -   What are the sources of error in your parameter estimates? What could you improve if you had to do this again?
 
--   What haven't we measured that would also be useful to know about soils if we want to understand catchment hydrology (*hint: think about runoff generation mechanisms*)
+-   What haven't we measured that would also be useful to know about soils if we want to understand runoff and streamflow generation mechanisms?
