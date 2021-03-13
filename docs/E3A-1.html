@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Exercise 3A - Characterising soil moisture | GEOS4499 Workbook</title>
   <meta name="description" content="Exercise 3A - Characterising soil moisture | GEOS4499 Workbook" />
-  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Exercise 3A - Characterising soil moisture | GEOS4499 Workbook" />
   <meta property="og:type" content="book" />
@@ -32,7 +32,7 @@
   
 <link rel="prev" href="exercise-2-streamflow-analysis.html"/>
 <link rel="next" href="assessment-2-data-analysis.html"/>
-<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,11 +50,8 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-
 
 
 
@@ -109,8 +106,10 @@
 </ul></li>
 <li class="chapter" data-level="" data-path="E3A-1.html"><a href="E3A-1.html"><i class="fa fa-check"></i>Exercise 3A - Characterising soil moisture</a>
 <ul>
-<li class="chapter" data-level="" data-path="E3A-1.html"><a href="E3A-1.html#methods"><i class="fa fa-check"></i>Methods</a></li>
-<li class="chapter" data-level="" data-path="E3A-1.html"><a href="E3A-1.html#E3A_2"><i class="fa fa-check"></i>Computing Soil Porosity and Soil Moisture</a></li>
+<li class="chapter" data-level="" data-path="E3A-1.html"><a href="E3A-1.html#sample-collection"><i class="fa fa-check"></i>Sample Collection</a></li>
+<li class="chapter" data-level="" data-path="E3A-1.html"><a href="E3A-1.html#E3A_2"><i class="fa fa-check"></i>Computing Soil Moisture and Soil Porosity</a></li>
+<li class="chapter" data-level="" data-path="E3A-1.html"><a href="E3A-1.html#estimating-field-capacity"><i class="fa fa-check"></i>Estimating Field Capacity</a></li>
+<li class="chapter" data-level="" data-path="E3A-1.html"><a href="E3A-1.html#what-did-we-learn"><i class="fa fa-check"></i>What did we learn?</a></li>
 </ul></li>
 <li class="part"><span><b>II Assessments</b></span></li>
 <li class="chapter" data-level="" data-path="assessment-2-data-analysis.html"><a href="assessment-2-data-analysis.html"><i class="fa fa-check"></i>Assessment 2 - Data Analysis</a></li>
@@ -145,204 +144,69 @@
             <section class="normal" id="section-">
 <div id="E3A_1" class="section level1 unnumbered">
 <h1>Exercise 3A - Characterising soil moisture</h1>
-<p>This is a simple introductory experiment to learn how to compute the essential characteristics of soil, relevant to hydrology. <em>We will refer again to this data when doing subsequent activities</em>.</p>
-<p>For this activity we will collect soil from different locations and make three replicates at each.</p>
-<div id="methods" class="section level3 unnumbered">
-<h3>Methods</h3>
-<p>Please seek to find three locations nearby to you where you can easily access surface soil to a depth of 10cm. Using a trowel, clear the ground surface and use a small “core” (e.g. measuring cup or inverted can) to collect your samples. You will need to know your sample size and volume. Place into a small tray or bag that is suitable for going into the oven.</p>
-<p>For each sample use a kitchen balance to record the sample weight. Make sure you correctly blank the balance to account for the sample container weight.
-Then place into the oven for drying at ~105˚C. Leave in the oven for 1-2 hours and then re-weigh. Use the data to compute soil moisture and porosity of each sample following the instructions below.</p>
+<p>During this exercise you will measure some of the key properties for soil hydrology. To do this, you will collect soil from different locations of your choosing to analyse. You will then calculate soil moisture content, porosity and field capacity. Importantly, you will finish by thinking about the meaning of your results. Let’s start by remembering some key terms:</p>
+<!-- This ```{block2, hint05-1, type='bluebox'} chunk below creates a blue info box when rendered. Edit the text as usual inside it (note: text won't appear rendered in the visual editor mode) -->
+
+<div class="bluebox">
+<p><strong>Porosity:</strong> The porosity is the ratio of the volume of the voids to the total volume of the sample. So if you have a sample of 100 cm<sup>3</sup> and 30 cm<sup>3</sup> is void space (non-solid), then you have a porosity of 0.3 or 30%.</p>
+<p><strong>Total Moisture Content:</strong> is measured by calculating mass loss during oven drying of wet samples at 103-105˚C for 1-2hrs. You can also measure the air-dried moisture content (measured as loss of mass during air-drying at a temperature of around 40˚C.</p>
+<p><strong>Saturated Water Content:</strong> Where all pore space in the soil is occupied by water and no further absorption of rainfall is possible. This will be equal to the total porosity.</p>
+<p><strong>Field capacity:</strong> The water content remaining after water has drained out of the soil under gravity. Technically, this is the moisture content remaining in soil subjected to -0.033MPa (0.3Bar) pressure (i.e. slight vacuum) because capillary action, osmotic pressure and gravity are balanced at this point. In the landscape, the excess water has moved downwared through the soil to become groundwater recharge.</p>
+<p><strong>Wilting Point:</strong> Plant roots can’t extract any more water (i.e. apply a suction stronger than -1.5 MPa) from this soil and begin to die. Permanent wilting point is the moisture content remaining in soil subjected to -1.50MPa (15 Bar) pressure (i.e. moderate vacuum).</p>
+<strong>Available Water Content:</strong> This is the amount moisture available for plants to extract, and is caluclated from Field Capacity – Permanent Wilting Point. This water does not drain through to the watertable under gravity, and also is not held too tightly by the soil, so that plants are able access it for uptake through their roots.
+</div>
+<div id="sample-collection" class="section level3 unnumbered">
+<h3>Sample Collection</h3>
+<p>First, start by collecting your soil samples. Find three locations nearby to you where you can easily access surface soil to a depth of 10cm. Using a trowel, clear the ground surface and use a small “core” (e.g. measuring cup or inverted can) to collect your samples. At each site you should collect three replicate samples. You may want to wrap these in foil to keep them from falling apart and then place them in a zip-lock bag (sealed tight to stop the sample drying out) with the sample ID recorded in permanent marker ready for transport back to “the lab” (i.e. your kitchen). While you are in the field make sure you record the coordinates (or location) where you collected the samples.</p>
+<p>You should also make a brief description of the soil - what colour is it (in real scientific studies we use colour charts to make sure colour descriptions are robust and repeatable). Would you describe your soil sample as sand? Or is it silty, making it feel with finer grains because of the finer grains. Sometimes it’s difficult to tell just by touch whether a sample contains silt or clay because these are both fine-grained. To test for clay you can roll a sample in your palm, if it holds a cylindrical sausage shape then it contains clay. Does your sample seem to have a lot of dark brown organic matter, or not much?</p>
+<p>For each sample use a kitchen balance to record the sample weight, making sure you correctly blank the balance to account for the sample container weight. Record the dimensions and volume of your samples. Then place them onto a tray that is suitable for going into the oven. Then place the tray into the oven for drying at ~105˚C. Leave in the oven until the sample is totally dry and then re-weigh (check after for 1-2 hours).</p>
+<p>Now you can use your measured data to compute the soil moisture and porosity of each sample following the instructions below. Repeat for the three replicates of each soil and enter your sample details and your results into the online <a href="https://docs.google.com/spreadsheets/d/1GgQBiI7hPVGUm3E9uXW8aHima0BIPgoXSg63Havb60o/edit#gid=0">Google sheet</a>. Make sure to enter your data on the correct sheet for this teaching period.</p>
 <!-- <center> -->
 <!-- ```{r image05-1, echo=FALSE, fig.cap="Equipment required for collecting soil samples.", out.width = '80%'} -->
 <!-- knitr::include_graphics("images/exercise_3A/picture1.jpg") -->
 <!-- ``` -->
 <!-- </center> -->
+<center>
+<div class="figure">
+<img src="images/exercise_3A/Sample%203.jpeg" width="336" alt="" />
+<p class="caption">A soil sample (core) collected using a kitchen measuring cup</p>
+</div>
+</center>
 </div>
 <div id="E3A_2" class="section level3 unnumbered">
-<h3>Computing Soil Porosity and Soil Moisture</h3>
-<p>Referring to the above collected soils. For each we will measure the soil mass before and after drying in the oven. The mass difference after oven drying is the weight of water contained in that soil volume. Based on this water mass we can work out the gravimetric and/or volumetric water content of that soil. We can also look at the mass and volume and work out the soil bulk density and porosity. These are essential measures for assessing water holding capacity of soils.</p>
-<p>For the soils indicated, we will take samples and measure the moisture content. Taking the mass before placing in an oven gives an estimate of the initial amount of water in the soil matrix prior to the drying.</p>
-<p>The volumetric water content (VWC, <span class="math inline">\(\theta\)</span>, theta), is calculated from the mass of wet and oven dried samples and taking into account the total sample volume:</p>
+<h3>Computing Soil Moisture and Soil Porosity</h3>
+<p>Soil moisture (water content) and porosity (proportion of void space) are key parameters that describe the capacity of soils to store water. Let’s calculate these parameters for each the the soil samples you collected.</p>
+<p><strong>Soil moisture</strong>: For each of your soils samples you should have measured the soil weight before and after drying in the oven. The mass-loss during oven drying represents the weight of water contained in that soil volume. (Note that clayey soils can retain considerable amounts of water when they are air-dry). Based on this water mass we can work out the gravimetric (by weight) and/or volumetric (by volume) water content of each soil sample. The volumetric water content (VWC, <span class="math inline">\(\theta\)</span>, theta, unitless because it is a ratio), is calculated from the mass of wet and oven dried samples and taking into account the total sample volume using Eq (8). You can express this value as a % by multiplying your result from (8) by 100. Enter your results into the online table (via Google Sheets)</p>
 <center>
-<p><span class="math display" id="eq:exercise5-1">\[\begin{equation}
+<span class="math display" id="eq:exercise5-1">\[\begin{equation}
 \theta=\frac{V_w}{V_T}=\frac{\left(M_{\text{sample}}-M_{\text{dry}}\right)}{V_T\ \rho_w}
 \tag{8}
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 </center>
-<p>We can also calculate the bulk density of the soil, and therefore the porosity of the soil. Bulk density <span class="math inline">\(\rho_b\)</span> is the mass of dry soil per unit volume. To determine the bulk density you need to know the volume of the column (<span class="math inline">\(\pi r^2 h\)</span>) where <span class="math inline">\(r\)</span> is radius and <span class="math inline">\(h\)</span> is height of soil in the sample. Remember that clayey soil contains considerable amounts of water under air dry conditions. From the bulk density and particle density <span class="math inline">\(\rho_p\)</span> (2.65 g cm<sup>-3</sup>) one can calculate the porosity <span class="math inline">\(\phi=\ \left(1-\frac{\rho_b}{\rho_p}\right)\)</span>.</p>
-<p>Repeat the above for each soil for three replicates. Enter data into the Table <a href="E3A-1.html#tab:table3A-1">6</a>, and the online <a href="https://docs.google.com/spreadsheets/d/1GgQBiI7hPVGUm3E9uXW8aHima0BIPgoXSg63Havb60o/edit#gid=0">Google sheet</a>.</p>
-<p>You can estimate the water storage potential, <span class="math inline">\(S_{\text{max}}\)</span> of a region by multiplying the soil volume by the porosity:</p>
+<p><strong>Soil Porosity</strong>: Let’s now calculate the bulk density of the soil, and therefore the porosity of the soil. Bulk density <span class="math inline">\(\rho_b\)</span> is the mass of dry soil per unit volume. You have already measured the dry volume of your soil, so to determine the bulk density you just need to work out the volume of your soil sample (if it was a column of core then volume = <span class="math inline">\(\pi r^2 h\)</span> where <span class="math inline">\(r\)</span> is radius and <span class="math inline">\(h\)</span> is height of soil in the sample). From the bulk density and particle density <span class="math inline">\(\rho_p\)</span> (2.65 g cm<sup>-3</sup>) you can then calculate the porosity <span class="math inline">\(\phi=\ \left(1-\frac{\rho_b}{\rho_p}\right)\)</span>. This value will also be a ratio, and you can multiply it by 100 to calculate the porosity as a %.</p>
+<p>Now that you know the porosity, you can estimate the water storage potential, <span class="math inline">\(S_{\text{max}}\)</span> of your sample by multiplying the soil volume by the porosity as shown in Eq (9). Add your results of these analyses to the online Google Sheet.</p>
 <center>
-<p><span class="math display" id="eq:exercise5-2">\[\begin{equation}
+<span class="math display" id="eq:exercise5-2">\[\begin{equation}
 S_{max}=\ \phi{\ V}_{soil}
 \tag{9}
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 </center>
-<p>Using a large sample of soil, estimate the infiltration of the soil using the Decagon infiltrometer, enter the data into the sheet supplied.</p>
-<center>
-<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
-<table class="table table-hover" style="font-size: 12px; width: auto !important; margin-left: auto; margin-right: auto;">
-<caption style="font-size: initial !important;">
-<span id="tab:table3A-1">Table 6: </span>Summary of soil properties. Click <a href="https://docs.google.com/spreadsheets/d/1GgQBiI7hPVGUm3E9uXW8aHima0BIPgoXSg63Havb60o/edit#gid=0">here</a> for the Google Sheets version.
-</caption>
-<thead>
-<tr>
-<th style="text-align:left;">
-Soil Sample ID (inc. replicates)
-</th>
-<th style="text-align:left;">
-Location (UTM, m)
-</th>
-<th style="text-align:left;">
-Fresh Weight (g)
-</th>
-<th style="text-align:left;">
-Dry Weight (g)
-</th>
-<th style="text-align:left;">
-Soil sample volume (V cm<sup>2</sup>)
-</th>
-<th style="text-align:left;">
-Bulk density (<span class="math inline">\(\rho_p\)</span>)
-</th>
-<th style="text-align:left;">
-Porosity (<span class="math inline">\(\varphi\)</span>)
-</th>
-<th style="text-align:left;">
-Volumetric water content (<span class="math inline">\(\theta\)</span>)
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-ID:
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-ID:
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-ID:
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-ID:
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-ID:
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-</tr>
-<tr>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-ID:
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-<td style="text-align:left;background-color: white !important;font-size: largepx;">
-</td>
-</tr>
-</tbody>
-</table>
 </div>
-</center>
-<!-- This ```{block2, hint05-1, type='bluebox'} chunk below creates a blue info box when rendered. Edit the text as usual inside it (note: text won't appear rendered in the visual editor mode) -->
-
-<div class="bluebox">
-<p><strong>Total Moisture Content:</strong> measured by oven drying wet samples at 103-105˚C for 1-2hrs.</p>
-<p><strong>Air Dried Moisture Content:</strong> measured by evaporation and loss of mass by air drying (e.g. at ~40˚C)</p>
-<p><strong>Saturated Water Content:</strong> Where all pore space in the soil is occupied by water and no further absorption of rainfall is possible. This is waterlogged soil.</p>
-<p><strong>Field capacity:</strong> moisture content remaining in soil subjected to -0.033MPa (0.3Bar) pressure
-(i.e. slight vacuum). Capillary action, osmotic pressure and gravity are balanced at this point. Excess water has moved to lower layers as groundwater recharge.</p>
-<p><strong>Permanent Wilting Point:</strong> moisture content remaining in soil subjected to -1.50MPa (15 Bar) pressure (i.e. moderate vacuum). Plant roots can’t extract any more water (i.e. apply a suction stronger than -1.5 MPa) from this soil and begin to die.</p>
-<strong>Available Water Content</strong> = Field Capacity – Permanent Wilting Point. This is the amount moisture available for plants to extract.
+<div id="estimating-field-capacity" class="section level3 unnumbered">
+<h3>Estimating Field Capacity</h3>
+<p>Let’s now estimate the field capacity of our soils and see how that compares to porosity. To do this we need to wet our soils to field capacity by filling it with water (try placing it in a jug or bucket to wet the sample up and then letting the water drain out under gravity. You may need to secure the edges with foil (or similar) so that the core doesn’t collapse as it soaks, but make sure to have drainage holes at the bottom.</p>
+<p>Once all the drips have stopped, weigh your sample and then oven dry it and re-weigh to work out the volumetric water content of the sample at field capacity using Eq (8).</p>
 </div>
+<div id="what-did-we-learn" class="section level3 unnumbered">
+<h3>What did we learn?</h3>
+<ul>
+<li><p>Spatial heterogeneity is a substantial issue in subsurface hydrology. What is the variation between sample replicates? How does this compare to the mean of the measured values (i.e. is the variation large relative to the mean?). How much do the soil parameter estimates vary across the whole data set?</p></li>
+<li><p>How did the volumetric water content in your soil compare to your estimate of the total porosity? Was the soil close to saturated, or very dry? Does this make sense in terms of where and when you collected it (time since rainfall, proximity to surface water or drainage).</p></li>
+<li><p>Based on your measured S<sub><em>max</em></sub>, what would be the water storing capacity in the upper 2 m of soil over an area of 1 km<sup>2</sup> ? Does this seem like a lot of water, or not much?</p></li>
+<li><p>How does your estimate of field capacity compare to your estimate of the total porosity? Does this seem reasonable? What does this mean for plant water availability?</p></li>
+<li><p>What are the sources of error in your parameter estimates? What could you improve if you had to do this again?</p></li>
+<li><p>What haven’t we measured that would also be useful to know about soils if we want to understand catchment hydrology (<em>hint: think about runoff generation mechanisms</em>)</p></li>
+</ul>
 
 </div>
 </div>
