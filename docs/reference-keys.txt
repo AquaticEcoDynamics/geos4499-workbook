@@ -21,12 +21,6 @@ eq:exercise2-4
 eq:exercise2-5
 eq:exercise5-1
 eq:exercise5-2
-eq:E3Bequation1
-eq:E3Bequation2
-fig:E3Bimage1
-tab:E3Btable1
-fig:E3Bimage2
-eq:E3Bequation3
 fig:A2Aimage1
 tab:A2Atable1
 eq:A2Aequation1
