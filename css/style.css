@@ -173,3 +173,11 @@ body {font-family: Arial;}
   position: relative;
   font-size: 14px;
   }
+
+.bluebox {
+    border: 1px solid #1d91c0;
+    border-left-width: 5px;
+    border-radius: 5px;
+    padding: 1em;
+    margin: 1em 0;
+}
