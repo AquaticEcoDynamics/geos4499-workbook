@@ -76,13 +76,13 @@ S_{max}=\ \phi{\ V}_{soil}
 ```
 </center>
 
-### Estimating Field Capacity  {.unnumbered}
+### Estimating Field Capacity {.unnumbered}
 
 Let's now estimate the field capacity of our soils and see how that compares to porosity. To do this we need to wet our soils to field capacity by filling it with water (try placing it in a jug or bucket to wet the sample up and then letting the water drain out under gravity. You may need to secure the edges with foil (or similar) so that the core doesn't collapse as it soaks, but make sure to allow for water to drain out the bottom.
 
 Once all the drips have stopped, weigh your sample and then oven dry it and re-weigh to work out the volumetric water content of the sample at field capacity using Eq (8).
 
-### What did we learn?  {.unnumbered}
+### What did we learn? {.unnumbered}
 
 -   Spatial heterogeneity is a substantial issue in subsurface hydrology. What is the variation between sample replicates? How does this compare to the mean of the measured values (i.e. is the variation large relative to the mean?). How much do the soil parameter estimates vary across the whole data set?
 

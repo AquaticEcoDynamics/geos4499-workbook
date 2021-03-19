@@ -27,6 +27,11 @@ fig:E3Bimage1
 fig:E3Bimage2
 fig:E3Bimage3
 fig:E3Bimage4
+fig:E4image1
+fig:E4image2
+fig:E4image3
+fig:E4image4
+fig:E4image5
 fig:A2Aimage1
 tab:A2Atable1
 eq:A2Aequation1
