@@ -57,6 +57,28 @@
 
 
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
@@ -128,7 +150,14 @@
 <li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#data-analysis"><i class="fa fa-check"></i>Data Analysis</a></li>
 <li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#interpretation-and-conclusions"><i class="fa fa-check"></i>Interpretation and conclusions</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="exercise-6-simple-lake-model.html"><a href="exercise-6-simple-lake-model.html"><i class="fa fa-check"></i>Exercise 6 - Simple lake model</a></li>
+<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html"><i class="fa fa-check"></i>Exercise 6 - Simple lake model</a>
+<ul>
+<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E6_2"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E6_3"><i class="fa fa-check"></i>Defining the system</a></li>
+<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E6_4"><i class="fa fa-check"></i>Simulating the system</a></li>
+<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E6_5"><i class="fa fa-check"></i>Transient simulation</a></li>
+<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E6_6"><i class="fa fa-check"></i>Rates of change</a></li>
+</ul></li>
 <li class="part"><span><b>II Assessments</b></span></li>
 <li class="chapter" data-level="" data-path="assessment-2-data-analysis.html"><a href="assessment-2-data-analysis.html"><i class="fa fa-check"></i>Assessment 2 - Data Analysis</a></li>
 <li class="chapter" data-level="" data-path="part-a-rainfall-and-streamflow-data-analysis.html"><a href="part-a-rainfall-and-streamflow-data-analysis.html"><i class="fa fa-check"></i>Part A - Rainfall and streamflow data analysis</a>
@@ -175,13 +204,192 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="exercise-6---simple-lake-model" class="section level1 unnumbered">
+<div id="E6_1" class="section level1 unnumbered">
 <h1>Exercise 6 - Simple lake model</h1>
+<div id="E6_2" class="section level2 unnumbered">
+<h2>Introduction</h2>
+<p>In this assignment you will look at simple iterative schemes for solving differential equations as a means of modelling environmental systems. The most straightforward numerical approaches involve repetition or iteration of a calculation to evaluate how the system changes through time or space.</p>
+<p>In this assignment we will look at a simple “bucket” storage model of how a lake level fluctuates through time. This is a modified version of an exercise from <span class="citation"><a href="#ref-wainwright2002environmental" role="doc-biblioref">Wainwright and Mulligan</a> (<a href="#ref-wainwright2002environmental" role="doc-biblioref">2002</a>)</span> (see p38). Similar types of models have been used for paleo-environmental reconstructions <span class="citation">(<a href="#ref-bradley1999paleoclimatology" role="doc-biblioref">Bradley 1999</a>)</span> and in hillslope hydrology <span class="citation">(<a href="#ref-dunin1976infiltration" role="doc-biblioref">Dunin 1976</a>)</span>, where the bucket represents the ability of soil to hold water. This type of approach can also be used to simulate solute concentrations, which is particularly useful for quantifying exchanges between surface water and groundwater <span class="citation">(<a href="#ref-cook2013estimating" role="doc-biblioref">Cook 2013</a>)</span>.</p>
+</div>
+<div id="E6_3" class="section level2 unnumbered">
+<h2>Defining the system</h2>
+<p>In this first part of the assignment you will use a simple “bucket” storage model to simulate changes in lake water level through time. The depth of the lake increases due to rainfall and inflows and decreases due to evaporation and seepage (Figure <a href="E6-1.html#fig:E6image1">19</a>). There is also a maximum level to which the lake can be filled, <span class="math inline">\(h_{\text{max}}\)</span> (m), above which water will overflow from the lake, such that <span class="math inline">\(0\le h\le h_{\text{max}}\)</span>. This simple system is described by the equation;</p>
+<span class="math display" id="eq:E6equation1">\[\begin{equation}
+\frac{dh}{dt}= r+i-e-kh
+\tag{12}
+\end{equation}\]</span>
+<p>where <span class="math inline">\(r\)</span> is the rate of rainfall (m yr<sup>-1</sup>), <span class="math inline">\(i\)</span> is the rate of water inflow from rivers and runoff (m yr<sup>-1</sup>), <span class="math inline">\(e\)</span> is the rate of evaporation from the lake (m yr<sup>-1</sup>), and <span class="math inline">\(kh\)</span> is the seepage rate from the base of the lake (infiltration to the underlying aquifer), which is assumed to be a linear function of the depth of water in the lake, <span class="math inline">\(h\)</span> (m). This seepage is controlled by the coefficient <span class="math inline">\(k\)</span> (yr<sup>-1</sup>), which describes the permeability of the lake bed. <strong>Before proceeding, satisfy yourself that you understand this equation and that each term in this equation has the same units, as required</strong>.</p>
+<center>
+<div class="figure"><span id="fig:E6image1"></span>
+<img src="images/exercise_6/picture1.png" alt="Conceptual model of lake water balance." width="70%" />
+<p class="caption">
+Figure 19: Conceptual model of lake water balance.
+</p>
+</div>
+</center>
+<p>Surface waters can be either gaining (groundwater discharge to streams and lakes), losing (recharge of aquifers by streams and lakes), or through-flow systems <span class="citation">(<a href="#ref-winter1998ground" role="doc-biblioref">Winter et al. 1998</a>)</span>. <strong>Based on the information you have, what type of lake (gaining, losing or through-flow) is the system shown in Figure</strong> <a href="E6-1.html#fig:E6image1">19</a><strong>? What other data might you want to measure to confirm this?</strong></p>
+</div>
+<div id="E6_4" class="section level2 unnumbered">
+<h2>Simulating the system</h2>
+<p>Equation <a href="E6-1.html#eq:E6equation1">(12)</a> is a differential equation, describing the rate of change of water level over time. We know that <span class="math inline">\(\frac{dh}{dt}\)</span> is technically the instantaneous rate of change of lake water level. But calculus tells us that we can approximate <span class="math inline">\(\frac{dh}{dt}\)</span> by calculating the change in water level over small increments of time, with the most accurate approximation using the smallest increments of time.</p>
+<p>So we have an equation for the rate of change in lake water level (Equation <a href="E6-1.html#eq:E6equation1">(12)</a>). But how do we calculate the lake level as a function of time, <span class="math inline">\(h(t)\)</span>? That is, how do we solve this differential equation to calculate <span class="math inline">\(h\)</span> for any given time? To do this we will use an iterative approach. Start with an initial lake level, <span class="math inline">\(h_{i}\)</span>, and then calculate the change in lake level over each small increment of time (in this case <span class="math inline">\(dt = 1\)</span> year is fine), using the rates for each process. The water level at the next time-step is then calculated by summing the initial level and the calculated change; <span class="math inline">\(h_{i+1} = h_{i} + dh\)</span>. <strong>Would this step of going from <span class="math inline">\(\frac{dh}{dt}\)</span> to <span class="math inline">\(h(t)\)</span> be considered as differentiation or integration? Explain your answer</strong>.</p>
+<center>
+<div class="figure"><span id="fig:E6image2"></span>
+<img src="images/exercise_6/picture2.png" alt="Simulated lake level under three different model scenarios (A, B and C)." width="70%" />
+<p class="caption">
+Figure 20: Simulated lake level under three different model scenarios (A, B and C).
+</p>
+</div>
+</center>
+<p><br></p>
+<center>
+<table class="table table-hover" style="font-size: 16px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption style="font-size: initial !important;">
+<span id="tab:E6table1">Table 6: </span>Model parameters for lake level simulations shown in Figure 2.
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+Parameter
+</th>
+<th style="text-align:center;">
+Units
+</th>
+<th style="text-align:center;">
+Model ?
+</th>
+<th style="text-align:center;">
+Model ?
+</th>
+<th style="text-align:center;">
+Model ?
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;min-width: 10em; ">
+<span class="math inline">\(r\)</span>
+</td>
+<td style="text-align:center;min-width: 10em; ">
+m yr<sup>-1</sup>
+</td>
+<td style="text-align:center;min-width: 10em; ">
+1.00
+</td>
+<td style="text-align:center;min-width: 10em; ">
+1.50
+</td>
+<td style="text-align:center;min-width: 10em; ">
+1.00
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; ">
+<span class="math inline">\(i\)</span>
+</td>
+<td style="text-align:center;min-width: 10em; ">
+m yr<sup>-1</sup>
+</td>
+<td style="text-align:center;min-width: 10em; ">
+0.20
+</td>
+<td style="text-align:center;min-width: 10em; ">
+1.60
+</td>
+<td style="text-align:center;min-width: 10em; ">
+0.80
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; ">
+<span class="math inline">\(e\)</span>
+</td>
+<td style="text-align:center;min-width: 10em; ">
+m yr<sup>-1</sup>
+</td>
+<td style="text-align:center;min-width: 10em; ">
+1.00
+</td>
+<td style="text-align:center;min-width: 10em; ">
+0.05
+</td>
+<td style="text-align:center;min-width: 10em; ">
+0.05
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; ">
+<span class="math inline">\(k\)</span>
+</td>
+<td style="text-align:center;min-width: 10em; ">
+yr<sup>-1</sup>
+</td>
+<td style="text-align:center;min-width: 10em; ">
+0.05
+</td>
+<td style="text-align:center;min-width: 10em; ">
+0.05
+</td>
+<td style="text-align:center;min-width: 10em; ">
+0.05
+</td>
+</tr>
+<tr>
+<td style="text-align:center;min-width: 10em; ">
+<span class="math inline">\(h_{\text{max}}\)</span>
+</td>
+<td style="text-align:center;min-width: 10em; ">
+m
+</td>
+<td style="text-align:center;min-width: 10em; ">
+50.00
+</td>
+<td style="text-align:center;min-width: 10em; ">
+50.00
+</td>
+<td style="text-align:center;min-width: 10em; ">
+50.00
+</td>
+</tr>
+</tbody>
+</table>
+</center>
+</div>
+<div id="E6_5" class="section level2 unnumbered">
+<h2>Transient simulation</h2>
+<p>In the above simulations all model parameters are constant throughout the time period of the simulation, so that the results tell us what the “steady state” water level in the lake would be given those inputs and outputs. Let’s now see what happens if we have a time-varying (i.e. transient) input, we can call this Model D.</p>
+<p>Let’s say that rainfall varies on decadal timescales, with wet (<span class="math inline">\(r\)</span> = 1.5 m yr<sup>-1</sup>) and dry (<span class="math inline">\(r\)</span> = 0.5 m yr<sup>-1</sup>) phases that alternate every 25 years. <strong>Start with a wet period and simulate water levels over 200 years using this transient rainfall distribution. Plot this new scenario on a chart along with the basecase. How do they compare? Does the lake ever overflow in this transient scenario?</strong></p>
+<p>If the lake is approximately circular, with a diameter of 50 m, what is the surface area of the lake? (hint: assume that the sides are steep so that lake surface area is independent of water level height). <strong>Based on this surface area, calculate the total volumes of seepage from the lakebed under these two scenarios (the basecase [Model A] and the transient model [Model D]). How do they compare, what is the effect of the transient rainfall input on the total volume of seepage? What does this tell you about the value of transient simulations vs steady state simulations?</strong></p>
+</div>
+<div id="E6_6" class="section level2 unnumbered">
+<h2>Rates of change</h2>
+<p>Now let’s look at the rate of change in lake level under each of these modelling scenarios. <strong>Plot</strong> <span class="math inline">\(\frac{dh}{dt}\)</span> vs time for each model (hint: remember that this is just the change in water level over time). How does this plot of <span class="math inline">\(\frac{dh}{dt}\)</span> vs time relate to Figure <a href="E6-1.html#fig:E6image2">20</a>? How long does it take for each model to reach “steady state?” How would the time it takes to reach steady state change if we used a different initial water level in our simulations?</p>
+<p>Now have a go at making your own rainfall boundary condition. You may choose to base it on a probability distribution, or a have it randomly varying through time. <strong>Plot both lake water level and</strong> <span class="math inline">\(\frac{dh}{dt}\)</span> vs time for your chosen rainfall distribution. How does this change your modelling results?</p>
 
+</div>
 </div>
 
 
 
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-bradley1999paleoclimatology" class="csl-entry">
+Bradley, Raymond S. 1999. <em>Paleoclimatology: Reconstructing Climates of the Quaternary</em>. Elsevier.
+</div>
+<div id="ref-cook2013estimating" class="csl-entry">
+Cook, Peter G. 2013. <span>“Estimating Groundwater Discharge to Rivers from River Chemistry Surveys.”</span> <em>Hydrological Processes</em> 27 (25): 3694–3707.
+</div>
+<div id="ref-dunin1976infiltration" class="csl-entry">
+Dunin, Frank X. 1976. <span>“Infiltration: Its Simulation for Field Conditions.”</span>
+</div>
+<div id="ref-wainwright2002environmental" class="csl-entry">
+Wainwright, John, and Mark Mulligan. 2002. <em>Environmental Modelling: Finding Simplicity in Complexity</em>. Wiley Online Library.
+</div>
+<div id="ref-winter1998ground" class="csl-entry">
+Winter, Thomas C, Judson William Harvey, O Lehn Franke, and William M Alley. 1998. <em>Ground Water and Surface Water: A Single Resource</em>. Vol. 1139. US geological Survey.
+</div>
+</div>
             </section>
 
           </div>
