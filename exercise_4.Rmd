@@ -82,7 +82,7 @@ knitr::include_graphics("images/exercise_4/picture5.png")
 
 Download the data provided.
 
-Before you can start your analysis you might need to clean the data -- remove any outliers and identify where your experimental data start and stop. You have very high temporal resolution data, which might not be ideal for the sensitivity of your loggers. Consider calculating a running average to get smooth temporal trends.
+Before you can start your analysis you might need to clean the data -- remove any outliers and identify where your experimental data start and stop. You have very high temporal resolution data, which combines with the sensitivity of your loggers to give you a lot of noise. Consider calculating a running average (over 60 seconds or more) to get smooth temporal trends.
 
 #### Characterizing the rainfall event {.unnumbered}
 
@@ -94,8 +94,6 @@ c)  Total rainfall volume (cm^3^),
 d)  Total runoff volume (cm^3^),
 e)  Average rainfall intensity (cm/min),
 f)  The runoff coefficient, $c$, for the 'storm' event.
-
-And what were the properties of your groundwater system? Estimate the initial "aquifer" storage of saline water (cm^3^) assuming that the porosity of the soil was 0.25. Do you think the watertable was static during the experiment?
 
 #### Separating pre-event and event water {.unnumbered}
 
