@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Exercise 6 - Simple lake model | GEOS4499 Workbook</title>
   <meta name="description" content="Exercise 6 - Simple lake model | GEOS4499 Workbook" />
-  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Exercise 6 - Simple lake model | GEOS4499 Workbook" />
   <meta property="og:type" content="book" />
@@ -32,7 +32,7 @@
   
 <link rel="prev" href="E4-1.html"/>
 <link rel="next" href="assessment-2-data-analysis.html"/>
-<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,35 +50,10 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
-
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
@@ -209,7 +184,7 @@ div.csl-indent {
 <div id="E6_2" class="section level2 unnumbered">
 <h2>Introduction</h2>
 <p>In this assignment you will look at simple iterative schemes for solving differential equations as a means of modelling environmental systems. The most straightforward numerical approaches involve repetition or iteration of a calculation to evaluate how the system changes through time or space.</p>
-<p>In this assignment we will look at a simple “bucket” storage model of how a lake level fluctuates through time. This is a modified version of an exercise from <span class="citation"><a href="#ref-wainwright2002environmental" role="doc-biblioref">Wainwright and Mulligan</a> (<a href="#ref-wainwright2002environmental" role="doc-biblioref">2002</a>)</span> (see p38). Similar types of models have been used for paleo-environmental reconstructions <span class="citation">(<a href="#ref-bradley1999paleoclimatology" role="doc-biblioref">Bradley 1999</a>)</span> and in hillslope hydrology <span class="citation">(<a href="#ref-dunin1976infiltration" role="doc-biblioref">Dunin 1976</a>)</span>, where the bucket represents the ability of soil to hold water. This type of approach can also be used to simulate solute concentrations, which is particularly useful for quantifying exchanges between surface water and groundwater <span class="citation">(<a href="#ref-cook2013estimating" role="doc-biblioref">Cook 2013</a>)</span>.</p>
+<p>In this assignment we will look at a simple “bucket” storage model of how a lake level fluctuates through time. This is a modified version of an exercise from <span class="citation"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#ref-wainwright2002environmental" role="doc-biblioref">Wainwright and Mulligan</a> (<a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#ref-wainwright2002environmental" role="doc-biblioref">2002</a>)</span> (see p38). Similar types of models have been used for paleo-environmental reconstructions <span class="citation">(<a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#ref-bradley1999paleoclimatology" role="doc-biblioref">Bradley 1999</a>)</span> and in hillslope hydrology <span class="citation">(<a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#ref-dunin1976infiltration" role="doc-biblioref">Dunin 1976</a>)</span>, where the bucket represents the ability of soil to hold water. This type of approach can also be used to simulate solute concentrations, which is particularly useful for quantifying exchanges between surface water and groundwater <span class="citation">(<a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#ref-cook2013estimating" role="doc-biblioref">Cook 2013</a>)</span>.</p>
 </div>
 <div id="E6_3" class="section level2 unnumbered">
 <h2>Defining the system</h2>
@@ -227,7 +202,7 @@ Figure 19: Conceptual model of lake water balance.
 </p>
 </div>
 </center>
-<p>Surface waters can be either gaining (groundwater discharge to streams and lakes), losing (recharge of aquifers by streams and lakes), or through-flow systems <span class="citation">(<a href="#ref-winter1998ground" role="doc-biblioref">Winter et al. 1998</a>)</span>. <strong>Based on the information you have, what type of lake (gaining, losing or through-flow) is the system shown in Figure</strong> <a href="E6-1.html#fig:E6image1">19</a><strong>? What other data might you want to measure to confirm this?</strong></p>
+<p>Surface waters can be either gaining (groundwater discharge to streams and lakes), losing (recharge of aquifers by streams and lakes), or through-flow systems <span class="citation">(<a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#ref-winter1998ground" role="doc-biblioref">Winter et al. 1998</a>)</span>. <strong>Based on the information you have, what type of lake (gaining, losing or through-flow) is the system shown in Figure</strong> <a href="E6-1.html#fig:E6image1">19</a><strong>? What other data might you want to measure to confirm this?</strong></p>
 </div>
 <div id="E6_4" class="section level2 unnumbered">
 <h2>Simulating the system</h2>
@@ -372,24 +347,6 @@ m
 
 
 
-<h3>References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-bradley1999paleoclimatology" class="csl-entry">
-Bradley, Raymond S. 1999. <em>Paleoclimatology: Reconstructing Climates of the Quaternary</em>. Elsevier.
-</div>
-<div id="ref-cook2013estimating" class="csl-entry">
-Cook, Peter G. 2013. <span>“Estimating Groundwater Discharge to Rivers from River Chemistry Surveys.”</span> <em>Hydrological Processes</em> 27 (25): 3694–3707.
-</div>
-<div id="ref-dunin1976infiltration" class="csl-entry">
-Dunin, Frank X. 1976. <span>“Infiltration: Its Simulation for Field Conditions.”</span>
-</div>
-<div id="ref-wainwright2002environmental" class="csl-entry">
-Wainwright, John, and Mark Mulligan. 2002. <em>Environmental Modelling: Finding Simplicity in Complexity</em>. Wiley Online Library.
-</div>
-<div id="ref-winter1998ground" class="csl-entry">
-Winter, Thomas C, Judson William Harvey, O Lehn Franke, and William M Alley. 1998. <em>Ground Water and Surface Water: A Single Resource</em>. Vol. 1139. US geological Survey.
-</div>
-</div>
             </section>
 
           </div>
