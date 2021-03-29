@@ -1,4 +1,4 @@
-# Exercise 6 - Simple lake model {#E6_1 .unnumbered}
+# Exercise 5 - Simple lake model {#E6_1 .unnumbered}
 
 ## Introduction {#E6_2 .unnumbered}
 
