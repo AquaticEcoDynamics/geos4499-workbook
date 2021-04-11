@@ -34,7 +34,7 @@ Q_{i}^{t} = \left\{\begin{matrix} 0,\ \ &R_{i}^{t}\le R_{i}^{crit}
 
 The “$t$” super- script refers to a “time-step”, usually referring to a single day. The “$i$” subscript in the above refers to the catchment index; in other words, $i=1$ refers to sub-catchment 1. 
 
-The total flow ($Q_{tot}$, m^3^/day) is calculated by summing the individual sub catchments, however there is an assumed lag time of 1 day for sub- catchment 2 and 2 days lag time for sub-catchment 3:
+The total flow ($Q_{tot}$, m^3^/day) is calculated by summing the individual sub catchments, however there is an assumed lag time of 1 day for sub-catchment 2 and 2 days lag time for sub-catchment 3:
 
 <center>
 
@@ -45,7 +45,7 @@ Q_{tot}^{t} = \color{#9BBB59}{Q_{1}^{t}} + \color{#0070C0}{Q_{2}^{t-1}} + \color
 
 </center>
 
-The time-lag of one day ($t-1$) and two days ($t-2$), is a way to simply account for the time it takes for water in sub-catchment 1 to reach to overall catchment outlet, a process we call streamflow routing.
+The time-lag of one day ($t-1$) and two days ($t-2$), is a way to simply account for the time it takes for water in sub-catchment 2 and 3 to reach to overall catchment outlet, a process we call streamflow routing.
 
 
 ### Module Resources {#A3A_4 .unnumbered}
