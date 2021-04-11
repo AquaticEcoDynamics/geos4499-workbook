@@ -13,8 +13,6 @@ We will develop the assessment through three main sessions focused on:
 -   C. Assessing climate change impacts
  
 
-## Objectives {#A3A_2 .unnumbered}
-
 ## A. Catchment Model {#A3A_3 .unnumbered}
 
 Consider a river basin with **3 sub-catchments**, each with **a different dominant land use and slightly different climate**.
