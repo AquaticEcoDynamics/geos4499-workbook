@@ -32,6 +32,10 @@ fig:E4image2
 fig:E4image3
 fig:E4image4
 fig:E4image5
+eq:E6equation1
+fig:E6image1
+fig:E6image2
+tab:E6table1
 fig:A2Aimage1
 tab:A2Atable1
 eq:A2Aequation1

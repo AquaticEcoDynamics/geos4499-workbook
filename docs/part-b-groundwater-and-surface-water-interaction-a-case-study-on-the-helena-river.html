@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Part B - Groundwater and surface water interaction: A case study on the Helena River | GEOS4499 Workbook</title>
   <meta name="description" content="Part B - Groundwater and surface water interaction: A case study on the Helena River | GEOS4499 Workbook" />
-  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Part B - Groundwater and surface water interaction: A case study on the Helena River | GEOS4499 Workbook" />
   <meta property="og:type" content="book" />
@@ -32,7 +32,7 @@
   
 <link rel="prev" href="part-a-rainfall-and-streamflow-data-analysis.html"/>
 
-<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,11 +50,8 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-
 
 
 
@@ -128,6 +125,15 @@
 <li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#data-analysis"><i class="fa fa-check"></i>Data Analysis</a></li>
 <li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#interpretation-and-conclusions"><i class="fa fa-check"></i>Interpretation and conclusions</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html"><i class="fa fa-check"></i>Exercise 5 - Simple lake model</a>
+<ul>
+<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E6_2"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E6_3"><i class="fa fa-check"></i>Defining the system</a></li>
+<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E6_4"><i class="fa fa-check"></i>Simulating the system</a></li>
+<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E6_5"><i class="fa fa-check"></i>Transient simulation</a></li>
+<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E6_6"><i class="fa fa-check"></i>Rates of change</a></li>
+<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#references"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
 <li class="part"><span><b>II Assessments</b></span></li>
 <li class="chapter" data-level="" data-path="assessment-2-data-analysis.html"><a href="assessment-2-data-analysis.html"><i class="fa fa-check"></i>Assessment 2 - Data Analysis</a></li>
 <li class="chapter" data-level="" data-path="part-a-rainfall-and-streamflow-data-analysis.html"><a href="part-a-rainfall-and-streamflow-data-analysis.html"><i class="fa fa-check"></i>Part A - Rainfall and streamflow data analysis</a>
@@ -151,7 +157,7 @@
 <li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#time-series-data-for-assessing-groundwater-levels-and-salinity"><i class="fa fa-check"></i>Time-series data for assessing groundwater levels and salinity</a></li>
 <li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#conceptualising-surface-groundwater-interaction"><i class="fa fa-check"></i>Conceptualising Surface-Groundwater interaction</a></li>
 <li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#submission"><i class="fa fa-check"></i>Submission</a></li>
-<li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#references"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#references-1"><i class="fa fa-check"></i>References</a></li>
 <li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#E4_15"><i class="fa fa-check"></i>Optional: Site visit to Helena River floodplain</a></li>
 </ul></li>
 <li class="divider"></li>
@@ -249,32 +255,36 @@ surface drainage channels.</p>
 <p><img src="images/assessment_2B/picture10.png" width="45%" height="25%" /><img src="images/assessment_2B/picture12.png" width="45%" height="25%" /></p>
 </center>
 <p>A series of monitoring wells have previously been installed at the site.
-The following <a href="https://en.wikipedia.org/wiki/Lidar">LIDAR</a> image shows the surface topography, with the
-locations of groundwater wells also indicated.</p>
+The following <a href="https://en.wikipedia.org/wiki/Lidar">LIDAR</a> image shows
+the surface topography, with the locations of groundwater wells also
+indicated.</p>
 <center>
 <div class="figure"><span id="fig:image04-23"></span>
 <img src="images/assessment_2B/picture7.png" alt="High-resolution LIDAR image of the surface topography of the Helena River study site in Guildford. The red-circles indicate groundwater observation wells." width="85%" />
 <p class="caption">
-Figure 20: High-resolution LIDAR image of the surface topography of the Helena River study site in Guildford. The red-circles indicate groundwater observation wells.
+Figure 22: High-resolution LIDAR image of the surface topography of the Helena River study site in Guildford. The red-circles indicate groundwater observation wells.
 </p>
 </div>
 </center>
 <p>These groundwater monitoring wells are holes that have been drilled into
-the ground and lined with PVC pipes that has slots at the bottom to let the
-water in. All you can see from the land surface is the top of the PVC
-casing sticking up with a cap and sometimes a lock on it. If you want to
-use these wells for a scientific purpose you need to know the
+the ground and lined with PVC pipes that has slots at the bottom to let
+the water in. All you can see from the land surface is the top of the
+PVC casing sticking up with a cap and sometimes a lock on it. If you
+want to use these wells for a scientific purpose you need to know the
 construction details. Firstly, where is the well (GPS coordinates) and
 what are the dimensions (depth and diameter) of the well? The well
 dimensions will determine the equipment you need to sample it. Secondly,
 across what depth range (and more importantly, elevation) is the screen
-interval (the area where slots are present)? This is the actual elevation of your groundwatre pressure measurement; it’s
-important that you know this so that you can compare your measurement
-with existing data. Once you get to a well, the first thing to do is
-measure the depth to water - from this measurement you can work out the
-elevation of the watertable, and also how much water is sitting in the
-well (standing water). If you want to sample for salinity or hydrochemical properties, then as a rule of thumb you need to remove 3-times
-this volume of standing water from the well before you take the sample to ensure the sample is representative of the aquifer.</p>
+interval (the area where slots are present)? This is the actual
+elevation of your groundwatre pressure measurement; it’s important that
+you know this so that you can compare your measurement with existing
+data. Once you get to a well, the first thing to do is measure the depth
+to water - from this measurement you can work out the elevation of the
+watertable, and also how much water is sitting in the well (standing
+water). If you want to sample for salinity or hydrochemical properties,
+then as a rule of thumb you need to remove 3-times this volume of
+standing water from the well before you take the sample to ensure the
+sample is representative of the aquifer.</p>
 <center>
 <p><img src="images/assessment_2B/picture14.png" width="45%" height="25%" /><img src="images/assessment_2B/picture15.png" width="45%" height="25%" /></p>
 </center>
@@ -283,18 +293,19 @@ this volume of standing water from the well before you take the sample to ensure
 <h3>Your task</h3>
 <p>During this assessment you will use existing data to delineate the
 hydrologic pathways (surface and sub-surface) that determine the
-distribution of water and salt in this floodplain system.
-You will use this information to develop a hydrological conceptual model
-of this site. Your assessment report should describe the context of
-the investigation and summarise your findings and observations as
-suitable for a reader such as the City of Swan Environmental Management team.</p>
+distribution of water and salt in this floodplain system. You will use
+this information to develop a hydrological conceptual model of this
+site. Your assessment report should describe the context of the
+investigation and summarise your findings and observations as suitable
+for a reader such as the City of Swan Environmental Management team.</p>
 <p>After your analysis you should be able to:</p>
 <ul>
 <li>Identify the distressed and dead trees at the site</li>
 <li>Identify the surface water flow regime - where and when does surface
 water pond or flow</li>
 <li>Articulate the key features of the groundwater system - water level
-trends, groundwater flow directions, and surface water - groundwater interaction areas</li>
+trends, groundwater flow directions, and surface water - groundwater
+interaction areas</li>
 <li>Assess the distribution of salinity in groundwater wells
 (piezometers) and surface water</li>
 <li>Conceptualise the hydrologic processes influencing salt movement and
@@ -302,7 +313,8 @@ accumulation across the site</li>
 <li>Articulate possible links between this conceptualization and
 declining health of <em>E. Rudis</em></li>
 </ul>
-<p>The data you need for the assessment is in the file [Helena Data Combined.xlsx]</p>
+<p>The data you need for the assessment is in the file [Helena Data
+Combined.xlsx]</p>
 </div>
 <div id="literature-review" class="section level3 unnumbered">
 <h3>Literature review</h3>
@@ -329,7 +341,7 @@ confluence of the Helena and Swan Rivers.</p>
 <div class="figure"><span id="fig:image04-7"></span>
 <img src="images/assessment_2B/picture23.png" alt="In Nearmap you can search for Guildford (green marker) to help you locate the study site at the confluence of the Helena and Swan Rivers (Blue shded area)" width="90%" />
 <p class="caption">
-Figure 21: In Nearmap you can search for Guildford (green marker) to help you locate the study site at the confluence of the Helena and Swan Rivers (Blue shded area)
+Figure 23: In Nearmap you can search for Guildford (green marker) to help you locate the study site at the confluence of the Helena and Swan Rivers (Blue shded area)
 </p>
 </div>
 </center>
@@ -351,7 +363,7 @@ water inundation at the site.</p>
 <div class="figure"><span id="fig:image04-11"></span>
 <img src="images/assessment_2B/picture13.png" alt="Example inundation pattern. Which way is the water flowing?" width="65%" />
 <p class="caption">
-Figure 22: Example inundation pattern. Which way is the water flowing?
+Figure 24: Example inundation pattern. Which way is the water flowing?
 </p>
 </div>
 </center>
@@ -381,7 +393,7 @@ column of you EC data and the <em>Y field</em> to the Northing column</li>
 <div class="figure"><span id="fig:image04-16"></span>
 <img src="images/assessment_2B/picture19.png" alt="Importing your EC data." width="100%" />
 <p class="caption">
-Figure 23: Importing your EC data.
+Figure 25: Importing your EC data.
 </p>
 </div>
 </center>
@@ -405,7 +417,7 @@ providers).</p></li>
 <div class="figure"><span id="fig:image04-17"></span>
 <img src="images/assessment_2B/picture20.png" alt="The QMS buttons in the QGIS toolbar." width="50%" />
 <p class="caption">
-Figure 24: The QMS buttons in the QGIS toolbar.
+Figure 26: The QMS buttons in the QGIS toolbar.
 </p>
 </div>
 </center>
@@ -427,7 +439,7 @@ graduate by as our EC column.</li>
 <div class="figure"><span id="fig:image04-18"></span>
 <img src="images/assessment_2B/picture21.png" alt="Changing the symbology of our point data." width="100%" />
 <p class="caption">
-Figure 25: Changing the symbology of our point data.
+Figure 27: Changing the symbology of our point data.
 </p>
 </div>
 </center>
@@ -445,50 +457,59 @@ of this
 <div class="figure"><span id="fig:image04-15"></span>
 <img src="images/assessment_2B/picture18.jpg" alt="Example map from your QGIS output." width="100%" />
 <p class="caption">
-Figure 26: Example map from your QGIS output.
+Figure 28: Example map from your QGIS output.
 </p>
 </div>
 </center>
 </div>
 <div id="time-series-data-for-assessing-groundwater-levels-and-salinity" class="section level3 unnumbered">
 <h3>Time-series data for assessing groundwater levels and salinity</h3>
-<p>You are provided with a spreadsheet that summarise the
-timeseries data collected by various agencies (e.g., UWA and DWER (via <a href="http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx">WIR</a>)). This files includes numerous sheets with the following data notes :</p>
+<p>You are provided with a spreadsheet that summarise the timeseries data
+collected by various agencies (e.g., UWA and DWER (via
+<a href="http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx">WIR</a>)).
+This files includes numerous sheets with the following data notes :</p>
 <ul>
-<li><p>Weather: There was a “Baro” dataset, which is a UWA logger measuring atmospheric pressure, in kPa.
-We measure this as the water levels in the piezometers may vary due
-to atmospheric pressure fluctuations. For your report you do not
-need to present this, just bear in mind it was used to “correct” the
-piezometer water level data. The rainfall provided is from the nearby <a href="https://weather.agric.wa.gov.au">DPIRD South-Perth</a>
-weather station.</p></li>
-<li><p>GW Levels: This includes the UWA piezometer level data (converted into
-mAHD) for the main wells: HW1, HW2, and HW3. Bore 7 is also included which is
-denoted as Jeremy on the map.</p></li>
+<li><p>Weather: There was a “Baro” dataset, which is a UWA logger measuring
+atmospheric pressure, in kPa. We measure this as the water levels in
+the piezometers may vary due to atmospheric pressure fluctuations.
+For your report you do not need to present this, just bear in mind
+it was used to “correct” the piezometer water level data. The
+rainfall provided is from the nearby <a href="https://weather.agric.wa.gov.au">DPIRD
+South-Perth</a> weather station.</p></li>
+<li><p>GW Levels: This includes the UWA piezometer level data (converted
+into mAHD) for the main wells: HW1, HW2, and HW3. Bore 7 is also
+included which is denoted as Jeremy on the map.</p></li>
 <li><p>GW Salinity: This has the UWA salinity measurements from inside the
 Piezometers. These data are in mS/cm.</p></li>
-<li><p>Helena River: River Corrected data is the water
-level of Helena River under the nearby Traffic Bridge. So you can think of this as
-the water level at the river-end of the piezometer transect. “Poison Lease” (upstream in Helena River to the east of our site).
-It also has the discharge (Q) at this site, based on a rating curve.</p></li>
-<li><p>Swan River: This has WIR data from the station MSB data as above, including the
-daily min and mix, showing the tidal amplitude of the Swan River
-over time. The “Vitox” Salinity data is from the WIR website for the
-nearby location which is just to the west of our site (on the other
-side of Kings Meadow Oval). This data indicates the river/estuary
-salinity and would be very similar to the salinity of the surface water
-in Helena River near our site also. Note its seasonality, compared
-to the groundwater.</p></li>
+<li><p>Helena River: River Corrected data is the water level of Helena
+River under the nearby Traffic Bridge. So you can think of this as
+the water level at the river-end of the piezometer transect. “Poison
+Lease” (upstream in Helena River to the east of our site). It also
+has the discharge (Q) at this site, based on a rating curve.</p></li>
+<li><p>Swan River: This has WIR data from the station MSB data as above,
+including the daily min and mix, showing the tidal amplitude of the
+Swan River over time. The “Vitox” Salinity data is from the WIR
+website for the nearby location which is just to the west of our
+site (on the other side of Kings Meadow Oval). This data indicates
+the river/estuary salinity and would be very similar to the salinity
+of the surface water in Helena River near our site also. Note its
+seasonality, compared to the groundwater.</p></li>
 </ul>
-<p>Remember, when working with groundwater data you need to be careful
-to distinguish between groundwater levels that are reported as a
-depth to water (from the ground level or top of casing) as opposed
-to groundwater levels the Australian Height Datum (AHD). If there are
-measured values of depth to water you need to convert these to
-elevations in m AHD so they can be compared with the prior data and
-WIR data. To do this we need to know the ground level elevation at
-the measurement point, in mAHD (or the elevation of the top of
-casing, if this was the origin for the measurement).</p>
-<p>Raw data is often not perfect, so think of some ways to presnet the data. For example, you could make a PIVOT table to look at monthly values. When interpreting the data we would like to highlight seasonality, and also relative differences between sites. Importantly, is there a way to bring togteher the different data into a single plot to help our interpretation of the what is happening at the system.</p>
+<p>Remember, when working with groundwater data you need to be careful to
+distinguish between groundwater levels that are reported as a depth to
+water (from the ground level or top of casing) as opposed to groundwater
+levels the Australian Height Datum (AHD). If there are measured values
+of depth to water you need to convert these to elevations in m AHD so
+they can be compared with the prior data and WIR data. To do this we
+need to know the ground level elevation at the measurement point, in
+mAHD (or the elevation of the top of casing, if this was the origin for
+the measurement).</p>
+<p>Raw data is often not perfect, so think of some ways to presnet the
+data. For example, you could make a PIVOT table to look at monthly
+values. When interpreting the data we would like to highlight
+seasonality, and also relative differences between sites. Importantly,
+is there a way to bring togteher the different data into a single plot
+to help our interpretation of the what is happening at the system.</p>
 </div>
 <div id="conceptualising-surface-groundwater-interaction" class="section level3 unnumbered">
 <h3>Conceptualising Surface-Groundwater interaction</h3>
@@ -501,17 +522,18 @@ some guiding questions can help focus your analyses:</p>
 <li><p>How does salinity vary across the surface water sites? How does this
 relate to sources of water (Helena River, Stormwater from nearby
 suburbs, Swan estuary, Rain)</p></li>
-<li><p>How does water level and salinity vary in the groundwater based on distance from the
-river? Are levels in the aquifer higher or lower than the (mean) river level? What about salinity?</p></li>
+<li><p>How does water level and salinity vary in the groundwater based on
+distance from the river? Are levels in the aquifer higher or lower
+than the (mean) river level? What about salinity?</p></li>
 <li><p>Do these patterns in groundwater salinity change seasonally?</p></li>
 <li><p>Which flow pathways drive the changes we see? Is water moving
 vertically or laterally? Consider how water levels in the
 piezometers vary relative to surface water. Think here Darcy’s Law
 and Hydraulic gradient.</p></li>
 <li><p>Are is the unsaturated zone (vadose zone) adequate for the tree
-roots? i.e., is the water table depth deep enough to contain non-salty
-soil moisture for them, or must they rely on water from salty
-groundwater? Look here at areas in nearmap where tree loss has
+roots? i.e., is the water table depth deep enough to contain
+non-salty soil moisture for them, or must they rely on water from
+salty groundwater? Look here at areas in nearmap where tree loss has
 occurred.</p></li>
 <li><p>What are the salinity tolerances reported for E. rudis, based on
 lab/field trials? And how does our data compare to sort of data
@@ -554,7 +576,7 @@ dot-points OK here.</p></li>
 Submissions not received by the due date will attract a late penalty.</p>
 </div>
 </div>
-<div id="references" class="section level3 unnumbered">
+<div id="references-1" class="section level3 unnumbered">
 <h3>References</h3>
 <p>Clay, R., Majer, J. (2001). Flooded Gum (Eucalyptus rudis) Decline in
 the Perth Metropolitan Area: A Preliminary Assessment.</p>
@@ -586,6 +608,23 @@ landscape.</li>
 <p><img src="images/assessment_2B/picture9.png" width="45%" height="25%" /><img src="images/assessment_2B/picture11.png" width="45%" height="25%" /></p>
 </center>
 
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-bradley1999paleoclimatology" class="csl-entry">
+Bradley, Raymond S. 1999. <em>Paleoclimatology: Reconstructing Climates of the Quaternary</em>. Elsevier.
+</div>
+<div id="ref-cook2013estimating" class="csl-entry">
+Cook, Peter G. 2013. <span>“Estimating Groundwater Discharge to Rivers from River Chemistry Surveys.”</span> <em>Hydrological Processes</em> 27 (25): 3694–3707.
+</div>
+<div id="ref-dunin1976infiltration" class="csl-entry">
+Dunin, Frank X. 1976. <span>“Infiltration: Its Simulation for Field Conditions.”</span>
+</div>
+<div id="ref-wainwright2002environmental" class="csl-entry">
+Wainwright, John, and Mark Mulligan. 2002. <em>Environmental Modelling: Finding Simplicity in Complexity</em>. Wiley Online Library.
+</div>
+<div id="ref-winter1998ground" class="csl-entry">
+Winter, Thomas C, Judson William Harvey, O Lehn Franke, and William M Alley. 1998. <em>Ground Water and Surface Water: A Single Resource</em>. Vol. 1139. US geological Survey.
+</div>
+</div>
 </div>
 </div>
             </section>

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Exercise 4 - Groundwater and surface water interaction | GEOS4499 Workbook</title>
   <meta name="description" content="Exercise 4 - Groundwater and surface water interaction | GEOS4499 Workbook" />
-  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Exercise 4 - Groundwater and surface water interaction | GEOS4499 Workbook" />
   <meta property="og:type" content="book" />
@@ -31,8 +31,8 @@
   
   
 <link rel="prev" href="E3B-1.html"/>
-<link rel="next" href="assessment-2-data-analysis.html"/>
-<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<link rel="next" href="E6-1.html"/>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,11 +50,8 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-
 
 
 
@@ -128,6 +125,15 @@
 <li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#data-analysis"><i class="fa fa-check"></i>Data Analysis</a></li>
 <li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#interpretation-and-conclusions"><i class="fa fa-check"></i>Interpretation and conclusions</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html"><i class="fa fa-check"></i>Exercise 5 - Simple lake model</a>
+<ul>
+<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E6_2"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E6_3"><i class="fa fa-check"></i>Defining the system</a></li>
+<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E6_4"><i class="fa fa-check"></i>Simulating the system</a></li>
+<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E6_5"><i class="fa fa-check"></i>Transient simulation</a></li>
+<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E6_6"><i class="fa fa-check"></i>Rates of change</a></li>
+<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#references"><i class="fa fa-check"></i>References</a></li>
+</ul></li>
 <li class="part"><span><b>II Assessments</b></span></li>
 <li class="chapter" data-level="" data-path="assessment-2-data-analysis.html"><a href="assessment-2-data-analysis.html"><i class="fa fa-check"></i>Assessment 2 - Data Analysis</a></li>
 <li class="chapter" data-level="" data-path="part-a-rainfall-and-streamflow-data-analysis.html"><a href="part-a-rainfall-and-streamflow-data-analysis.html"><i class="fa fa-check"></i>Part A - Rainfall and streamflow data analysis</a>
@@ -151,7 +157,7 @@
 <li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#time-series-data-for-assessing-groundwater-levels-and-salinity"><i class="fa fa-check"></i>Time-series data for assessing groundwater levels and salinity</a></li>
 <li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#conceptualising-surface-groundwater-interaction"><i class="fa fa-check"></i>Conceptualising Surface-Groundwater interaction</a></li>
 <li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#submission"><i class="fa fa-check"></i>Submission</a></li>
-<li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#references"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#references-1"><i class="fa fa-check"></i>References</a></li>
 <li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#E4_15"><i class="fa fa-check"></i>Optional: Site visit to Helena River floodplain</a></li>
 </ul></li>
 <li class="divider"></li>
@@ -230,7 +236,7 @@ Figure 16: Saturated aquifer correctly set up within catchment model.
 <p>This saturated aquifer layer was then overlain with a second layer of dry soil, being careful not to disturb the original layer. This upper layer was shaped into the form of a catchment (concave) so that when the subsurface fills up there was a stream flowing to the catchment outlet (Figure <a href="E4-1.html#fig:E4image4">17</a>). The middle outlet should not be covered with soil, but the soil should be just below this outlet (this is your riverbed). At this step you could see some capillary rise of aquifer water into the vadose zone.</p>
 <center>
 <div class="figure"><span id="fig:E4image4"></span>
-<img src="images/exercise_4/picture4.png" alt="Unsaturated zone on to of aquifer. Topography should slope towards the middle and the catchment outlet." width="254" height="70%" />
+<img src="images/exercise_4/picture4.png" alt="Unsaturated zone on to of aquifer. Topography should slope towards the middle and the catchment outlet." height="70%" />
 <p class="caption">
 Figure 17: Unsaturated zone on to of aquifer. Topography should slope towards the middle and the catchment outlet.
 </p>
@@ -242,7 +248,7 @@ Figure 17: Unsaturated zone on to of aquifer. Topography should slope towards th
 <p>The rainfall outlets were brought close to the catchment surface to avoid “raining” outside the catchment, and then the tubes at the bottom of the catchment were turned so that they were directed into the PVC drain so that outflow could be measured. And now the rain! The apparatus was left with the rain on for approximately 20 minutes until the catchment had filled up, stream flow had begun and the EC at the catchment outlet has clearly decreased (Figure <a href="E4-1.html#fig:E4image5">18</a>). To finish, the rain was turned off, but with the loggers still running for another 20 minutes, or until streamflow ceased, so we could measure what happens after the rain had stopped.</p>
 <center>
 <div class="figure"><span id="fig:E4image5"></span>
-<img src="images/exercise_4/picture5.png" alt="Streamflow at the catchment outlet." width="316" height="30%" />
+<img src="images/exercise_4/picture5.png" alt="Streamflow at the catchment outlet." height="30%" />
 <p class="caption">
 Figure 18: Streamflow at the catchment outlet.
 </p>
@@ -308,16 +314,13 @@ And once this pre-event component is known, we can calculate the event component
 
 </div>
 </div>
-
-
-
             </section>
 
           </div>
         </div>
       </div>
 <a href="E3B-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="assessment-2-data-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="E6-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
