@@ -13,7 +13,7 @@ rmd_files: ["index.Rmd",
             #"exercise_7.Rmd",
             "assessment_2A.Rmd",
             "assessment_2B.Rmd",
-            #"assessment_3.Rmd",
+            "assessment_3.Rmd",
             #"assessment_3B.Rmd",
             #"references.Rmd",
             ]
