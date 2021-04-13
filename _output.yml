@@ -10,7 +10,8 @@ bookdown::gitbook:
     download: [["Exercise_1A_Answer_Sheet.docx", "Exercise 1A Answer Sheet"],
               ["Exercise_1B_Answer_Sheet.docx", "Exercise 1B Answer Sheet"],
               ["Helena_Data.zip", 'Helena Data'],
-              ["Exercise 4 Data.zip", 'Exercise 4 Data']
+              ["Exercise 4 Data.zip", 'Exercise 4 Data'],
+              ['Assessment 3A Spreadsheets.zip', 'Assessment 3A Spreadsheets']
               ]
     search: yes
     fontsettings:
