@@ -11,7 +11,7 @@ We will develop the assessment through three main sessions focused on:
 -   B. Lake dynamics
 
 -   C. Assessing climate change impacts
- 
+
 
 ## A. Catchment Model {#A3A_3 .unnumbered}
 
@@ -30,7 +30,7 @@ Q_{i}^{t} = \left\{\begin{matrix} 0,\ \ &R_{i}^{t}\le R_{i}^{crit}
 
 </center>
 
-The “$t$” super- script refers to a “time-step”, usually referring to a single day. The “$i$” subscript in the above refers to the catchment index; in other words, $i=1$ refers to sub-catchment 1. 
+The “$t$” super- script refers to a “time-step”, usually referring to a single day. The “$i$” subscript in the above refers to the catchment index; in other words, $i=1$ refers to sub-catchment 1.
 
 The total flow ($Q_{tot}$, m^3^/day) is calculated by summing the individual sub catchments, however there is an assumed lag time of 1 day for sub-catchment 2 and 2 days lag time for sub-catchment 3:
 
@@ -54,8 +54,8 @@ Download the Excel spreadsheet for this exercise by clicking the download button
 ### Building the model {#A3A_5 .unnumbered}
 
 1)  Draw by hand the conceptual model of this system.
-2)  Confirm what the indicies are refering to in the above equations ($t$, $i$).
-3)  Build the above model in Excel, to predict the individual sub-catchment flows and river basin total flow. Assume basic information as outlined in Table \@ref(tab:tableA3A1) below and the supplied rainfall data for the 3 sub-catchments. Input a gussed value for $c$ within the range indicated for now.
+2)  Confirm what the indices are referring to in the above equations ($t$, $i$).
+3)  Build the above model in Excel, to predict the individual sub-catchment flows and river basin total flow. Assume basic information as outlined in Table \@ref(tab:tableA3A1) below and the supplied rainfall data for the 3 sub-catchments. Input a guessed value for $c$ within the range indicated for now.
 
 <center>
 
@@ -65,7 +65,7 @@ library(kableExtra)
 library(hablar)
 library(dplyr)
 #options(knitr.kable.NA = '')
-tableA3A1 <- read.csv("tables/assessment_3A/table1.csv", check.names=FALSE) 
+tableA3A1 <- read.csv("tables/assessment_3A/table1.csv", check.names=FALSE)
 kable(tableA3A1, format = "html", escape = F, align = "c", caption = "Parameters for the individual catchments.") %>%
   kable_styling(full_width = F, position = "center") %>%
   #column_spec(1, width_min = "5em") %>%
@@ -73,7 +73,7 @@ kable(tableA3A1, format = "html", escape = F, align = "c", caption = "Parameters
   #column_spec(3, width_min = "13em") %>%
   #row_spec(1:12, background = '#ffffff00') %>%
   scroll_box(width = "100%", height = "445px",
-             fixed_thead = FALSE) 
+             fixed_thead = FALSE)
 ```
 
 </center>
@@ -88,17 +88,17 @@ Now we have the model running, let's make sure the predicted flows are realistic
 The goal of model calibration is to minimise error between the predictions and available observations. We can check this by using a regression plot of the  total observed runoff and the model total runoff, checking to get the highest R^2^ value, and ensuring the magnitudes are comparable.
 ```
 
-5)  Plotting the time-series of daily flows is“crowded” and it’s hard to see differences. In this case we therefore do what is called a “cumulative mass-curve”. For this we cumulate the daily flow and plot over time – so it keeps increasing. This is the cumulative mass of water (usally presented in m3) delivered by the catchment. Create a "stacked area plot" of the cumulative flow from each sub-catchment.
+5)  Plotting the time-series of daily flows is“crowded” and it’s hard to see differences. In this case we therefore do what is called a “cumulative mass-curve”. For this we cumulate the daily flow and plot over time – so it keeps increasing. This is the cumulative mass of water (usually presented in m3) delivered by the catchment. Create a "stacked area plot" of the cumulative flow from each sub-catchment.
 
 
 ### Land-use change scenario {#A3A_9 .unnumbered}
 
 Lets assess a land-use change scenario, and see how urbanisation may affect runoff amounts.
 
-5)  If the total urban area in each sub-catchment expands to 50% ($F_{urban}=0.5$), how would this affect the overall amount of water discharged? 
+5)  If the total urban area in each sub-catchment expands to 50% ($F_{urban}=0.5$), how would this affect the overall amount of water discharged?
 
 ```{block2, hint7_2, type='rmdtip2'}
-To assess this we must change the runoff coefficient, $c$, to reflect the increased imperviousness brought about by urbanisation. We will need to assume a $c$ value for urban land, $c_{urban}$,, and then we need to average this and the calibrated version from step (4) to come up with the new value: $c_{new} = (c_{old} + c_{urban})/2$. The $R^{crit}$ value for each sub-catchment should also be redued by 25%. 
+To assess this we must change the runoff coefficient, $c$, to reflect the increased imperviousness brought about by urbanisation. We will need to assume a $c$ value for urban land, $c_{urban}$,, and then we need to average this and the calibrated version from step (4) to come up with the new value: $c_{new} = (c_{old} + c_{urban})/2$. The $R^{crit}$ value for each sub-catchment should also be redued by 25%.
 ```
 
 To compare scenarios we could plot time-series of streamflows with multiple series on a single plot. As above, we can more easily compare scenarios using the cumulative mass plot, as they will start to diverge and the differences will stand out more clearly.
@@ -129,7 +129,7 @@ Bearing this in mind, the water balance equation describing the change in lake s
 (\#eq:equationA3A5)
 \end{equation}
 \begin{equation}
-\frac{dS_{lower}}{dt}= Q_{out_{upper}} + \underbrace{ kh_{upper} A_{upper} }_{\text{gw from upper -> lower}} + \underbrace{  (R - E - kh_{lower}) A_{lower} }_{\text{lower lake fluxes}} - Q_{out_{lower}} 
+\frac{dS_{lower}}{dt}= Q_{out_{upper}} + \underbrace{ kh_{upper} A_{upper} }_{\text{gw from upper -> lower}} + \underbrace{  (R - E - kh_{lower}) A_{lower} }_{\text{lower lake fluxes}} - Q_{out_{lower}}
 (\#eq:equationA3A6)
 \end{equation}
 
@@ -146,7 +146,7 @@ knitr::include_graphics("images/assessment_3/lake_pars.png")
 </center>
 
 
-With these we can model the water storage in the two lakes. Start with the template spreadsheet provided. You can use the daily rain and evaporation (data provided) to drive this model, but you will need to ensure you have consistent units across terms (i.e. all rates are /d, not a mix of /d and /y, and note that volumes are different from lengths!). 
+With these we can model the water storage in the two lakes. Start with the template spreadsheet provided. You can use the daily rain and evaporation (data provided) to drive this model, but you will need to ensure you have consistent units across terms (i.e. all rates are /d, not a mix of /d and /y, and note that volumes are different from lengths!).
 
 We will assume that the sides of the lakes are steep so that lake surface area is independent of water level height. Therefore, water level is related to the storage volume in the lake according to:
 
@@ -160,7 +160,7 @@ h_{upper}=\frac{S_{upper}}{A_{lower}}    \text{    &    }     h_{lower}=\frac{S_
 
 </center>
 
-To start the simulation we must use an initial lake water level, as provided in the details below (Table 4), to get the starting lake storage, $S^{t=0}$ or $S^{0}$. 
+To start the simulation we must use an initial lake water level, as provided in the details below (Table 4), to get the starting lake storage, $S^{t=0}$ or $S^{0}$.
 
 The outflow (overflow) of each lake only occurs when the lake water level exceeds the maximum depth, which are denoted $h^{max}_{upper}$ and $h^{max}_{lower}$. In general, for either lake:
 
@@ -200,10 +200,10 @@ library(dplyr)
 evap <- read.csv("tables/assessment_3A/evap.csv")
 evap$Date <- as.Date(evap$Date)
 plot <- ggplot(data=evap, aes(x=Date, y=Evaporation)) +
-  geom_line(colour= "#3182bd", size = 1.2) + xlab("Time (years)") + ylab("Potential evaporation (m day<sup>-1</sup>)") + 
-              theme_bw() 
+  geom_line(colour= "#3182bd", size = 1.2) + xlab("Time (years)") + ylab("Potential evaporation (m day<sup>-1</sup>)") +
+              theme_bw()
 ggplotly(plot) %>%
-  config(displaylogo = FALSE) 
+  config(displaylogo = FALSE)
 ```
 </center>
 
@@ -257,7 +257,7 @@ When interpreting the results, consider:
 ## Submission {#A2A_6 .unnumbered}
 
 ::: {.redbox2}
-Your submission is a single report based building on all three exercises, parts A, B and C listed above. 
+Your submission is a single report based building on all three exercises, parts A, B and C listed above.
 
 If you did not complete any of the individual exercises, you should still write the report, based on whatever you were able to complete.
 Use the questions in the exercise as a guide to the ideas that should be included in your discussion. There is no page limit, but it should be around eight pages.
@@ -266,7 +266,7 @@ There are two main focuses for the report:
 
 • _the scientific aspects associated with catchment and lake assessment_, and
 
-• _the technical and practical aspects of numerical modelling_. 
+• _the technical and practical aspects of numerical modelling_.
 
 The structure of the report should be as follows:
 
@@ -359,7 +359,7 @@ library(kableExtra)
 library(hablar)
 library(dplyr)
 #options(knitr.kable.NA = '')
-tableA3A2 <- read.csv("tables/assessment_3A/table2.csv", check.names=FALSE) 
+tableA3A2 <- read.csv("tables/assessment_3A/table2.csv", check.names=FALSE)
 kable(tableA3A2, format = "html", escape = F, align = "c", caption = "Phosphate parameters.") %>%
   kable_styling(full_width = F, position = "center") %>%
   column_spec(1, width_min = "25em") %>%
@@ -367,7 +367,7 @@ kable(tableA3A2, format = "html", escape = F, align = "c", caption = "Phosphate 
   column_spec(3, width_min = "11em") %>%
   #row_spec(1:12, background = '#ffffff00') %>%
   scroll_box(width = "100%", height = "235px",
-             fixed_thead = FALSE) 
+             fixed_thead = FALSE)
 ```
 
 </center>
@@ -382,5 +382,3 @@ See how dairy has the highest alpha? This means it produces the most $P$ of all 
 ```{block2, hint7_3, type='rmdtip2'}
 Use an IF statement.
 ```
-
-

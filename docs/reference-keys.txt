@@ -36,8 +36,10 @@ eq:E6equation1
 fig:E6image1
 fig:E6image2
 tab:E6table1
-fig:image7-1
+fig:image7-0
+fig:image7-2
 fig:map7-1
+fig:image7-3
 fig:A2Aimage1
 tab:A2Atable1
 eq:A2Aequation1
