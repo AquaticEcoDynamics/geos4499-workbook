@@ -181,3 +181,11 @@ body {font-family: Arial;}
     padding: 1em;
     margin: 1em 0;
 }
+
+leaflet-bar a, .leaflet-bar a:hover {
+  background-color: #fff !important;
+}  
+
+.leaflet-touch .leaflet-bar a {
+background-color: #fff !important;
+}

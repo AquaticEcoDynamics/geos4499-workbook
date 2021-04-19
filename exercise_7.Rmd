@@ -23,9 +23,19 @@ allow="encrypted-media; accelerometer; gyroscope; picture-in-picture">
 ### Case study {#E7_4 -}
 
 <center>
+```{r image7-1, echo=FALSE, fig.cap="Drain L inflows (yellow arrow) will be diverted (blue arrow).", out.width='100%'}
+knitr::include_graphics("images/exercise_7/picture1.jpeg")
+```
 
-![Figure 1: Drain L inflows (yellow arrow) will be diverted (blue arrow)](images/exercise_7/picture1.jpeg){width=750px}
 
+
+```{r map7-1, fig.cap="Explore the case study area with this interactive map.", out.width='100%', out.height='350px', echo=FALSE, message=FALSE, warning=FALSE}
+library(leaflet)
+library(magrittr) 
+leaflet::leaflet() %>% 
+  leaflet::setView(lat = -37.170055016065895, lng = 139.78148241493437, zoom = 15) %>% 
+  leaflet::addProviderTiles(providers$Esri.WorldImagery)
+```
 </center>
 
 ### Module resources {#E7_5 -}
