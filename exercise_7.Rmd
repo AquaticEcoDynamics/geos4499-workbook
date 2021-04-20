@@ -100,7 +100,7 @@ knitr::include_graphics("images/exercise_7/benefits.png")
 
 
 
-## B - Flow diversion case study : Robe Lakes {#E7_4 -}
+## B - Flow diversion case study : Robe Lakes {#E7_5 -}
 
 
 <center>
@@ -119,18 +119,17 @@ We can further plan for e-water requirements to a critical system using scenario
 Specifically in this example, we assess the impact of diverting water from "Drain L", thereby reducing water to the Robe Lakes. Before we assess our diversion scenario, we must first analyse the historical flow data, to understand the historical flow regime.
 
 <center>
-
 ```{r image7-3, echo=FALSE, fig.cap="Drain L inflows (yellow arrow) will be diverted (blue arrow).", out.width='100%'}
 knitr::include_graphics("images/exercise_7/picture1.jpeg")
 ```
 </center>
 
 
-### Module resources {.unnumbered}
+### Module resources {#E7_6 .unnumbered}
 
 Download the Excel spreadsheet for this module by clicking the download button in the tool bar <i class="fa fa-download" aria-hidden="true"></i>.
 
-### Categorising flow data {.unnumbered}
+### Categorising flow data {#E7_7 .unnumbered}
 
 You are given a time-series of daily river flow and need to assess how different diversion scenarios impact the freshwater flow delivery to a down stream estuary.
 
@@ -201,7 +200,7 @@ Then you just fiddle until you get what you want. The following is an example:
 Sum each year
 ```
 
-### Flow diversion scenarios {.unnumbered}
+### Flow diversion scenarios {#E7_8 .unnumbered}
 
 5) Assess the amount of water available for **flow diversion for two scenarios** by adding a new time-series column for each option:
     a. Water below 50 ML/day and above 550 ML/day is NOT diverted
@@ -217,14 +216,14 @@ Construct a nested `IF()` that solves the following:
 6) Add two new columns for each of the above to work out **cumulative amount** (running total) of diverted water
     a. $\text{Cumulated Volume} = \text{Previous Cumulated Volume}+\text{Today's Diverted Discharge}$
 
-### Assessing impacts on lake salinity {.unnumbered}
+### Assessing impacts on lake salinity {#E7_9 .unnumbered}
 
 7) Create a scatter plot of historical salinity (as EC) collected from the site marked in the map (+) vs daily discharge from the drain (see sheet: Estuary – Salinity).
 8) Fit a trendline to the data and display equation and R^2^ – this is a statistical model.
 9) In a new time-series column in the previous sheet, use the statistical model from above to predict a salinity time-series for the above station in the estuary under the two diversion scenarios compared to the base case.
 
 
-## Conclusions {#E7_8 -}
+## Conclusions {#E7_10 -}
 
 In this exercise, we have explored the complexities of allocating water to the environment in a contested situation (i.e., where there are competing "customers" for the water resource).  In particular, we can sumamrise **environmental flows**:
 
