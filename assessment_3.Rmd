@@ -78,7 +78,7 @@ kable(tableA3A1, format = "html", escape = F, align = "c", caption = "Parameters
 
 </center>
 
-### Calibrating the model {#A3A_7 .unnumbered}
+### Calibrating the model {#A3A_6 .unnumbered}
 
 Now we have the model running, let's make sure the predicted flows are realistic. Previously we assumed a value of $c$ for each sub-catchment, but what is the best value for each sub-catchment that would give the most accurate prediction?
 
@@ -91,7 +91,7 @@ The goal of model calibration is to minimise error between the predictions and a
 5)  Plotting the time-series of daily flows is“crowded” and it’s hard to see differences. In this case we therefore do what is called a “cumulative mass-curve”. For this we cumulate the daily flow and plot over time – so it keeps increasing. This is the cumulative mass of water (usually presented in m3) delivered by the catchment. Create a "stacked area plot" of the cumulative flow from each sub-catchment.
 
 
-### Land-use change scenario {#A3A_9 .unnumbered}
+### Land-use change scenario {#A3A_7 .unnumbered}
 
 Lets assess a land-use change scenario, and see how urbanisation may affect runoff amounts.
 
@@ -107,7 +107,7 @@ To compare scenarios we could plot time-series of streamflows with multiple seri
 
 
 
-## B. Lake system model {#A3A_3 .unnumbered}
+## B. Lake system model {#A3A_8 .unnumbered}
 
 The catchment we have simulated above discharges its water into a lake system located at the low point of the landscape. This includes two main lakes which are situated in sequence. Aside from the catchment river inflow, the lakes receive and lose water from various hydrological pathways The lakes can fill up and overflow, above a certain critical lake height, and overflow water from the initial lake flows to the downstream lake.
 
@@ -208,7 +208,7 @@ ggplotly(plot) %>%
 </center>
 
 
-### Building the model {#A3A_5 .unnumbered}
+### Building the model {#A3A_9 .unnumbered}
 Now we have established the background, start building the model by following these steps:
 
 7) Sketch the described system, setting the context and using the notation above.
@@ -219,14 +219,14 @@ settings in Table 2 (change the red numbers to match Table 4).
 11) Once this lake looks good, implement the columns needed for resolving the Lower Lake, based on Eq 19 above.
 
 
-### Assessing the model {#A3A_5 .unnumbered}
+### Assessing the model {#A3A_10 .unnumbered}
 12) Change the settings (model parameters) to see the sensitivity to leakage ($k$) and maximum lake depth ($h_{max}$).
 13) Would increasing or decreasing the surface area of Lower Lake help stabilise the water level?
 14) Use the model to demonstrate an alternate scenario of lake management – how would this change the lake water levels?
 15) How realistic is this model and what changes could you make if you were asked to improve it?
 
 
-## C. Climate change impact assessment {#A3A_3 .unnumbered}
+## C. Climate change impact assessment {#A3A_11 .unnumbered}
 
 In the final exercise of this assignment, we continue modelling calculations that we have developed previously with one addition: we use your models to predict the effects of a changing climate. Lake water quality has been highlighted as being sensitive to climate change (Trolle et al., 2011). Within Western Australia, a significant decline in rainfall has been observed (e.g., https://water.wa.gov.au/planning-for-the-future/allocation-plans/managing-water-in-a-changing-climate/climate-change-impacts-on-the-south-west)
 
@@ -254,7 +254,7 @@ When interpreting the results, consider:
 
 
 
-## Submission {#A2A_6 .unnumbered}
+## Submission {#A2A_12 .unnumbered}
 
 ::: {.redbox2}
 Your submission is a single report based building on all three exercises, parts A, B and C listed above.
@@ -306,7 +306,7 @@ Follow the unit style and use a consistent format throughout.
 :::
 
 
-### Optional: Add phosphorus concentrations to the model{#A3A_8 .unnumbered}
+### Optional: Add phosphorus concentrations to the model{#A3A_13 .unnumbered}
 
 
 For each sub-catchment, the phosphorus concentration, $P_{i}$ (g/m^3^), depends on how much flow there is (e.g. more flow = more fertilizer leaching) by assuming a simple power law fitted to the flow-concentration relationship computed for each land-use ($P$\~$\alpha Q \beta$). This is averaged over the different land use fractions (denoted with the small $p$ index), using the land-use fraction $F_p$:
