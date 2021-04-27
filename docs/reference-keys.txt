@@ -42,6 +42,7 @@ fig:image7-0
 fig:image7-2
 fig:map7-1
 fig:image7-3
+fig:image8-1
 fig:A2Aimage1
 tab:A2Atable1
 eq:A2Aequation1
