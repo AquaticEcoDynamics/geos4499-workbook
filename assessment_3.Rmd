@@ -294,7 +294,7 @@ Assess the ability of the model to capture this system. You may wish to consider
 - The model equations
 - The software used
 - The uncertainty of the parameters
-- How managers could use this to help reduce nutrient export from a catchment and adapt to a changing climate
+- How managers could use this to help adapt to a changing climate
 
 Give a general conclusion of the three exercises
 Connect your results to your aims
