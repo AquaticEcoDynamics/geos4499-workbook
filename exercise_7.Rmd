@@ -104,7 +104,6 @@ knitr::include_graphics("images/exercise_7/benefits.png")
 
 
 <center>
-
 ```{r map7-1, fig.cap="Explore the case study area with this interactive map.", out.width='100%', out.height='350px', echo=FALSE, message=FALSE, warning=FALSE}
 library(leaflet)
 library(magrittr)
@@ -225,7 +224,7 @@ Construct a nested `IF()` that solves the following:
 
 ## Conclusions {#E7_10 -}
 
-In this exercise, we have explored the complexities of allocating water to the environment in a contested situation (i.e., where there are competing "customers" for the water resource).  In particular, we can sumamrise **environmental flows**:
+In this exercise, we have explored the complexities of allocating water to the environment in a contested situation (i.e., where there are competing "customers" for the water resource).  In particular, we can summarise **environmental flows**:
 
 -   appreciate that there is a potential conflict between e-flow vs irrigation allocation
 -   e-flow allocation is a river restoration and maintenance tool
