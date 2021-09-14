@@ -154,7 +154,7 @@ We will assume that the sides of the lakes are steep so that lake surface area i
 <center>
 
 \begin{equation}
-h_{upper}=\frac{S_{upper}}{A_{lower}}    \text{    &    }     h_{lower}=\frac{S_{lower}}{A_{lower}}
+h_{upper}=\frac{S_{upper}}{A_{upper}}    \text{    &    }     h_{lower}=\frac{S_{lower}}{A_{lower}}
 (\#eq:equationA3A7)
 \end{equation}
 
