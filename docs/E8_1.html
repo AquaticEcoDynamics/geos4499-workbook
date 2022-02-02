@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>References | GEOS4499 Workbook</title>
-  <meta name="description" content="References | GEOS4499 Workbook" />
+  <title>Exercise 8 - Exploring future climate data projections | GEOS4499 Workbook</title>
+  <meta name="description" content="Exercise 8 - Exploring future climate data projections | GEOS4499 Workbook" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="References | GEOS4499 Workbook" />
+  <meta property="og:title" content="Exercise 8 - Exploring future climate data projections | GEOS4499 Workbook" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="References | GEOS4499 Workbook" />
+  <meta name="twitter:title" content="Exercise 8 - Exploring future climate data projections | GEOS4499 Workbook" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="A3A_1.html"/>
-
+<link rel="prev" href="E7_1.html"/>
+<link rel="next" href="assessment-2---data-analysis.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -277,37 +277,96 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references-2" class="section level1 unnumbered">
-<h1>References</h1>
+<div id="E8_1" class="section level1 unnumbered">
+<h1>Exercise 8 - Exploring future climate data projections</h1>
+<p>Understanding what our future climate might look like can be confusing. There are many models, emissions scenarios, time-windows of interest, and variables that we need to understand. Traditionally the output from Global Climate Models (GCM’s) is also very complicated and requires sophisticated data analysis scripts to load and process the spatio-temporal data to something able to be used in impact assessments. In this exercsie we aim to use the <a href="https://www.climatechangeinaustralia.gov.au/en/projections-tools/summary-data-explorer/">CCIA</a> data tool, which provides a user-friendly interface that allows users to extract and interpret data in a simple way.</p>
+<div id="E8_2" class="section level2 unnumbered">
+<h2>Objectives</h2>
+<p>To be able to source essential information on future climate conditions for a chosen area in Australia, and appreciate ways to compare future climate projects and communicate uncertainty.</p>
+</div>
+<div id="E8_3" class="section level2 unnumbered">
+<h2>Making a simple summary plot with the CCIA tool</h2>
+<p>Goto the “<strong>Summary Data Explorer</strong>” tab.</p>
+<ol style="list-style-type: decimal">
+<li>Click on a region on the map.</li>
+<li>In the pop-up, select the variable of interest to view the seasonal bar-plot.</li>
+<li>Download the plot and under-pinning data by clicking on links.
+Have a look at the seasonal changes in temperature, evapotranspiration and rainfall. What do you notice? For rainfall, are some seasons more impacted than others? Is the range predicted by models smaller or bigger than the projected change?
+Make a summary paragraph – something that is concise and understandable but also informative – explaining the nature of climate change at your selected location.</li>
+</ol>
+</div>
+<div id="E8_8" class="section level2 unnumbered">
+<h2>Threshold exceedance</h2>
+<p>Now let’s consider how the frequency of crossing thresholds changes. Whilst the occurance of an “extreme” event (e.g. drought or flood) is rare, the rate their frequency of occurance may change can be disproportionally large compared to, say, the change in the mean (Refer to slide 3 of Lecture 8).</p>
+<p>Goto the “<strong>Thresholds Calculator</strong>” tab.</p>
+<p>In the Configure Data section:</p>
+<ol style="list-style-type: decimal">
+<li>You can select a VARIABLE from the drop-down list – start with MAX TEMPERATURE</li>
+<li>Select a THRESHOLD LEVEL from the drop-down list – select 35 C</li>
+<li>Select a MODEL from the drop-down list</li>
+<li>Select an EMISSIONS SCENARIO from the drop-down list – start with RCP8.5</li>
+<li>Select a TIME PERIOD from the four choices in the drop-down list – use 2050</li>
+<li>Select a SEASON from the drop-down list – use ANNUAL</li>
+<li>Click REDRAW MAP to display the results (there will be a short delay). A map of the gridded results and locations (grey dots) displays and the Select Locality selector becomes active.</li>
+<li>Choose a location on the map or select from the Select Locality drop-down (if desired) to bring up a table comparing historic with future information.</li>
+<li>In the pop-up box showing the results from all models, note the AWAP (historical) value (eg 17 days). Now copy the results from the models and paste into a column in an excel spreadsheet. Label the column in Excel with the RCP level.</li>
+<li>Repeat Step 4-9 for the other RCP values. Once you have a table of data, make a nice graph.</li>
+<li>You can repeat the above for specific seasons and variables.</li>
+</ol>
+</div>
+<div id="E8_9" class="section level2 unnumbered">
+<h2>Spatial gradients in climate trends:</h2>
+<p>We can also access the direct outputs from the model gird (at the land surface level), giving us an appreciation of the spatial variability and “patchiness.”</p>
+<p>Goto the “<strong>Map Explorer</strong>” tab.</p>
+<ol style="list-style-type: decimal">
+<li>Think about Assessment 3 part C. Then:</li>
+</ol>
+<p>In the Configure Data section:</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Now select 2050 TIME PERIOD, and set the VARIABLE to Rainfall. Select a MODEL (e.g., ACCESS).</li>
+<li>For Both RCP4.5 and RCP8.5 draw a map of south-west WA, and re-do this for each season. For each map, note down an approximate rainfall % change for the region around Perth.</li>
+<li>Note the “pixel” size – these results are from a GCM. What sort fo pixel size does your chosen model use? How could we get results at a higher resolution?</li>
+<li>Consider your Assessment 3 CC scenario, and the data in the SWSY report. How do these results compare?</li>
+</ol>
+</div>
+<div id="E8_10" class="section level2 unnumbered">
+<h2>Climate trajectories:</h2>
+<p>Goto the <strong>Time Series Explorer</strong> section.</p>
+<ol style="list-style-type: decimal">
+<li>Follow the instructions to set the time-series graph details, in order to prepare a future trajectory of temperature and (winter) rainfall for a chosen region and RCP. Is there a crtiical year where anomolous conditions start?</li>
+</ol>
+</div>
+<div id="E8_11" class="section level2 unnumbered">
+<h2>Climate Futures Tool:</h2>
+<p>By now you appreciate that climate change cannot always be summarised by applying a simple factor or multiplier. The CCIA Climate Futures Tool allows projections to be classified by the combined changes in two variables, with the data usually presented in an easy to understand colour-coded matrix.</p>
+<p>Importantly this approach is a way of dealing with uncertainty – the more models that agree with a certain level of “change” the more likely that is to occur. That doesn’t mean the less common outcomes are wrong, but on the balance of probability, the more models that agree suggests the likelihood of that outcome is higher.</p>
+<p>For a region of your choice, work through using the <strong>Climate Futures Tool</strong>; following the instructions provided to prepare a summary matrix such as the one below.</p>
+<center>
+<div class="figure"><span style="display:block;" id="fig:image8-1"></span>
+<img src="images/exercise_8/ccia.png" alt="Example output matrix summarising the frequency of model predictions of a certain outcome. Where models agree the liklihood of that outcome is high." width="80%" />
+<p class="caption">
+Figure 26: Example output matrix summarising the frequency of model predictions of a certain outcome. Where models agree the liklihood of that outcome is high.
+</p>
+</div>
+</center>
+</div>
+<div id="E8_12" class="section level2 unnumbered">
+<h2>Conclusions</h2>
+<p>The activity (<strong>a</strong>) helps us appreciate the complexity in trying to anticipate what the future might hold for a certain region of interest, and
+(<strong>b</strong>) gives you an (Australian) example of where you can easily get data on Climate Change information.</p>
 
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div class="csl-entry">
-Bradley, Raymond S. 1999. <em>Paleoclimatology: Reconstructing Climates of the Quaternary</em>. Elsevier.
-</div>
-<div class="csl-entry">
-Cook, Peter G. 2013. <span>“Estimating Groundwater Discharge to Rivers from River Chemistry Surveys.”</span> <em>Hydrological Processes</em> 27 (25): 3694–3707.
-</div>
-<div class="csl-entry">
-Dillon, P, P Stuyfzand, T Grischek, M Lluria, RDG Pyne, RC Jain, J Bear, et al. 2019. <span>“Sixty Years of Global Progress in Managed Aquifer Recharge.”</span> <em>Hydrogeology Journal</em> 27 (1): 1–30.
-</div>
-<div class="csl-entry">
-Dunin, Frank X. 1976. <span>“Infiltration: Its Simulation for Field Conditions.”</span>
-</div>
-<div class="csl-entry">
-Wainwright, John, and Mark Mulligan. 2002. <em>Environmental Modelling: Finding Simplicity in Complexity</em>. Wiley Online Library.
-</div>
-<div class="csl-entry">
-Winter, Thomas C, Judson William Harvey, O Lehn Franke, and William M Alley. 1998. <em>Ground Water and Surface Water: A Single Resource</em>. Vol. 1139. US geological Survey.
 </div>
 </div>
-</div>
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="A3A_1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="E7_1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="assessment-2---data-analysis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
