@@ -62,7 +62,7 @@ Download the Excel spreadsheet for this exercise by clicking the download button
 ```{r tableA3A1, echo=FALSE, message=FALSE, warning=FALSE}
 library(knitr)
 library(kableExtra)
-library(hablar)
+#library(hablar)
 library(dplyr)
 #options(knitr.kable.NA = '')
 tableA3A1 <- read.csv("tables/assessment_3A/table1.csv", check.names=FALSE)
@@ -356,7 +356,7 @@ Now let's work out the land-use specific stream $P$ concentrations:
 ```{r tableA3A2, echo=FALSE, message=FALSE, warning=FALSE}
 library(knitr)
 library(kableExtra)
-library(hablar)
+#library(hablar)
 library(dplyr)
 #options(knitr.kable.NA = '')
 tableA3A2 <- read.csv("tables/assessment_3A/table2.csv", check.names=FALSE)
