@@ -56,6 +56,7 @@ fig:image04-18
 fig:image04-15
 eq:equationA3A1
 eq:equationA3A2
+tab:tableA3A1
 fig:A3image1
 eq:equationA3A5
 eq:equationA3A6
@@ -63,5 +64,7 @@ fig:A3image2
 eq:equationA3A7
 eq:equationA3A8
 eq:equationA3A9
+fig:ass3-fig2
 eq:equationA3A3
 eq:equationA3A4
+tab:tableA3A2

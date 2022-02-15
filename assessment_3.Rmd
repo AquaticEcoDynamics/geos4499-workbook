@@ -60,20 +60,20 @@ Download the Excel spreadsheet for this exercise by clicking the download button
 <center>
 
 ```{r tableA3A1, echo=FALSE, message=FALSE, warning=FALSE}
-# library(knitr)
-# library(kableExtra)
-# library(hablar)
-# library(dplyr)
-# #options(knitr.kable.NA = '')
-# tableA3A1 <- read.csv("tables/assessment_3A/table1.csv", check.names=FALSE)
-# kable(tableA3A1, format = "html", escape = F, align = "c", caption = "Parameters for the individual catchments.") %>%
-#   kable_styling(full_width = F, position = "center") %>%
-#   #column_spec(1, width_min = "5em") %>%
-#   #column_spec(2, width_min = "15em") %>%
-#   #column_spec(3, width_min = "13em") %>%
-#   #row_spec(1:12, background = '#ffffff00') %>%
-#   scroll_box(width = "100%", height = "445px",
-#              fixed_thead = FALSE)
+library(knitr)
+library(kableExtra)
+library(hablar)
+library(dplyr)
+#options(knitr.kable.NA = '')
+tableA3A1 <- read.csv("tables/assessment_3A/table1.csv", check.names=FALSE)
+kable(tableA3A1, format = "html", escape = F, align = "c", caption = "Parameters for the individual catchments.") %>%
+  kable_styling(full_width = F, position = "center") %>%
+  #column_spec(1, width_min = "5em") %>%
+  #column_spec(2, width_min = "15em") %>%
+  #column_spec(3, width_min = "13em") %>%
+  #row_spec(1:12, background = '#ffffff00') %>%
+  scroll_box(width = "100%", height = "445px",
+             fixed_thead = FALSE)
 ```
 
 </center>
@@ -193,17 +193,17 @@ This is depicted visually in Figure \@ref(fig:ass3-fig2), which is incorporated 
 
 <center>
 ```{r ass3-fig2, fig.cap="Potential evaporation rate sine wave function used to capture seasonal variation in lake evaporation.", echo=FALSE, message=FALSE, warning=FALSE, out.width='80%',out.height='50%'}
-# library(ggplot2)
-# library(lubridate)
-# library(plotly)
-# library(dplyr)
-# evap <- read.csv("tables/assessment_3A/evap.csv")
-# evap$Date <- as.Date(evap$Date)
-# plot <- ggplot(data=evap, aes(x=Date, y=Evaporation)) +
-#   geom_line(colour= "#3182bd", size = 1.2) + xlab("Time (years)") + ylab("Potential evaporation (m day<sup>-1</sup>)") +
-#               theme_bw()
-# ggplotly(plot) %>%
-#   config(displaylogo = FALSE)
+library(ggplot2)
+library(lubridate)
+library(plotly)
+library(dplyr)
+evap <- read.csv("tables/assessment_3A/evap.csv")
+evap$Date <- as.Date(evap$Date)
+plot <- ggplot(data=evap, aes(x=Date, y=Evaporation)) +
+  geom_line(colour= "#3182bd", size = 1.2) + xlab("Time (years)") + ylab("Potential evaporation (m day<sup>-1</sup>)") +
+              theme_bw()
+ggplotly(plot) %>%
+  config(displaylogo = FALSE)
 ```
 </center>
 
@@ -354,20 +354,20 @@ Now let's work out the land-use specific stream $P$ concentrations:
 <center>
 
 ```{r tableA3A2, echo=FALSE, message=FALSE, warning=FALSE}
-# library(knitr)
-# library(kableExtra)
-# library(hablar)
-# library(dplyr)
-# #options(knitr.kable.NA = '')
-# tableA3A2 <- read.csv("tables/assessment_3A/table2.csv", check.names=FALSE)
-# kable(tableA3A2, format = "html", escape = F, align = "c", caption = "Phosphate parameters.") %>%
-#   kable_styling(full_width = F, position = "center") %>%
-#   column_spec(1, width_min = "25em") %>%
-#   column_spec(2, width_min = "11em") %>%
-#   column_spec(3, width_min = "11em") %>%
-#   #row_spec(1:12, background = '#ffffff00') %>%
-#   scroll_box(width = "100%", height = "235px",
-#              fixed_thead = FALSE)
+library(knitr)
+library(kableExtra)
+library(hablar)
+library(dplyr)
+#options(knitr.kable.NA = '')
+tableA3A2 <- read.csv("tables/assessment_3A/table2.csv", check.names=FALSE)
+kable(tableA3A2, format = "html", escape = F, align = "c", caption = "Phosphate parameters.") %>%
+  kable_styling(full_width = F, position = "center") %>%
+  column_spec(1, width_min = "25em") %>%
+  column_spec(2, width_min = "11em") %>%
+  column_spec(3, width_min = "11em") %>%
+  #row_spec(1:12, background = '#ffffff00') %>%
+  scroll_box(width = "100%", height = "235px",
+             fixed_thead = FALSE)
 ```
 
 </center>
