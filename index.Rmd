@@ -1,6 +1,6 @@
 --- 
 title: "GEOS4499 Workbook"
-author: "Matt Hipsey, Sarah Bourke, Jason Beringer and Giles Knight"
+author: "Matt Hipsey, Sarah Bourke, Jason Beringer, Jim McCallum and Giles Knight"
 date: "Last updated: `r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
@@ -12,8 +12,6 @@ description: ""
 
 # Introduction {-}
 
-This workbook includes activities to go with the modules of GEOS4499 Water in a Changing Climate.
-
-Module specific activities will be added sequentially throughout semester. From the table of contents you can see the weekly activities, and specific details for individual assessments. Please refer to LMS for information about the course schedule.
+This workbook includes active learning excercises to go with the modules of GEOS4499 Water in a Changing Climate. Below these are your assessments for this unit. Please refer to the Unit Outline on LMS for mre information about the unit schedule and to access the learning modules for each week of the unit.
 
 For more information contact: sarah.bourke@uwa.edu.au.

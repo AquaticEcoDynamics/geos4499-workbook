@@ -1,0 +1,23 @@
+# (PART) Assessments {.unnumbered}
+
+---
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+# Assessment 1 - Online Quizzes {#A1_1 .unnumbered}
+
+You will complete four online quizzes that will test your understanding
+of the learning content in this unit. Each quiz is worth 5%. This
+assessment makes up a total of 20% of your mark for this unit. Each quiz
+should be completed on LMS by the due date. The due date for each quiz
+can be seen in the Unit Outline and an announcement will be made when
+each quiz becomes available.
+
+## Learning Objective {.unnumbered}
+
+At the completion of these quizzes learners will have:
+
+-   demonstrated an ability to explain key hydrological concepts and
+    processes

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Exercise 6 - Assessing environmental flow impacts | GEOS4499 Workbook</title>
-  <meta name="description" content="Exercise 6 - Assessing environmental flow impacts | GEOS4499 Workbook" />
+  <title>Assessment 3B - Modelling catchment response to climate change | GEOS4499 Workbook</title>
+  <meta name="description" content="Assessment 3B - Modelling catchment response to climate change | GEOS4499 Workbook" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Exercise 6 - Assessing environmental flow impacts | GEOS4499 Workbook" />
+  <meta property="og:title" content="Assessment 3B - Modelling catchment response to climate change | GEOS4499 Workbook" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Exercise 6 - Assessing environmental flow impacts | GEOS4499 Workbook" />
+  <meta name="twitter:title" content="Assessment 3B - Modelling catchment response to climate change | GEOS4499 Workbook" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="E5_1.html"/>
-<link rel="next" href="E7_1.html"/>
+<link rel="prev" href="A2B-1.html"/>
+<link rel="next" href="references-2.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -274,229 +274,411 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="E6_1" class="section level1 unnumbered">
-<h1>Exercise 6 - Assessing environmental flow impacts</h1>
-<div id="E6_2" class="section level2 unnumbered">
+<div id="A3B_1" class="section level1 unnumbered">
+<h1>Assessment 3B - Modelling catchment response to climate change</h1>
+<div id="A3B_2" class="section level2 unnumbered">
 <h2>Objectives</h2>
-<p>Use scenario assessment to identify the impacts of water diversion on a coastal lake system.
-Become familiar with basic spreadsheet commands in Excel by conducting an environmental flow analysis and building a simple impact model.</p>
-</div>
-<div id="E6_3" class="section level2 unnumbered">
-<h2>What are environmental flows?</h2>
-<p>Lakes, rivers and estuaries are adapted to receive water based on the natural hydrological condition, but often water is required upstream for other purposes. An environmental flow is water that is provided to the environment to maintain its health and natural diversity</p>
-<blockquote>
-<p>In simple terms: Provision of water to satisfy environmental requirements for ‘healthy’ (natural) function.
-<br></p>
-</blockquote>
-<center>
-<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;">
-<iframe style="border: 0; top: 0; left: 0; width: 90%; height: 90%; position: absolute;" src="https://www.youtube.com/embed/BLeA1l0IH3w" allowfullscreen scrolling="no" allow="encrypted-media; accelerometer; gyroscope; picture-in-picture">
-</iframe>
-</div>
-</center>
-<blockquote>
-<p>Environmental flows are a form of river/wetland restoration. They are sometimes referred to as “e-flows.”</p>
-</blockquote>
-<p><br></p>
-<p>In the Murray-Darling Basin (<a href="https://www.mdba.gov.au/importance-murray-darling-basin">MDB</a>), a water market was established that allows for irrigation entitlements to be “traded”; e-water must be bought from the “water holder” (in this case that is the Commonwealth Environmental Water Holder, <a href="http://www.environment.gov.au/water/cewo">CEWH</a>).</p>
-</div>
-<div id="E6_4" class="section level2 unnumbered">
-<h2>A - Classifying e-flow benefits case study : MDB</h2>
-<p>After viewing the 6 videos on LMS related to the Murray-Darling Basin water management issues, you can reflect on the nature of the environmental, economic and social interactions that have characterised the basin. Could you describe the historical events that led to the issues as described, management responses, and the perceived policy failures?</p>
-<p>The overall management plan for the MDB uses a thing called Sustainable Diversion Limits (SDL’s) where managers identify what is able to be taken from the river, and in converse, what the river needs to function normally.</p>
-<p>In any river system, water and flows are needed in rivers to maintain:</p>
+<p>The aim of this assignment is to develop your thinking about how we can
+conceptualise environmental systems in times of change, how different
+“components” of the environment link together, and to understand
+approaches to predict changes to the environment brought about by
+climate change. We look at simple example of a catchment-lake system,
+but the methods and logic introduced are relevant for how assessments
+are undertaken to assess how climate change impacts real-world systems.</p>
+<p>We will develop the assessment through three main sessions focused on:</p>
 <ul>
-<li>Physical integrity of the river channel and floodplains (e.g., movement of sediment and maintenance of habitat)</li>
-<li>Species and biological communities</li>
-<li>Ecological processes (eg. nutrient, carbon, energy flow)</li>
-<li>Ecosystem services:
-<ul>
-<li>Flood attenuation</li>
-<li>Water purification</li>
-<li>Fish production</li>
-</ul></li>
+<li><p>A. Catchment streamflow prediction</p></li>
+<li><p>B. Lake dynamics</p></li>
+<li><p>C. Assessing climate change impacts</p></li>
 </ul>
-<p>When we talk about river flows, from an eco-hydrology point of view, we can categorise them as having specific flow “components.”</p>
-<ul>
-<li><strong>Extreme low flows</strong> - reduced connectivity and limited species migration</li>
-<li><strong>Low flows / base flows</strong> - maintain adequate habitat; drinking water for terrestrial animals;
-and soil moisture for plants</li>
-<li><strong>High flow pulses</strong> - Support feeding and spawning activities of fish</li>
-<li><strong>Small floods</strong> (2 – 10yr ARI) - enable migration to flood plains, wetlands, and other habitats that act as breeding grounds and provide resources to many species. Drive reproduction processes of riparian plants</li>
-<li><strong>Large floods</strong> (&gt;10yr ARI) – Can change the path of the river, form new habitat, and move sediment and plant matter, connect remote environments</li>
-</ul>
-<p>When allocating water we try to maintain a “realistic” flow hydrograph based on historical (reference) data. But how do we measure the success or failure? Buying e-water costs a lot of money and is a politically charged issue. So we need to know we are getting it right!</p>
-<p>Ideally we use a “flow-response” model - a measure of what ecological benefit we will get from a certain flow regime. But this is easier said than done, and measuring benefits is an important area of research.</p>
-<p>So we need to use indicators – “measures of response.” This can include things like:</p>
-<ul>
-<li>Vegetation</li>
-<li>Water Quality (WQ)</li>
-<li>Biodiversity – e.g., fish / macroinvertebrate trophic index</li>
-</ul>
-<p>We then monitor/assess indicators and adjust environmental flow management regime … in an ideal world. The Murray-Darling Basin Authority (MDBA) has a program called “FLOW MER” - Measuring Evaluation Research to do just this.</p>
+</div>
+<div id="A3B_3" class="section level2 unnumbered">
+<h2>A. Catchment Model</h2>
+<p>Consider a river basin with <strong>3 sub-catchments</strong>, each with <strong>a
+different dominant land use and slightly different climate</strong>.</p>
+<p>The daily runoff from each sub-catchment, <span class="math inline">\(Q_i\)</span> (m<sup>3</sup>/day), can be
+simply approximated based on the daily rainfall (<span class="math inline">\(R\)</span>), where <span class="math inline">\(c\)</span> is the
+daily runoff efficiency and <span class="math inline">\(R^{crit}\)</span> is the initial loss threshold
+(<span class="math inline">\(m\)</span>, this is the amount of rainfall that does not make it to the
+stream):</p>
 <center>
-<div class="figure"><span style="display:block;" id="fig:image7-0"></span>
-<img src="images/exercise_7/mer.png" alt="Focus study sites where environmental water delivery is assessed in the MDB. Visit: https://flow-mer.org.au" width="100%" />
-<p class="caption">
-Figure 22: Focus study sites where environmental water delivery is assessed in the MDB. Visit: <a href="https://flow-mer.org.au" class="uri">https://flow-mer.org.au</a>
-</p>
-</div>
+<span class="math display" id="eq:equationA3A1">\[\begin{equation}
+Q_{i}^{t} = \left\{\begin{matrix} 0,\ \ &amp;R_{i}^{t}\le R_{i}^{crit}
+\\ c_{i}(R_{i}^{t}-R_{i}^{crit})A_{i},\ \ &amp;R_{i}^{t}&gt; R_{i}^{crit}
+\end{matrix}\right.
+\tag{14}
+\end{equation}\]</span>
 </center>
-<p>Take some time now to choose a selected MDBA focus site accessible from the above link. For your allocated/chosen focus region:</p>
-<ul>
-<li>Identify its location and key “values”</li>
-<li>Read the background and description of the approach to assessment of benefits</li>
-</ul>
-<p>Review and be able to answer the following questions:
-- What are the expected stresses to be caused if natural water-flow regimes are lost?
-- List the current type of work being undertaken to assess how e-water is affecting the
-region
-- Describe the key findings / key learnings of the assessment that was undertaken at that site</p>
-<p>After reviewing the overview of the environmental flow monitoring focus areas, complete a table categorising the general benefits of environmental water delivery, and for each category give examples.</p>
+<p>The “<span class="math inline">\(t\)</span>” super- script refers to a “time-step,” usually referring to a
+single day. The “<span class="math inline">\(i\)</span>” subscript in the above refers to the catchment
+index; in other words, <span class="math inline">\(i=1\)</span> refers to sub-catchment 1.</p>
+<p>The total flow (<span class="math inline">\(Q_{tot}\)</span>, m<sup>3</sup>/day) is calculated by summing the
+individual sub catchments, however there is an assumed lag time of 1 day
+for sub-catchment 2 and 2 days lag time for sub-catchment 3:</p>
 <center>
-<div class="figure"><span style="display:block;" id="fig:image7-2"></span>
-<img src="images/exercise_7/benefits.png" alt="Example table to audit the variety of benefits reported across the different sites. Get the word template by clicking the download button in the tool bar." width="100%" />
-<p class="caption">
-Figure 23: Example table to audit the variety of benefits reported across the different sites. Get the word template by clicking the download button in the tool bar.
-</p>
-</div>
+<span class="math display" id="eq:equationA3A2">\[\begin{equation}
+Q_{tot}^{t} = \color{#9BBB59}{Q_{1}^{t}} + \color{#0070C0}{Q_{2}^{t-1}} + \color{#F79646}{Q_{3}^{t-2}}
+\tag{15}
+\end{equation}\]</span>
 </center>
+<p>The time-lag of one day (<span class="math inline">\(t-1\)</span>) and two days (<span class="math inline">\(t-2\)</span>), is a way to simply
+account for the time it takes for water in sub-catchment 2 and 3 to
+reach to overall catchment outlet, a process we call streamflow routing.</p>
+<div id="A3B_4" class="section level3 unnumbered">
+<h3>Module Resources</h3>
+<p>Download the Excel spreadsheet for this exercise by clicking the
+download button in the tool bar
+<i class="fa fa-download" aria-hidden="true"></i>.</p>
 </div>
-<div id="E6_5" class="section level2 unnumbered">
-<h2>B - Flow diversion case study : Robe Lakes</h2>
-<center>
-<div class="figure"><span style="display:block;" id="fig:map7-1"></span>
-<div id="htmlwidget-0855276f8f41a5f19482" style="width:100%;height:350px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0855276f8f41a5f19482">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[-37.1700550160659,139.781482414934],15,[]],"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]}]},"evals":[],"jsHooks":[]}</script>
-<p class="caption">
-Figure 24: Explore the case study area with this interactive map.
-</p>
-</div>
-</center>
-<p>We can further plan for e-water requirements to a critical system using scenario modelling, and as outlined above, the concept of “flow-response.” In this case we look at an example in South Australia where an assessment for water diversion is being undertaken, and we seek to look at what impact this might have on the salinity of a coastal lake. In other words, if we change the flow regime, what will the response be. In this case, salinity is an environmental indicator of ecological requirements.</p>
-<p>Specifically in this example, we assess the impact of diverting water from “Drain L,” thereby reducing water to the Robe Lakes. Before we assess our diversion scenario, we must first analyse the historical flow data, to understand the historical flow regime.</p>
-<center>
-<div class="figure"><span style="display:block;" id="fig:image7-3"></span>
-<img src="images/exercise_7/picture1.jpeg" alt="Drain L inflows (yellow arrow) will be diverted (blue arrow)." width="100%" />
-<p class="caption">
-Figure 25: Drain L inflows (yellow arrow) will be diverted (blue arrow).
-</p>
-</div>
-</center>
-<div id="E6_6" class="section level3 unnumbered">
-<h3>Module resources</h3>
-<p>Download the Excel spreadsheet for this module by clicking the download button in the tool bar <i class="fa fa-download" aria-hidden="true"></i>.</p>
-</div>
-<div id="E6_7" class="section level3 unnumbered">
-<h3>Categorising flow data</h3>
-<p>You are given a time-series of daily river flow and need to assess how different diversion scenarios impact the freshwater flow delivery to a down stream estuary.</p>
+<div id="A3B_5" class="section level3 unnumbered">
+<h3>Building the model</h3>
 <ol style="list-style-type: decimal">
-<li>For this flow time-series, calculate the <strong>volume of daily flow</strong> within the following bands
-0-40; 40-80; 80-120; 120-200; 200-400; 400-1000; &gt;1000</li>
+<li>Draw by hand the conceptual model of this system.</li>
+<li>Confirm what the indices are referring to in the above equations
+(<span class="math inline">\(t\)</span>, <span class="math inline">\(i\)</span>).</li>
+<li>Build the above model in Excel, to predict the individual
+sub-catchment flows and river basin total flow. Assume basic
+information as outlined in Table <a href="#tab:tableA3A1"><strong>??</strong></a> below and the
+supplied rainfall data for the 3 sub-catchments. Input a guessed
+value for <span class="math inline">\(c\)</span> within the range indicated for now.</li>
 </ol>
-
-<div class="rmdtip2">
-Use a nested <code>IF()</code> statement in adjacent columns to partition flows
 <center>
-<img src="images/exercise_7/picture2.png" style="width:100.0%" />
 </center>
 </div>
-<center>
-<video width="100%" height="100%" controls>
-<source src="images/exercise_7/video1.mp4" type="video/mp4">
-</video>
-</center>
-<ol start="2" style="list-style-type: decimal">
-<li>For this flow time-series, calculate the <strong>number of days</strong> of daily flow within the above bands and work out <strong>annual average number of days</strong></li>
-</ol>
-
-<div class="rmdtip2">
-Use <code>COUNT()</code> to get the number of entries in the column
-</div>
-<ol start="3" style="list-style-type: decimal">
-<li>Calculate the <strong>annual amount of flow</strong> in total and in each band</li>
-</ol>
-<p>You may do the annual averaging manually or the pivot table method. For the pivot table method: Insert a new column B, Label it Year.
-Type the year number into the first cell, make sure it is formatted as a number.</p>
-<center>
-<video width="100%" height="80%" controls>
-<source src="images/exercise_7/video2.mp4" type="video/mp4">
-</video>
-</center>
-<p>Click two times on the little square in the corner of the box. This will fill down the page.
-Repeat this at each year change and you will have the year only information which you can then use to summarise data. As the original date has day numbers and decimal time each one is unique so you end up with a record for each day. This way you get a record for each year.</p>
-
-<div class="rmdtip2">
-Use <code>YEAR()</code> to speed this step up
-</div>
-<p>Highlight all the data. It must have headings for each column or it won’t work.
-Go to “Insert” then “Pivot Table.” Click OK as you want the default settings.
-Then you just fiddle until you get what you want. The following is an example:</p>
-<center>
-<video width="90%" height="90%" controls>
-<source src="images/exercise_7/video3.mp4" type="video/mp4">
-</video>
-</center>
+<div id="A3B_6" class="section level3 unnumbered">
+<h3>Calibrating the model</h3>
+<p>Now we have the model running, let’s make sure the predicted flows are
+realistic. Previously we assumed a value of <span class="math inline">\(c\)</span> for each sub-catchment,
+but what is the best value for each sub-catchment that would give the
+most accurate prediction?</p>
 <ol start="4" style="list-style-type: decimal">
-<li><strong>Sort the years</strong> from highest to lowest total annual flow:
-<ol style="list-style-type: lower-alpha">
-<li>Add a new column next to the flows indexing the years sequentially (i.e. 1, 2, 3…)</li>
-<li>Add a new column next to the indices calculating the probability of meeting the annual flow: <span class="math inline">\(P(Yri) = \frac{i}{\text{number of years}+1}\)</span></li>
-</ol></li>
+<li>Manually adjust the runoff coefficient values (<span class="math inline">\(c\)</span>) for each
+sub-catchment (see possible ranges in table above) until the model
+best matches the observed data. This process is called
+“calibration.”</li>
 </ol>
+
+<div class="rmdtip2">
+The goal of model calibration is to minimise error between the predictions and available observations. We can check this by using a regression plot of the total observed runoff and the model total runoff, checking to get the highest R<sup>2</sup> value, and ensuring the magnitudes are comparable.
+</div>
+<ol start="5" style="list-style-type: decimal">
+<li>Plotting the time-series of daily flows is“crowded” and it’s hard to
+see differences. In this case we therefore do what is called a
+“cumulative mass-curve.” For this we cumulate the daily flow and
+plot over time – so it keeps increasing. This is the cumulative
+mass of water (usually presented in m3) delivered by the catchment.
+Create a “stacked area plot” of the cumulative flow from each
+sub-catchment.</li>
+</ol>
+</div>
+<div id="A3B_7" class="section level3 unnumbered">
+<h3>Land-use change scenario</h3>
+<p>Lets assess a land-use change scenario, and see how urbanisation may
+affect runoff amounts.</p>
+<ol start="5" style="list-style-type: decimal">
+<li>If the total urban area in each sub-catchment expands to 50%
+(<span class="math inline">\(F_{urban}=0.5\)</span>), how would this affect the overall amount of water
+discharged?</li>
+</ol>
+
+<div class="rmdtip2">
+To assess this we must change the runoff coefficient, <span class="math inline">\(c\)</span>, to reflect the increased imperviousness brought about by urbanisation. We will need to assume a <span class="math inline">\(c\)</span> value for urban land, <span class="math inline">\(c_{urban}\)</span>,, and then we need to average this and the calibrated version from step (4) to come up with the new value: <span class="math inline">\(c_{new} = (c_{old} + c_{urban})/2\)</span>. The <span class="math inline">\(R^{crit}\)</span> value for each sub-catchment should also be redued by 25%.
+</div>
+<p>To compare scenarios we could plot time-series of streamflows with
+multiple series on a single plot. As above, we can more easily compare
+scenarios using the cumulative mass plot, as they will start to diverge
+and the differences will stand out more clearly.</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Prepare a cumulative time-series of water from the orginal
+calibrated model, and the urban land-use change scenario. Quantify
+the difference between the two in terms of annual water volume for
+each catchment.</li>
+</ol>
+</div>
+</div>
+<div id="A3B_8" class="section level2 unnumbered">
+<h2>B. Lake system model</h2>
+<p>The catchment we have simulated above discharges its water into a lake
+system located at the low point of the landscape. This includes two main
+lakes which are situated in sequence. Aside from the catchment river
+inflow, the lakes receive and lose water from various hydrological
+pathways The lakes can fill up and overflow, above a certain critical
+lake height, and overflow water from the initial lake flows to the
+downstream lake.</p>
 <center>
-<video width="100%" height="100%" controls>
-<source src="images/exercise_7/video4.mp4" type="video/mp4">
+<div class="figure"><span style="display:block;" id="fig:A3image1"></span>
+<img src="images/assessment_3/yellagonga.jpg" alt="Two-lake system" width="80%" />
+<p class="caption">
+Figure 35: Two-lake system
+</p>
+</div>
+</center>
+<p>Given the position of upper lake in the landscape it is likely to be a
+through-flow lake, so we also include terms for groundwater outflow,
+connecting the two lakes. We’ll assume that groundwater inflow is
+determined by the regional groundwater gradient which is relatvely
+stable so that we can use a constant value. For groundwater outflow, we
+can use the same approach as we used in Exercise 5, where infiltration
+was a function of water level in the lake.</p>
+<p>Bearing this in mind, the water balance equation describing the change
+in lake storage (<span class="math inline">\(S\)</span>, <span class="math inline">\(m^3\)</span>) of the upper lake is:</p>
+<center>
+<p><span class="math display" id="eq:equationA3A5">\[\begin{equation}
+\frac{dS_{upper}}{dt}= Q_{tot} +\underbrace{   (R - E -kh_{upper} ) A_{upper} }_{\text{upper lake fluxes}} - Q_{out_{upper}}
+\tag{16}
+\end{equation}\]</span> <span class="math display" id="eq:equationA3A6">\[\begin{equation}
+\frac{dS_{lower}}{dt}= Q_{out_{upper}} + \underbrace{ kh_{upper} A_{upper} }_{\text{gw from upper -&gt; lower}} + \underbrace{  (R - E - kh_{lower}) A_{lower} }_{\text{lower lake fluxes}} - Q_{out_{lower}}
+\tag{17}
+\end{equation}\]</span></p>
+</center>
+<p>wher <span class="math inline">\(R\)</span> is the precipitation (<span class="math inline">\(m/day\)</span>) falling on the relevant lake
+(precipitation rate x lake area, <span class="math inline">\(A\)</span>), <span class="math inline">\(Q_{tot}\)</span> is the inflow
+(discharge) rate from the catchment (<span class="math inline">\(m^3/day\)</span>), <span class="math inline">\(Q_{out_{upper}}\)</span> is
+the overflow from the upper to the lower lake, <span class="math inline">\(E\)</span> is the evaporation
+rate (<span class="math inline">\(m/day\)</span>) and the <span class="math inline">\(khA\)</span> terms reflect the groundwater seepage
+associated with each of the lakes.</p>
+<center>
+<div class="figure"><span style="display:block;" id="fig:A3image2"></span>
+<img src="images/assessment_3/lake_pars.png" alt="Model parameters for lake system water level simulation" width="80%" />
+<p class="caption">
+Figure 36: Model parameters for lake system water level simulation
+</p>
+</div>
+</center>
+<p>With these we can model the water storage in the two lakes. Start with
+the template spreadsheet provided. You can use the daily rain and
+evaporation (data provided) to drive this model, but you will need to
+ensure you have consistent units across terms (i.e. all rates are /d,
+not a mix of /d and /y, and note that volumes are different from
+lengths!).</p>
+<p>We will assume that the sides of the lakes are steep so that lake
+surface area is independent of water level height. Therefore, water
+level is related to the storage volume in the lake according to:</p>
+<center>
+<span class="math display" id="eq:equationA3A7">\[\begin{equation}
+h_{upper}=\frac{S_{upper}}{A_{upper}}    \text{    &amp;    }     h_{lower}=\frac{S_{lower}}{A_{lower}}
+\tag{18}
+\end{equation}\]</span>
+</center>
+<p>To start the simulation we must use an initial lake water level, as
+provided in the details below (Table 4), to get the starting lake
+storage, <span class="math inline">\(S^{t=0}\)</span> or <span class="math inline">\(S^{0}\)</span>.</p>
+<p>The outflow (overflow) of each lake only occurs when the lake water
+level exceeds the maximum depth, which are denoted <span class="math inline">\(h^{max}_{upper}\)</span> and
+<span class="math inline">\(h^{max}_{lower}\)</span>. In general, for either lake:</p>
+<center>
+<span class="math display" id="eq:equationA3A8">\[\begin{equation}
+Q_{out}=
+\left\{\begin{matrix} 0,\ \ &amp;h^{t}\le h^{max}
+\\ (h^{t*}-h^{max})A,\ \ &amp;h^{t}\gt h^{max}
+\end{matrix}\right.
+\tag{19}
+\end{equation}\]</span>
+</center>
+<p>where <span class="math inline">\(h^{t*}\)</span> is the estimate of what the daily water level would be
+prior to computing <span class="math inline">\(Q_{out}\)</span> (i.e., an interim value). Note that when
+applying this, and <span class="math inline">\(IF\)</span> statement can be used to compute the equation
+above.</p>
+<p>The rate of potential evaporation, <span class="math inline">\(E_{p_{annual}}\)</span> <span class="math inline">\((m/yr)\)</span>, at the
+chosen location varies seasonally - more in summer and less in winter.
+It is rare to measure evaporation so instead we can rely on the annual
+rate of potential evaporation, and spread it over a year using a sine
+wave. The sine wave, is tailored to ensure the peak is in summer and the
+trough is in winter, and that the sum of the daily evaporation rates
+adds to the annual total:</p>
+<center>
+<span class="math display" id="eq:equationA3A9">\[\begin{equation}
+E_{daily}= sin() E_{p_{annual}}
+\tag{20}
+\end{equation}\]</span>
+</center>
+<p>This is depicted visually in Figure <a href="#fig:ass3-fig2"><strong>??</strong></a>, which is
+incorporated in the provided data sheet with typical parameters for
+Perth conditions.</p>
+<center>
+</center>
+<div id="A3B_9" class="section level3 unnumbered">
+<h3>Building the model</h3>
+<p>Now we have established the background, start building the model by
+following these steps:</p>
+<ol start="7" style="list-style-type: decimal">
+<li>Sketch the described system, setting the context and using the
+notation above.</li>
+<li>Write out the above two equations using “difference” notation (i.e.,
+<span class="math inline">\(S^{t+1}_{lower} = S^t_{lower} + R^t...\)</span> ).</li>
+<li>Open the LakeModel spreadsheet and finish the columns for the Upper
+Lake, using the below settings in Table 2 (change the red numbers to
+match Table 4).</li>
+<li>Plot the Upper Lake storage and water depth over time. Now also plot
+the water fluxes.</li>
+<li>Once this lake looks good, implement the columns needed for
+resolving the Lower Lake, based on Eq 19 above.</li>
+</ol>
+</div>
+<div id="A3B_10" class="section level3 unnumbered">
+<h3>Assessing the model</h3>
+<ol start="12" style="list-style-type: decimal">
+<li>Change the settings (model parameters) to see the sensitivity to
+leakage (<span class="math inline">\(k\)</span>) and maximum lake depth (<span class="math inline">\(h_{max}\)</span>).</li>
+<li>Would increasing or decreasing the surface area of Lower Lake help
+stabilise the water level?</li>
+<li>Use the model to demonstrate an alternate scenario of lake
+management – how would this change the lake water levels?</li>
+<li>How realistic is this model and what changes could you make if you
+were asked to improve it?</li>
+</ol>
+</div>
+</div>
+<div id="A3B_11" class="section level2 unnumbered">
+<h2>C. Climate change impact assessment</h2>
+<p>In the final exercise of this assignment, we continue modelling
+calculations that we have developed previously with one addition: we use
+your models to predict the effects of a changing climate. Lake water
+quality has been highlighted as being sensitive to climate change
+(Trolle et al., 2011). Within Western Australia, a significant decline
+in rainfall has been observed (e.g.,
+<a href="https://water.wa.gov.au/planning-for-the-future/allocation-plans/managing-water-in-a-changing-climate/climate-change-impacts-on-the-south-west" class="uri">https://water.wa.gov.au/planning-for-the-future/allocation-plans/managing-water-in-a-changing-climate/climate-change-impacts-on-the-south-west</a>)</p>
+<p>Read the document ‘<em>Climate analyses for south-west Western Australia</em>’
+(CSIRO, 2010) to learn about the projected climate changes for the
+coming decades, the various scenarios proposed and the different models
+that are synthesised in the report. For example, look at Sections 4.5.1
+Rainfall Change and 4.5.2 Areal Potential Evaporation show predicted
+rainfall and evaporation changes for the year ~2030.</p>
+<p>Use your judgement to select seasonal and annual trend changes, for
+example, one model may predict a 2% decrease in spring rainfall and a 3%
+increase in evaporation for the area around Perth. Alter your climate
+forcing data so that it reflects one of the climate models forecast.
+Recalculate the water balance for 2030 to 2033 with your new rainfall
+and evaporation forcing. This is essentially a new scenario of your
+model.</p>
+<p>When describing the methods for this climate change assessment, explain
+the methods you used to obtain the climate change trend from the CSIRO
+report, and then the approach to alter the climate forcing in the model.</p>
+<p>When describing the results of the climate change impacts, explain what
+the differences were between the base case and the projected scenarios.
+Create a set of figures that show the differences between the base case
+scenario and any future scenarios for key catchment and lake results.</p>
+<p>When interpreting the results, consider:</p>
+<p>• how your results match the rest of the climate literature that you
+have researched,</p>
+<p>• positive or negative changes for future lake ecosystems in 2033,</p>
+<p>• the benefits of regional and global climate models,</p>
+<p>• the relative merits of simple bucket models and complex general
+circulation models,</p>
+<p>• any other effects of increased temperature that are not captured in
+this model,</p>
+<p>• how the model could be improved, and the next steps that future
+modellers could carry out.</p>
+</div>
+<div id="A2A_12" class="section level2 unnumbered">
+<h2>Submission</h2>
+<div class="redbox2">
+<p>Your submission is a single report based building on all three
+exercises, parts A, B and C listed above.</p>
+<p>If you did not complete any of the individual exercises, you should
+still write the report, based on whatever you were able to complete. Use
+the questions in the exercise as a guide to the ideas that should be
+included in your discussion. There is no page limit, but it should be
+around eight pages.</p>
+<p>There are two main focuses for the report:</p>
+<p>• <em>the scientific aspects associated with catchment and lake
+assessment</em>, and</p>
+<p>• <em>the technical and practical aspects of numerical modelling</em>.</p>
+<p>The structure of the report should be as follows:</p>
+<p><strong>Introduction</strong> : Include just the background information that is
+necessary to understand your aim. This should relate to assessment of
+land-use change and climate change. Introduce all three exercises
+together in a nicely connected way within the one introduction Include
+an aim, and a hypothesis if you can Include conceptual diagrams if they
+help explain the background</p>
+<p><strong>Methods</strong> : Explain what you did, so that someone else could repeat it
+Separate the three exercises, within this one Methods section, using
+sub-sections for the catchment, lake and climate aspects Use the past
+tense, and a passive voice Show the model equations Show all parameters
+used, including sources for parameters or estimates found in the
+literature Include conceptual diagrams to help explain the methods</p>
+<p><strong>Results</strong> : Report the numbers, trends or other findings you
+calculated. Include figures if they help you explain the results, for
+example, time series. Separate the three exercises, within this one
+Results section. Remember to label all of your axes with the correct
+units, provide a legend only if necessary, and add a caption underneath
+the figure. Don’t add a title on a figure (use a caption).</p>
+<p><strong>Discussion</strong> : Assess the ability of the model to capture this system.
+You may wish to consider - - The suitability of the conceptual model (is
+it flawed or robust?) - The model equations - The software used - The
+uncertainty of the parameters - How managers could use this to help
+adapt to a changing climate</p>
+<p>Give a general conclusion of the three exercises Connect your results to
+your aims Connect your results to the rest of your background reading.</p>
+<p><strong>References</strong> : Follow the unit style and use a consistent format
+throughout.</p>
+</div>
+<div id="A3B_13" class="section level3 unnumbered">
+<h3>Optional: Add phosphorus concentrations to the model</h3>
+<p>For each sub-catchment, the phosphorus concentration, <span class="math inline">\(P_{i}\)</span> (g/m<sup>3</sup>),
+depends on how much flow there is (e.g. more flow = more fertilizer
+leaching) by assuming a simple power law fitted to the
+flow-concentration relationship computed for each land-use
+(<span class="math inline">\(P\)</span>~<span class="math inline">\(\alpha Q \beta\)</span>). This is averaged over the different land use
+fractions (denoted with the small <span class="math inline">\(p\)</span> index), using the land-use
+fraction <span class="math inline">\(F_p\)</span>:</p>
+<center>
+<span class="math display" id="eq:equationA3A3">\[\begin{equation}
+P_{i}^{t} = \sum_{p=4}^{N_{p}} F_{p}\left (\color{#FF0000}{\alpha_{p} \left (\frac{Q_{i}^{t}}{A_{i}}  \right )^{\beta_{p}}+P_{0}}  \right )
+\tag{21}
+\end{equation}\]</span>
+</center>
+
+<div class="rmdnote2">
+<span class="math inline">\(\color{#FF0000}{\alpha_{p} \left (\frac{Q_{i}^{t}}{A_{i}} \right )^{\beta_{p}}+P_{0}}\)</span> is the flow dependent concentration of the <em>p</em>-th land use type.
+</div>
+<p>Where alpha (<span class="math inline">\(\alpha\)</span>) and beta (<span class="math inline">\(\beta\)</span>) are variables that govern the
+stream <span class="math inline">\(P_i\)</span> concentration (g/m<sup>3</sup>) as a function of area-averaged flow
+rate (<span class="math inline">\(Q/A\)</span>) and they depend on the dominant land use (<span class="math inline">\(p\)</span>). <span class="math inline">\(N_p\)</span> is
+the number of land use classes being considered (4) and <span class="math inline">\(P_0\)</span> is the
+background concentration (g/m<sup>3</sup>) for that sub-catchment (i.e. the value
+of PO<sub>4</sub> when flow tends to 0).</p>
+<p>The total <span class="math inline">\(P\)</span> export load is <span class="math inline">\(P_{load}\)</span> (g/day) and is the sum of the
+different sub catchment outputs (remember <em>load = flow x concentration</em>)
+with the assumed lag time:</p>
+<center>
+<span class="math display" id="eq:equationA3A4">\[\begin{equation}
+P_{load}^{t} = \color{#9BBB59}{P_{1}^{t} Q_{1}^{t}} + \color{#0070C0}{P_{2}^{t-1} Q_{2}^{t-1}} + \color{#F79646}{P_{3}^{t-2} Q_{3}^{t-2}}
+\tag{22}
+\end{equation}\]</span>
+</center>
+<center>
+<video width="80%" height="80%" controls>
+<source src="images/assessment_3A/video1.mp4" type="video/mp4">
 </video>
 </center>
-<div class="line-block">           c. Scatter plot the flow vs probability curve</div>
-
-<div class="rmdtip2">
-Sum each year
-</div>
-</div>
-<div id="E6_8" class="section level3 unnumbered">
-<h3>Flow diversion scenarios</h3>
+<p>Now let’s work out the land-use specific stream <span class="math inline">\(P\)</span> concentrations:</p>
 <ol start="5" style="list-style-type: decimal">
-<li>Assess the amount of water available for <strong>flow diversion for two scenarios</strong> by adding a new time-series column for each option:
-<ol style="list-style-type: lower-alpha">
-<li>Water below 50 ML/day and above 550 ML/day is NOT diverted</li>
-<li>Water below 150 ML/day and above 1000 ML/day is NOT diverted</li>
-</ol></li>
+<li>Predict the sub catchment river <span class="math inline">\(P\)</span> concentrations and total river
+basin <span class="math inline">\(P\)</span> export load. The best way to do this is first predict the
+<span class="math inline">\(P\)</span> concentration of each land-use class (<span class="math inline">\(F_p\)</span>) in each sub
+catchment each as a column (i.e. Dairy <span class="math inline">\(P\)</span> concentration, Wheat <span class="math inline">\(P\)</span>
+concentration and so on), and then sum the 4 columns for <span class="math inline">\(P_i\)</span>.</li>
+</ol>
+<center>
+</center>
+
+<div class="rmdtip2">
+See how dairy has the highest alpha? This means it produces the most <span class="math inline">\(P\)</span> of all 4 classes.
+</div>
+<ol start="7" style="list-style-type: decimal">
+<li>If the irrigated dairy industry were made to contain their flows
+(i.e. prevent high <span class="math inline">\(P\)</span> concentrations going to the stream), how
+would this affect the overall concentration in the water at the
+river basin outlet? They have to keep the total subcatchment <span class="math inline">\(P\)</span>
+concentration below 0.065 g m<sup>3</sup>.</li>
 </ol>
 
 <div class="rmdtip2">
-Construct a nested <code>IF()</code> that solves the following:
-<center>
-<img src="images/exercise_7/picture3.png" style="width:100.0%" />
-</center>
+Use an IF statement.
 </div>
-<ol start="6" style="list-style-type: decimal">
-<li>Add two new columns for each of the above to work out <strong>cumulative amount</strong> (running total) of diverted water
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\text{Cumulated Volume} = \text{Previous Cumulated Volume}+\text{Today&#39;s Diverted Discharge}\)</span></li>
-</ol></li>
-</ol>
-</div>
-<div id="E6_9" class="section level3 unnumbered">
-<h3>Assessing impacts on lake salinity</h3>
-<ol start="7" style="list-style-type: decimal">
-<li>Create a scatter plot of historical salinity (as EC) collected from the site marked in the map (+) vs daily discharge from the drain (see sheet: Estuary – Salinity).</li>
-<li>Fit a trendline to the data and display equation and R<sup>2</sup> – this is a statistical model.</li>
-<li>In a new time-series column in the previous sheet, use the statistical model from above to predict a salinity time-series for the above station in the estuary under the two diversion scenarios compared to the base case.</li>
-</ol>
-</div>
-</div>
-<div id="E6_10" class="section level2 unnumbered">
-<h2>Conclusions</h2>
-<p>In this exercise, we have explored the complexities of allocating water to the environment in a contested situation (i.e., where there are competing “customers” for the water resource). In particular, we can summarise <strong>environmental flows</strong>:</p>
-<ul>
-<li>appreciate that there is a potential conflict between e-flow vs irrigation allocation</li>
-<li>e-flow allocation is a river restoration and maintenance tool</li>
-<li>the array of benefits from e-water need to quantified and maybe site specific</li>
-<li>there is a need for identifying “Sustainable Diversion Limits” based on assessment of historical flow requirements.</li>
-</ul>
 
+</div>
 </div>
 </div>
             </section>
@@ -504,8 +686,8 @@ Construct a nested <code>IF()</code> that solves the following:
           </div>
         </div>
       </div>
-<a href="E5_1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="E7_1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="A2B-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

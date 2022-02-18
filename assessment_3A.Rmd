@@ -1,12 +1,8 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
 
-# Part B - Groundwater and surface water interaction: A case study on the Helena River {#A2B-1 .unnumbered}
 
-### Learning Objectives {#A2B-2 .unnumbered}
+# Assessment 3A - Groundwater and surface water interaction: A case study on the Helena River {#A2B-1 .unnumbered}
+
+### Learning Objectives {#A3A-1 .unnumbered}
 
 This assessment will require students to understand how hydrologic
 monitoring of can inform the conceptual models of ecosystems that
@@ -27,7 +23,7 @@ their ability to:
 -   effectively communicate their understanding of a hydrological system
     through a written report
 
-### Background {#A2B-3 .unnumbered}
+### Background {#A3A-2 .unnumbered}
 
 The degradation of freshwater systems by increasing salinity is a major
 challenge facing Western Australia. Salinisation of the Avon river,
@@ -72,7 +68,7 @@ observed decline, and alternate hypothesis related to tree pathogens
 (e.g. Phytophthora) are also as drivers of decline are also under
 investigation.
 
-### Helena River Study Site {#A2B-4 .unnumbered}
+### Helena River Study Site {#A3A-3 .unnumbered}
 
 Start by watching [this
 video](https://echo360.org.au/media/a8e04685-0067-42ec-8524-4d97602a2e0e/public)
@@ -143,7 +139,7 @@ knitr::include_graphics(c(
 
 </center>
 
-### Your task {#A2B-5 .unnumbered}
+### Your task {#A3A-4 .unnumbered}
 
 During this assessment you will use existing data to delineate the
 hydrologic pathways (surface and sub-surface) that determine the
@@ -171,7 +167,7 @@ After your analysis you should be able to:
 The data you need for the assessment is in the file [Helena Data
 Combined.xlsx]
 
-### Literature review {#A2B-6 .unnumbered}
+### Literature review {#A3A-5 .unnumbered}
 
 Start by reading this report by UWA researchers to learn more about the
 history of scientific studies at this site and recent findings:
@@ -184,7 +180,7 @@ knitr::include_graphics("images/assessment_2B/picture17.png")
 
 </center>
 
-### Mapping vegetation change {#A2B-7 .unnumbered}
+### Mapping vegetation change {#A3A-6 .unnumbered}
 
 There are now a range of spatial data products that have been generated
 from aerial imagery and remote sensing methods that we can use to help
@@ -232,7 +228,7 @@ knitr::include_graphics("images/assessment_2B/picture13.png")
 
 </center>
 
-### Mapping salinity (EC) in QGIS {#A2B-8 .unnumbered}
+### Mapping salinity (EC) in QGIS {#A3A-7 .unnumbered}
 
 Surface water samples from across the site have previously been
 collected and analysed for electrical conductivity (EC), which is a
@@ -326,7 +322,7 @@ knitr::include_graphics("images/assessment_2B/picture18.jpg")
 
 </center>
 
-### Time-series data for assessing groundwater levels and salinity {#A2B-9 .unnumbered}
+### Time-series data for assessing groundwater levels and salinity {#A3A-8 .unnumbered}
 
 You are provided with a spreadsheet that summarise the timeseries data
 collected by various agencies (e.g., UWA and DWER (via
@@ -380,7 +376,7 @@ seasonality, and also relative differences between sites. Importantly,
 is there a way to bring togteher the different data into a single plot
 to help our interpretation of the what is happening at the system.
 
-### Conceptualising Surface-Groundwater interaction {.unnumbered}
+### Conceptualising Surface-Groundwater interaction {#A3A-9 .unnumbered}
 
 Now that you have an understanding of the previous studies at the site,
 and have plotted the existing data, the next step is to develop your
@@ -467,7 +463,7 @@ riparian decline: Ecohydrology and hydro-climatological change in the
 Upper Swan estuary. The University of Western Australia, Perth,
 Australia. 51pp.
 
-### Optional: Site visit to Helena River floodplain {#A2B-10 .unnumbered}
+### Optional: Site visit to Helena River floodplain {#A3A-10 .unnumbered}
 
 If you are in Perth you can visit the study site just outside of the
 Guildford town center. Arrive at the carpark near King's Meadow Oval,

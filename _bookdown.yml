@@ -2,8 +2,8 @@ book_filename: GEOS4499 Workbook
 output_dir: docs
 delete_merged_file: true
 rmd_files: ["index.Rmd",
-            "exercise_1A.Rmd",
-            "exercise_1B.Rmd",
+            #"exercise_1A.Rmd",
+            "exercise_1.Rmd",
             "exercise_2.Rmd",
             "exercise_3A.Rmd",
             "exercise_3B.Rmd",
@@ -12,10 +12,10 @@ rmd_files: ["index.Rmd",
             "exercise_6.Rmd",
             "exercise_7.Rmd",
             "exercise_8.Rmd",
-            "assessment_2A.Rmd",
-            "assessment_2B.Rmd",
-            "assessment_3.Rmd",
-            #"assessment_3B.Rmd",
+            "assessment_1.Rmd",
+            "assessment_2.Rmd",
+            "assessment_3A.Rmd",
+            "assessment_3B.Rmd",
             "references.Rmd",
             ]
 new_session: no
