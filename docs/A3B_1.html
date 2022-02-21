@@ -107,15 +107,6 @@ div.csl-indent {
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
-<li class="part"><span><b>I Exercises</b></span></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html"><i class="fa fa-check"></i>Exercise 1A – Spatial rainfall variability</a>
-<ul>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_1"><i class="fa fa-check"></i>Introduction</a></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_2"><i class="fa fa-check"></i>Objective</a></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_3"><i class="fa fa-check"></i>Methods</a></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_7"><i class="fa fa-check"></i>Activity</a></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_11"><i class="fa fa-check"></i>Conclusions</a></li>
-</ul></li>
 <li class="chapter" data-level="" data-path="exercise-1---understanding-rainfall-and-streamflow-data.html"><a href="exercise-1---understanding-rainfall-and-streamflow-data.html"><i class="fa fa-check"></i>Exercise 1 - Understanding rainfall and streamflow data</a>
 <ul>
 <li class="chapter" data-level="" data-path="exercise-1---understanding-rainfall-and-streamflow-data.html"><a href="exercise-1---understanding-rainfall-and-streamflow-data.html#E1B_1"><i class="fa fa-check"></i>Introduction</a></li>
@@ -207,7 +198,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="E8_1.html"><a href="E8_1.html#E8_11"><i class="fa fa-check"></i>Climate Futures Tool:</a></li>
 <li class="chapter" data-level="" data-path="E8_1.html"><a href="E8_1.html#E8_12"><i class="fa fa-check"></i>Conclusions</a></li>
 </ul></li>
-<li class="part"><span><b>II Assessments</b></span></li>
+<li class="part"><span><b>I Assessments</b></span></li>
 <li class="chapter" data-level="" data-path="A1_1.html"><a href="A1_1.html"><i class="fa fa-check"></i>Assessment 1 - Online Quizzes</a>
 <ul>
 <li class="chapter" data-level="" data-path="A1_1.html"><a href="A1_1.html#learning-objective"><i class="fa fa-check"></i>Learning Objective</a></li>
@@ -306,7 +297,7 @@ stream):</p>
 Q_{i}^{t} = \left\{\begin{matrix} 0,\ \ &amp;R_{i}^{t}\le R_{i}^{crit}
 \\ c_{i}(R_{i}^{t}-R_{i}^{crit})A_{i},\ \ &amp;R_{i}^{t}&gt; R_{i}^{crit}
 \end{matrix}\right.
-\tag{14}
+\tag{12}
 \end{equation}\]</span>
 </center>
 <p>The “<span class="math inline">\(t\)</span>” super- script refers to a “time-step,” usually referring to a
@@ -318,7 +309,7 @@ for sub-catchment 2 and 2 days lag time for sub-catchment 3:</p>
 <center>
 <span class="math display" id="eq:equationA3A2">\[\begin{equation}
 Q_{tot}^{t} = \color{#9BBB59}{Q_{1}^{t}} + \color{#0070C0}{Q_{2}^{t-1}} + \color{#F79646}{Q_{3}^{t-2}}
-\tag{15}
+\tag{13}
 \end{equation}\]</span>
 </center>
 <p>The time-lag of one day (<span class="math inline">\(t-1\)</span>) and two days (<span class="math inline">\(t-2\)</span>), is a way to simply
@@ -409,7 +400,7 @@ downstream lake.</p>
 <div class="figure"><span style="display:block;" id="fig:A3image1"></span>
 <img src="images/assessment_3/yellagonga.jpg" alt="Two-lake system" width="80%" />
 <p class="caption">
-Figure 35: Two-lake system
+Figure 31: Two-lake system
 </p>
 </div>
 </center>
@@ -425,10 +416,10 @@ in lake storage (<span class="math inline">\(S\)</span>, <span class="math inlin
 <center>
 <p><span class="math display" id="eq:equationA3A5">\[\begin{equation}
 \frac{dS_{upper}}{dt}= Q_{tot} +\underbrace{   (R - E -kh_{upper} ) A_{upper} }_{\text{upper lake fluxes}} - Q_{out_{upper}}
-\tag{16}
+\tag{14}
 \end{equation}\]</span> <span class="math display" id="eq:equationA3A6">\[\begin{equation}
 \frac{dS_{lower}}{dt}= Q_{out_{upper}} + \underbrace{ kh_{upper} A_{upper} }_{\text{gw from upper -&gt; lower}} + \underbrace{  (R - E - kh_{lower}) A_{lower} }_{\text{lower lake fluxes}} - Q_{out_{lower}}
-\tag{17}
+\tag{15}
 \end{equation}\]</span></p>
 </center>
 <p>wher <span class="math inline">\(R\)</span> is the precipitation (<span class="math inline">\(m/day\)</span>) falling on the relevant lake
@@ -441,7 +432,7 @@ associated with each of the lakes.</p>
 <div class="figure"><span style="display:block;" id="fig:A3image2"></span>
 <img src="images/assessment_3/lake_pars.png" alt="Model parameters for lake system water level simulation" width="80%" />
 <p class="caption">
-Figure 36: Model parameters for lake system water level simulation
+Figure 32: Model parameters for lake system water level simulation
 </p>
 </div>
 </center>
@@ -457,7 +448,7 @@ level is related to the storage volume in the lake according to:</p>
 <center>
 <span class="math display" id="eq:equationA3A7">\[\begin{equation}
 h_{upper}=\frac{S_{upper}}{A_{upper}}    \text{    &amp;    }     h_{lower}=\frac{S_{lower}}{A_{lower}}
-\tag{18}
+\tag{16}
 \end{equation}\]</span>
 </center>
 <p>To start the simulation we must use an initial lake water level, as
@@ -472,7 +463,7 @@ Q_{out}=
 \left\{\begin{matrix} 0,\ \ &amp;h^{t}\le h^{max}
 \\ (h^{t*}-h^{max})A,\ \ &amp;h^{t}\gt h^{max}
 \end{matrix}\right.
-\tag{19}
+\tag{17}
 \end{equation}\]</span>
 </center>
 <p>where <span class="math inline">\(h^{t*}\)</span> is the estimate of what the daily water level would be
@@ -489,7 +480,7 @@ adds to the annual total:</p>
 <center>
 <span class="math display" id="eq:equationA3A9">\[\begin{equation}
 E_{daily}= sin() E_{p_{annual}}
-\tag{20}
+\tag{18}
 \end{equation}\]</span>
 </center>
 <p>This is depicted visually in Figure <a href="#fig:ass3-fig2"><strong>??</strong></a>, which is
@@ -625,7 +616,7 @@ fraction <span class="math inline">\(F_p\)</span>:</p>
 <center>
 <span class="math display" id="eq:equationA3A3">\[\begin{equation}
 P_{i}^{t} = \sum_{p=4}^{N_{p}} F_{p}\left (\color{#FF0000}{\alpha_{p} \left (\frac{Q_{i}^{t}}{A_{i}}  \right )^{\beta_{p}}+P_{0}}  \right )
-\tag{21}
+\tag{19}
 \end{equation}\]</span>
 </center>
 
@@ -644,7 +635,7 @@ with the assumed lag time:</p>
 <center>
 <span class="math display" id="eq:equationA3A4">\[\begin{equation}
 P_{load}^{t} = \color{#9BBB59}{P_{1}^{t} Q_{1}^{t}} + \color{#0070C0}{P_{2}^{t-1} Q_{2}^{t-1}} + \color{#F79646}{P_{3}^{t-2} Q_{3}^{t-2}}
-\tag{22}
+\tag{20}
 \end{equation}\]</span>
 </center>
 <center>

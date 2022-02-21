@@ -53,7 +53,7 @@ options(kableExtra.html.bsTable = F, knitr.kable.NA = '')
 table4 <- read.csv("tables/exercise1A/table4.csv", check.names=FALSE)
 kable(table4,"html", escape = F, align = rep('c', 5), caption = "Bureau of Meteorology Automatic Weather Station data and station ID across WA and SWWA. Complete a row in the table for your site [here](https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing).",
       bootstrap_options = "hover") %>%
-  kable_styling(table1, bootstrap_options = "hover", "striped",
+  kable_styling(table4, bootstrap_options = "hover", "striped",
                 full_width = F, position = "center",
                 font_size = 12) %>%
   column_spec(1, width_min = "10em") %>%

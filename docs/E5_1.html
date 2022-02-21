@@ -107,15 +107,6 @@ div.csl-indent {
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
-<li class="part"><span><b>I Exercises</b></span></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html"><i class="fa fa-check"></i>Exercise 1A – Spatial rainfall variability</a>
-<ul>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_1"><i class="fa fa-check"></i>Introduction</a></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_2"><i class="fa fa-check"></i>Objective</a></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_3"><i class="fa fa-check"></i>Methods</a></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_7"><i class="fa fa-check"></i>Activity</a></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_11"><i class="fa fa-check"></i>Conclusions</a></li>
-</ul></li>
 <li class="chapter" data-level="" data-path="exercise-1---understanding-rainfall-and-streamflow-data.html"><a href="exercise-1---understanding-rainfall-and-streamflow-data.html"><i class="fa fa-check"></i>Exercise 1 - Understanding rainfall and streamflow data</a>
 <ul>
 <li class="chapter" data-level="" data-path="exercise-1---understanding-rainfall-and-streamflow-data.html"><a href="exercise-1---understanding-rainfall-and-streamflow-data.html#E1B_1"><i class="fa fa-check"></i>Introduction</a></li>
@@ -207,7 +198,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="E8_1.html"><a href="E8_1.html#E8_11"><i class="fa fa-check"></i>Climate Futures Tool:</a></li>
 <li class="chapter" data-level="" data-path="E8_1.html"><a href="E8_1.html#E8_12"><i class="fa fa-check"></i>Conclusions</a></li>
 </ul></li>
-<li class="part"><span><b>II Assessments</b></span></li>
+<li class="part"><span><b>I Assessments</b></span></li>
 <li class="chapter" data-level="" data-path="A1_1.html"><a href="A1_1.html"><i class="fa fa-check"></i>Assessment 1 - Online Quizzes</a>
 <ul>
 <li class="chapter" data-level="" data-path="A1_1.html"><a href="A1_1.html#learning-objective"><i class="fa fa-check"></i>Learning Objective</a></li>
@@ -283,31 +274,31 @@ div.csl-indent {
 </div>
 <div id="E5_3" class="section level2 unnumbered">
 <h2>Defining the system</h2>
-<p>In this first part of the assignment you will use a simple “bucket” storage model to simulate changes in lake water level through time. The depth of the lake increases due to rainfall and inflows and decreases due to evaporation and seepage (Figure <a href="E5_1.html#fig:E5image1">20</a>). There is also a maximum level to which the lake can be filled, <span class="math inline">\(h_{\text{max}}\)</span> (m), above which water will overflow from the lake, such that <span class="math inline">\(0\le h\le h_{\text{max}}\)</span>. This simple system is described by the equation;</p>
+<p>In this first part of the assignment you will use a simple “bucket” storage model to simulate changes in lake water level through time. The depth of the lake increases due to rainfall and inflows and decreases due to evaporation and seepage (Figure <a href="E5_1.html#fig:E5image1">16</a>). There is also a maximum level to which the lake can be filled, <span class="math inline">\(h_{\text{max}}\)</span> (m), above which water will overflow from the lake, such that <span class="math inline">\(0\le h\le h_{\text{max}}\)</span>. This simple system is described by the equation;</p>
 <span class="math display" id="eq:E5equation1">\[\begin{equation}
 \frac{dh}{dt}= r+i-e-kh
-\tag{13}
+\tag{11}
 \end{equation}\]</span>
 <p>where <span class="math inline">\(r\)</span> is the rate of rainfall (m yr<sup>-1</sup>), <span class="math inline">\(i\)</span> is the rate of water inflow from rivers and runoff (m yr<sup>-1</sup>), <span class="math inline">\(e\)</span> is the rate of evaporation from the lake (m yr<sup>-1</sup>), and <span class="math inline">\(kh\)</span> is the seepage rate from the base of the lake (infiltration to the underlying aquifer), which is assumed to be a linear function of the depth of water in the lake, <span class="math inline">\(h\)</span> (m). This seepage is controlled by the coefficient <span class="math inline">\(k\)</span> (yr<sup>-1</sup>), which describes the permeability of the lake bed. Before proceeding, satisfy yourself that you understand this equation and that each term in this equation has the same units, as required.</p>
 <center>
 <div class="figure"><span style="display:block;" id="fig:E5image1"></span>
 <img src="images/exercise_5/picture1.png" alt="Conceptual model of lake water balance." width="70%" />
 <p class="caption">
-Figure 20: Conceptual model of lake water balance.
+Figure 16: Conceptual model of lake water balance.
 </p>
 </div>
 </center>
-<p>Surface waters can be either gaining (groundwater discharge to streams and lakes), losing (recharge of aquifers by streams and lakes), or through-flow systems <span class="citation">(<a href="#ref-winter1998ground" role="doc-biblioref">Winter et al. 1998</a>)</span>. Based on the information you have, what type of lake (gaining, losing or through-flow) is the system shown in Figure <a href="E5_1.html#fig:E5image1">20</a>? What other data might you want to measure to confirm this?</p>
+<p>Surface waters can be either gaining (groundwater discharge to streams and lakes), losing (recharge of aquifers by streams and lakes), or through-flow systems <span class="citation">(<a href="#ref-winter1998ground" role="doc-biblioref">Winter et al. 1998</a>)</span>. Based on the information you have, what type of lake (gaining, losing or through-flow) is the system shown in Figure <a href="E5_1.html#fig:E5image1">16</a>? What other data might you want to measure to confirm this?</p>
 </div>
 <div id="E5_4" class="section level2 unnumbered">
 <h2>Simulating the system</h2>
-<p>Equation <a href="E5_1.html#eq:E5equation1">(13)</a> is a differential equation, describing the rate of change of water level over time. We know that <span class="math inline">\(\frac{dh}{dt}\)</span> is technically the instantaneous rate of change of lake water level. But calculus tells us that we can approximate <span class="math inline">\(\frac{dh}{dt}\)</span> by calculating the change in water level over small increments of time, with the most accurate approximation using the smallest increments of time.</p>
-<p>So we have an equation for the rate of change in lake water level (Equation <a href="E5_1.html#eq:E5equation1">(13)</a>). But how do we calculate the lake level as a function of time, <span class="math inline">\(h(t)\)</span>? That is, how do we solve this differential equation to calculate <span class="math inline">\(h\)</span> for any given time? To do this we will use an iterative approach. Start with an initial lake level, <span class="math inline">\(h_{i}\)</span>, and then calculate the change in lake level over each small increment of time (in this case <span class="math inline">\(dt = 1\)</span> year is fine), using the rates for each process. The water level at the next time-step is then calculated by summing the initial level and the calculated change; <span class="math inline">\(h_{i+1} = h_{i} + dh\)</span>. Would this step of going from <span class="math inline">\(\frac{dh}{dt}\)</span> to <span class="math inline">\(h(t)\)</span> be considered as differentiation or integration?.</p>
+<p>Equation <a href="E5_1.html#eq:E5equation1">(11)</a> is a differential equation, describing the rate of change of water level over time. We know that <span class="math inline">\(\frac{dh}{dt}\)</span> is technically the instantaneous rate of change of lake water level. But calculus tells us that we can approximate <span class="math inline">\(\frac{dh}{dt}\)</span> by calculating the change in water level over small increments of time, with the most accurate approximation using the smallest increments of time.</p>
+<p>So we have an equation for the rate of change in lake water level (Equation <a href="E5_1.html#eq:E5equation1">(11)</a>). But how do we calculate the lake level as a function of time, <span class="math inline">\(h(t)\)</span>? That is, how do we solve this differential equation to calculate <span class="math inline">\(h\)</span> for any given time? To do this we will use an iterative approach. Start with an initial lake level, <span class="math inline">\(h_{i}\)</span>, and then calculate the change in lake level over each small increment of time (in this case <span class="math inline">\(dt = 1\)</span> year is fine), using the rates for each process. The water level at the next time-step is then calculated by summing the initial level and the calculated change; <span class="math inline">\(h_{i+1} = h_{i} + dh\)</span>. Would this step of going from <span class="math inline">\(\frac{dh}{dt}\)</span> to <span class="math inline">\(h(t)\)</span> be considered as differentiation or integration?.</p>
 <center>
 <div class="figure"><span style="display:block;" id="fig:E5image2"></span>
 <img src="images/exercise_5/picture2.png" alt="Simulated lake level under three different model scenarios (A, B and C)." width="70%" />
 <p class="caption">
-Figure 21: Simulated lake level under three different model scenarios (A, B and C).
+Figure 17: Simulated lake level under three different model scenarios (A, B and C).
 </p>
 </div>
 </center>
@@ -315,7 +306,7 @@ Figure 21: Simulated lake level under three different model scenarios (A, B and 
 <center>
 <table class="table table-hover" style="font-size: 16px; width: auto !important; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:E6table1">Table 8: </span>Model parameters for lake level simulations shown in Figure 2.
+<span id="tab:E6table1">Table 5: </span>Model parameters for lake level simulations shown in Figure 2.
 </caption>
 <thead>
 <tr>
@@ -434,7 +425,7 @@ m
 </div>
 <div id="E5_6" class="section level2 unnumbered">
 <h2>Rates of change</h2>
-<p>Now let’s look at the rate of change in lake level under each of these modelling scenarios. Plot <span class="math inline">\(\frac{dh}{dt}\)</span> vs time for each model (hint: remember that this is just the change in water level over time). How does this plot of <span class="math inline">\(\frac{dh}{dt}\)</span> vs time relate to Figure <a href="E5_1.html#fig:E5image2">21</a>? How long does it take for each model to reach “steady state?” How would the time it takes to reach steady state change if we used a different initial water level in our simulations?</p>
+<p>Now let’s look at the rate of change in lake level under each of these modelling scenarios. Plot <span class="math inline">\(\frac{dh}{dt}\)</span> vs time for each model (hint: remember that this is just the change in water level over time). How does this plot of <span class="math inline">\(\frac{dh}{dt}\)</span> vs time relate to Figure <a href="E5_1.html#fig:E5image2">17</a>? How long does it take for each model to reach “steady state?” How would the time it takes to reach steady state change if we used a different initial water level in our simulations?</p>
 <p>Now have a go at making your own rainfall boundary condition. You may choose to base it on a probability distribution, or a have it randomly varying through time. Plot both lake water level and <span class="math inline">\(\frac{dh}{dt}\)</span> vs time for your chosen rainfall distribution. How does this change your results?</p>
 </div>
 <div id="references" class="section level2 unnumbered">
