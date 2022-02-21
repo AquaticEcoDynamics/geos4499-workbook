@@ -1,6 +1,6 @@
-# Assessment 2 - Presentation on climate modes {#A2_1 .unnumbered}
+# Assessment 2 - Presentation on hydroclimates {#A2_1 .unnumbered}
 
-In this assessment you will work in small groups to produce a presentation on [climate drivers and modes of climate variability](http://www.bom.gov.au/watl/about-weather-and-climate/australian-climate-influences.shtml).
+In this assessment you will work in small groups to produce a presentation on [climate drivers](http://www.bom.gov.au/watl/about-weather-and-climate/australian-climate-influences.shtml) and how these link to weather and hydrology.
 
 ## Learning Objectives {#A2_2 .unnumbered}
 
@@ -12,18 +12,25 @@ At the completion of this assessment learners will have demonstrated an ability 
 
 ## Learning Task {#A2_3 .unnumbered}
 
-You will each be assigned to a group to create a 15 minute presentation about one of the following topics:
+You will each be assigned to a group to create a 20 minute presentation about one of the following topics related to hydroclimatology. You may choose another relevant topic subject to approval by the Unit Coordinator
 
 -   Southern Annular Mode (SAM)
 -   Indian Ocean Dipole (IOD)
--   El Nino Southern Oscillation (ENSO)
+-   El Nino Southern Oscillation (ENSO) and the southern oscillation index (SOI)
 -   North-west cloud bands
 -   Sub-tropical ridge
+-   Tropical cyclones
 
-You may choose another relevant topic subject to approval by the Unit Coordinator
+Your presentation should cover these 5 points;
 
-Your presentation should clearly describe the climate driver or climate mode you are focusing on, and clearly explain the role of this in shaping the climate of Western Australia. To complete this task you should comprehensively research your topic, including peer-reviewed literature. All sources must be cited appropriately in you presentation slides.
+1.  concisely describe the climate phenomena you are focusing on
+2.  articulate the spatial and temporal scales that this phenomena operates on
+3.  clearly explain the role of this phenomena in shaping the climate of Western Australia
+4.  present data to demonstrate the effect of this phenomena on weather and hydrology
+5.  describe how this phenomena is likely to change in the future
 
-A video of your presentation should be submitted to the link on LMS. It is recommended that you record your presentation in Teams and then upload the link to the video (not the whole file).
+To complete this task you should comprehensively research your topic, including peer-reviewed literature and publicly available data. All sources must be cited appropriately in you presentation slides with citations and the relevant slides and a reference list at the end. If you are using figures from another source then you need to cite this source. You may also need to re-label the figure to make sure that the fonts are legible at the scale you are using.
 
-In addition to submitting your group presentation, you are also required to provide a critical review of two other presentations. You review should be completed using the template provided on LMS, and then uploaded via the assignment submission link (also on LMS).
+A video of your presentation should be submitted to the link on LMS by the due date. It is recommended that you record your presentation in Microsoft Teams and then upload the link to the video (not the whole video file). Part of your mark will be based on your peers assessment of your contribution to the group submission; download the template for peer feedback from LMS and submit it using the link provided.
+
+In addition to submitting your group presentation, you are also required to provide a critical review of two other presentations. You review should be completed using the template provided on LMS, and then uploaded via the assignment submission link (also on LMS) by the due date.

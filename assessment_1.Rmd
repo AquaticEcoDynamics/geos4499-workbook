@@ -9,15 +9,28 @@ editor_options:
 # Assessment 1 - Online Quizzes {#A1_1 .unnumbered}
 
 You will complete four online quizzes that will test your understanding
-of the learning content in this unit. Each quiz is worth 5%. This
-assessment makes up a total of 20% of your mark for this unit. Each quiz
-should be completed on LMS by the due date. The due date for each quiz
+of the learning content in this unit. The due date for each quiz
 can be seen in the Unit Outline and an announcement will be made when
 each quiz becomes available.
 
 ## Learning Objective {.unnumbered}
 
-At the completion of these quizzes learners will have:
+At the completion of these quizzes learners will have demonstrated an ability to:
 
--   demonstrated an ability to explain key hydrological concepts and
+-   explain and key hydrological concepts and
     processes
+-   quantify hydrologic processes using mathematical relationships
+-   interpret hydro-climatological processes from observed or modelled data.
+
+## Learning Task {.unnumbered}
+
+Each quiz will cover two weeks of the unit learning content. You are strongly encouraged to complete the relevant formative quiz questions on LMS before attempting the summative (for marks) quiz. Each quiz is worth 5% so that this assessment makes up a total of 20% of your mark for this unit. 
+
+You will only be able to start each quiz once, so make sure that you have a suitable work space and will not be interrupted. Once the quiz is released it will be available for the next 48 hours; you must complete each quiz within this timeframe to avoid late penalties. Once you begin the quiz you will have 2 hours to answer the questions; after 2 hours your answers will be automatically submitted. 
+
+Your answers to the quiz should be based on your own knowledge and any written answers must not be plagiarized. Standard procedures and penalties will apply in the event of plagiarism. 
+
+- DO NOT copy your answer from the internet
+- DO NOT assume that the answer google spits out is correct
+- DO complete the formative quiz questions and clarify anything you don't understand before taking the quiz.
+- DO make sure your laptop is sufficiently charged and/or plugged in before you begin the quiz.

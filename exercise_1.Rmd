@@ -1,51 +1,51 @@
-# Exercise 1 - Understanding rainfall and streamflow data {-}
+# Exercise 1 - Understanding rainfall and streamflow data {.unnumbered}
 
-## Introduction {#E1B_1 -}
+## Introduction {#E1_1 .unnumbered}
 
-In this exercise we will learn how to access rain and flow data, and examine the nature of rainfall data and use some simple statistics in Excel to describe these data. We will also investigate links between modes of climate variablity and the measured data.  
+In this exercise we will learn how to access rain and flow data, and examine the nature of these data and using Excel. We will also investigate links between modes of climate variablity and the measured data.
+
+## Learning Objectives {#E1_2 .unnumbered}
+
+By the end of this exercise learners will be able to:
+
+-   Access rainfall and streamflow data from publicly available data sources
+-   Describe the nature of that data using simple statistics in Excel.
+-   Explain how and why rainfall and streamflow may be changing over time
+-   Investigate how climate variability affects annual rainfall and streamflow.
 
 
-## Objective {#E1B_2 -}
+## Getting Rainfall Data {#E1_3 .unnumbered}
 
-By the end of this activity, you should:
-
-- Be able to source rainfall and streamflow data, understand the nature of that data and describe it using simple statistics in Excel.
--   Understand how and why rainfall may be changing over time and use statistics and regression to test this hypothesis.
--   Know how different modes of climate variability such as IOD and ENSO can affect annual rainfall.
--   Be able to elucidate the nature of the relationship between rainfall and streamflow.
-
-
-**Download the activity sheet for this exercise by clicking the download button in the tool bar** <i class="fa fa-download" aria-hidden="true"></i>. 
-
-## Getting Rainfall Data {#E1B_3 -}
-
-1) Start by downloading the daily rainfall data for a chosen BOM site from the [Bureau of Meteorology](http://www.bom.gov.au/climate/data/) web site. Choose a site of interest in Western Australia.  Use the site ID to get the data as below. Download and extract the zipped file to get a CSV file that can be opened in Excel. 
+Start by downloading the daily rainfall data for a chosen BOM site from the [Bureau of Meteorology](http://www.bom.gov.au/climate/data/) web site. Choose a site of interest in Western Australia. Use the site ID to get the data as below. Download and extract the zipped file to get a CSV file that can be opened in Excel.
 
 <center>
+
 <video width="100%" height="100%" controls>
-  <source src="images/exercise1A/video1.mp4" type="video/mp4">
+
+<source src="images/exercise1A/video1.mp4" type="video/mp4">
+
 </video>
+
 </center>
 
-## Statistical Properties of Rainfall Data {#E1B_4 -}
+## Statistical Properties of Rainfall Data {#E1_4 .unnumbered}
 
-2) Now, let’s plot the time series of DAILY rainfall. Clean up the plot as required and add to your activity sheet. Describe the main features of this data set. Consider: what is the most appropriate type of graph for rainfall data (bar, scatter, line)?
+Now, let's plot the time series of DAILY rainfall. Clean up the plot as required and add to your activity sheet. Describe the main features of this data set. Consider: what is the most appropriate type of graph for rainfall data (bar, scatter, line)?
 
-3) Calculate the annual SUM of rainfall. But note, we want to ensure that there are only whole years to calculate the sums or else the incomplete years will be in error (the sum will be artificially low due to missing data). Delete the rows of data for the last partial year (e.g., 2021) and any partial years at the start (the first and last year measured may change depending on the site you selected). To explore each year's data we will use a PIVOT table. Select the required data across multiple columns (year C to rainfall amount F). Then insert PIVOT table (select "Create a new tab"). Select Year and Rainfall amount as the FIELDS. Drag the Year FIELD into the ROWS box. Left click on the “Sum of Year” in the VALUES box and remove it. Plot the annual sums as a timeseries. You can also select "COUNT" to see how many entries are given for each. Years with more than 10% of days missing, are unreliable to include in our analysis so see if your station has any incomplete years. Clean up the plot with the sum of rainfall as required and add to your activity sheet. What are the main features of this annual data set? What variability can you see? 
+Calculate the annual SUM of rainfall. But note, we want to ensure that there are only whole years to calculate the sums or else the incomplete years will be in error (the sum will be artificially low due to missing data). Delete the rows of data for the last partial year (e.g., 2021) and any partial years at the start (the first and last year measured may change depending on the site you selected). To explore each year's data we will use a PIVOT table. Select the required data across multiple columns (year C to rainfall amount F). Then insert PIVOT table (select "Create a new tab"). Select Year and Rainfall amount as the FIELDS. Drag the Year FIELD into the ROWS box. Left click on the "Sum of Year" in the VALUES box and remove it. Plot the annual sums as a timeseries. You can also select "COUNT" to see how many entries are given for each. Years with more than 10% of days missing, are unreliable to include in our analysis so see if your station has any incomplete years. Clean up the plot with the sum of rainfall as required and add to your activity sheet. What are the main features of this annual data set? What variability can you see?
 
-
-4) Now we have a "clean" dataset, we want to explore some statistics. Use the Data Analysis add-in to calculate descriptive statistics (mean annual rainfall, max annual rainfall, min annual rainfall, Standard deviation of annual rainfall, Skewness) for the whole data (you can install by going to *Tools->Add-ins->Analysis ToolPack*).
-Copy the results [here](https://docs.google.com/spreadsheets/d/1gFbXF9USMM8nQghy1P0cIThnNT3TFadwFy2RstU41PA/edit?usp=sharing) and complete Table \@ref(tab:table4) for your site (and others when they are done). Describe the values you got and what they mean. How “useful” are these statistics for your understanding of the system? What if any assumptions are there about these statistics? 
+Now we have a "clean" dataset, we want to explore some statistics. Use the Data Analysis add-in to calculate descriptive statistics (mean annual rainfall, max annual rainfall, min annual rainfall, Standard deviation of annual rainfall, Skewness) for the whole data (you can install by going to *Tools-\>Add-ins-\>Analysis ToolPack*). Copy the results [here](https://docs.google.com/spreadsheets/d/129fkRd6_oI1KFyql8QunjKeDBx47WU1lduWMFms5N_s/edit?usp=sharing) and complete Table for your site. Describe the values you got and what they mean. How "useful" are these statistics for your understanding of the system? What if any assumptions are there about these statistics?
 
 <!-- Old link: -->
+
 <!-- https://docs.google.com/spreadsheets/d/10mHrNWEHoqWif96e7SwvowfQ7sMg_qMxFtw6POr7sG4/edit?usp=sharing -->
 
-5) Next, let’s look at the distribution of the rainfall data. Do this by plotting a histogram of the rainfall data (you will need to decide on a reasonable bin size) and plotting the cumulative probability distribution (you can ask Excel to generate this automatically when it makes the histogram, or generate it manually – each data point represents a probability of 1/#data points). What do these plots tell you about the rainfall data? Are the data normally distributed? 
+Next, let's look at the distribution of the rainfall data. Do this by plotting a histogram of the rainfall data (you will need to decide on a reasonable bin size) and plotting the cumulative probability distribution (you can ask Excel to generate this automatically when it makes the histogram, or generate it manually -- each data point represents a probability of 1/\#data points). What do these plots tell you about the rainfall data? Are the data normally distributed?
 
-6) Plot the seasonal (monthly average) rainfall. Use a PIVOT table again. Insert PIVOT table (select OK to create a new tab). Select **Month** and **Rainfall** amount as the FIELDS; drag the Month FIELD into the ROWS box. Left click on the “Sum of Month” in the VALUES box and remove it. Plot the annual sums as a timeseries. Clean up the plot as required and submit on your answer sheet.
-How would you describe the seasonal pattern of rainfall (hint look at the climate type)? What factors may influence it (hint, think about earth orbit)? 
+Plot the seasonal (monthly average) rainfall. Use a PIVOT table again. Insert PIVOT table (select OK to create a new tab). Select **Month** and **Rainfall** amount as the FIELDS; drag the Month FIELD into the ROWS box. Left click on the "Sum of Month" in the VALUES box and remove it. Plot the annual sums as a timeseries. Clean up the plot as required and submit on your answer sheet. How would you describe the seasonal pattern of rainfall (hint look at the climate type)? What factors may influence it (hint, think about earth orbit)?
 
 <center>
+
 ```{r table4, echo=FALSE, message=FALSE, warning=FALSE}
 library(knitr)
 library(kableExtra)
@@ -66,44 +66,14 @@ kable(table4,"html", escape = F, align = rep('c', 5), caption = "Bureau of Meteo
   scroll_box(width = "100%", height = "515px",
              fixed_thead = FALSE)
 ```
-</center>
-
-## Getting Streamflow Data {#E1B_5 -}
-
-7) Streamflow data is recently reported on the BOM website for some rivers, but the measurement of streamflow is a State Government responsibility. To get streamflow data, go the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site. Use this WIR tool to locate a gauging station near your rainfall site. Add the site to your cart and submit a data request - check that the data is being delivered as a "package of pre-computed reports". You will then be emailed a zip file of the station's data. Ensure the station has 10-20 years of available data for this exercise.
-
-<center>
-
-<video width="85%" height="85%" controls>
-
-<source src="images/exercise1A/video3.mp4" type="video/mp4">
-
-</video>
 
 </center>
 
+## Temporal trends in rainfall {#E1_5 .unnumbered}
 
-8) Once you have the data, explore the CSV file received to see the nature of the data provided - i.e., river flow discharge rate. Can you use the techniques introduced above to summarise the data (e.g., create a PIVOT table)?
+For your chosen site, calculate the trend in rainfall for the **last 5 years.** Either copy and paste the annual totals from the PIVOT table (include the year and amount columns) or calculate the manually. Select the last 5 years of data and in DATA ANALYSIS start a REGRESSION. Input the data range for x (the independant variable) and y (the dependant variable). Select "**Line Fit Plots**". What did you find and what were you expecting? Is this long enough for a reliable trend? Is the relationship really linear -- discuss? (You can do this same analysis by adding a trend-line to the data, as described in 2. below).
 
-Q. Now you know how to source some essential water data, and summarise it in an easy to use fashion. What else could we do to explore the data?
-
-Now let's will explore the link between climate modes and the rainfall and runoff data. Rainfall is influenced by a number of processes that operate on different space and time scales (see Figure \@ref(fig:A2Aimage1)).
-
-<center>
-
-```{r A2Aimage1, echo=FALSE, fig.cap="A guide to the timescales applicable to weather, climate variability and climate change [Pacific Climate Futures](www.pacificclimatefutures.net).", out.width = '80%'}
-knitr::include_graphics("images/assessment_2A/image1.png")
-```
-
-
-</center>
-
-
-## Temporal trends in rainfall {#A2A_2 .unnumbered}
-
-1)  For your chosen site, calculate the trend in rainfall for the **last 5 years.** Either copy and paste the annual totals from the PIVOT table (include the year and amount columns) or calculate the manually. Select the last 5 years of data and in DATA ANALYSIS start a REGRESSION. Input the data range for x (the independant variable) and y (the dependant variable). Select "**Line Fit Plots**". What did you find and what were you expecting? Is this long enough for a reliable trend? Is the relationship really linear -- discuss? (You can do this same analysis by adding a trend-line to the data, as described in 2. below).
-
-2)  Now, calculate the trend in rainfall for **all** years available at the site. You can calculate that annual total rainfall using a PIVOT table (include the year and amount columns) or by calculating them manually using SUM. Select the all years of data and INSERT a SCATTER plot. Add a linear trend line and "**display the equation**" on the chart. The slope of the equation of the line tells you the trend. Add the Pearson correlation coefficient (r^2^) value as well to see how well the line fits the data (1 is a perfect fit, 0 is no fit). Add the information for your site into Table \@ref(tab:A2Atable1) and the [online spreadsheet](https://docs.google.com/spreadsheets/d/19UQ5b6LEEeE9qBFcsITmWKympP0YQ4No4-doKT93zfA/edit?usp=sharing).
+Now, calculate the trend in rainfall for **all** years available at the site. You can calculate that annual total rainfall using a PIVOT table (include the year and amount columns) or by calculating them manually using SUM. Select the all years of data and INSERT a SCATTER plot. Add a linear trend line and "**display the equation**" on the chart. The slope of the equation of the line tells you the trend. Add the Pearson correlation coefficient (r^2^) value as well to see how well the line fits the data (1 is a perfect fit, 0 is no fit). Add the information for your site into Table \@ref(tab:A2Atable1) and the [online spreadsheet](https://docs.google.com/spreadsheets/d/129fkRd6_oI1KFyql8QunjKeDBx47WU1lduWMFms5N_s/edit?usp=sharing).
 
 <center>
 
@@ -132,13 +102,13 @@ kable(table1,"html", escape = F, align = rep('c', 5), caption = "Bureau of Meteo
 
 <br>
 
-3)  Looking at the plot of rainfall over time at your site, what hypothesis can we make about changes in rainfall amount over time? Using the full temporal dataset (all years), perform a REGRESSION analysis like you did in the first question. These results will inclue a t-statistic (t Stat) and P-value, enter them also into Table \@ref(tab:A2Atable1). The null hypothesis is the the rainfall did NOT change over time. If the P-value is smaller than alpha = 0.05 then we can REJECT the null hypothesis (which means that the rainfall amount has changed significantly over time). You can also reject the null hypothesis if the t-statistic is less than -2.101 or greater than 2.101 (based on a normal distribution). Describe the results and conclusions of this analysis.
+Looking at the plot of rainfall over time at your site, what hypothesis can we make about changes in rainfall amount over time? Using the full temporal dataset (all years), perform a REGRESSION analysis like you did in the first question. These results will inclue a t-statistic (t Stat) and P-value, enter them also into Table \@ref(tab:A2Atable1). The null hypothesis is the the rainfall did NOT change over time. If the P-value is smaller than alpha = 0.05 then we can REJECT the null hypothesis (which means that the rainfall amount has changed significantly over time). You can also reject the null hypothesis if the t-statistic is less than -2.101 or greater than 2.101 (based on a normal distribution). Describe the results and conclusions of this analysis.
 
-4)  Inspect the results of everyone's analysis for Table \@ref(tab:A2Atable1) ([Google Sheets version](https://docs.google.com/spreadsheets/d/19UQ5b6LEEeE9qBFcsITmWKympP0YQ4No4-doKT93zfA/edit?usp=sharing)). Which station(s) have a statistically significant slope. Are there statistically significant changes in rainfall? Are they consistent across WA? What may be causing the changes?
+Inspect the results of everyone's analysis for Table \@ref(tab:A2Atable1) ([Google Sheets version](https://docs.google.com/spreadsheets/d/129fkRd6_oI1KFyql8QunjKeDBx47WU1lduWMFms5N_s/edit?usp=sharing)). Which station(s) have a statistically significant slope. Are there statistically significant changes in rainfall? Are they consistent across WA? What may be causing the changes?
 
-## Spatial patterns in rainfall {#A2A_3 .unnumbered}
+## Spatial patterns in rainfall {#E1_6 .unnumbered}
 
-5)  Take the information in Table \@ref(tab:table4) ([Google Sheets version](https://docs.google.com/spreadsheets/d/19UQ5b6LEEeE9qBFcsITmWKympP0YQ4No4-doKT93zfA/edit?usp=sharing)) and record the values onto a map of Western Australia. Now think about the spatial patterns rather than the temporal ones (i.e climate modes). What spatial patterns might you expect and what do you notice? What may be causing these spatial patterns?
+Take the information in Table \@ref(tab:table4) ([Google Sheets version](https://docs.google.com/spreadsheets/d/129fkRd6_oI1KFyql8QunjKeDBx47WU1lduWMFms5N_s/edit?usp=sharing)) and record the values onto a map of Western Australia. Now think about the spatial patterns rather than the temporal ones (i.e climate modes). What spatial patterns might you expect and what do you notice? What may be causing these spatial patterns?
 
 <center>
 
@@ -148,15 +118,41 @@ knitr::include_graphics("images/assessment_2A/image2.png")
 
 </center>
 
+## Getting Streamflow Data {#E1_7 .unnumbered}
 
-## Relationship between rainfall and runoff {#A2A_5 .unnumbered}
+Streamflow data is recently reported on the BOM website for some rivers, but the measurement of streamflow is a State Government responsibility. To get streamflow data, go the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site. Use this WIR tool to locate a gauging station near your rainfall site. Add the site to your cart and submit a data request - check that the data is being delivered as a "package of pre-computed reports". You will then be emailed a zip file of the station's data. Ensure the station has 10-20 years of available data for this exercise.
 
-Now lets examine the relationship between annual rainfall and annual streamflow (also called discharge by surface hydrologists). Go to the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site and download the streamflow data closest to your rainfall stations to examine this relationship (Refer to the [Exercise 1B](#E1B_1) activity for details on how to source the data - make sure the site has streamflow data by checking the data availability and the request the report for water levels and flow - continuous to get the flow data).
+<center>
 
-8)  Plot a scatter plot of annual streamflow (y-axis) and annual rainfall (x-axis). Add a trendline to the chart. What are the relationships between rainfall and streamflow? Are they linear or non-linear and why? Add the data for your site to the [online spreadsheet](https://docs.google.com/spreadsheets/d/19UQ5b6LEEeE9qBFcsITmWKympP0YQ4No4-doKT93zfA/edit?usp=sharing) so we can look at the whole data set - are there consistent relationships across WA? If not, explain the variation.
+<video width="85%" height="85%" controls>
 
+<source src="images/exercise1A/video3.mp4" type="video/mp4">
 
-## Linking rainfall and streamflow to climate variability{#A2A_4 .unnumbered}
+</video>
+
+</center>
+
+Once you have the data, explore the CSV file received to see the nature of the data provided - i.e., river flow discharge rate. Can you use the techniques introduced above to summarise the data (e.g., create a PIVOT table)?
+
+Q. Now you know how to source some essential water data, and summarise it in an easy to use fashion. What else could we do to explore the data?
+
+Now let's will explore the link between climate modes and the rainfall and runoff data. Rainfall is influenced by a number of processes that operate on different space and time scales (see Figure \@ref(fig:A2Aimage1)).
+
+<center>
+
+```{r A2Aimage1, echo=FALSE, fig.cap="A guide to the timescales applicable to weather, climate variability and climate change [Pacific Climate Futures](www.pacificclimatefutures.net).", out.width = '80%'}
+knitr::include_graphics("images/assessment_2A/image1.png")
+```
+
+</center>
+
+## Relationship between rainfall and streamflow {#E1_8 .unnumbered}
+
+Now lets examine the relationship between annual rainfall and annual streamflow (also called discharge by surface hydrologists). Go to the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site and download the streamflow data closest to your rainfall stations to examine this relationship.
+
+Plot a scatter plot of annual streamflow (y-axis) and annual rainfall (x-axis). Add a trendline to the chart. What are the relationships between rainfall and streamflow? Are they linear or non-linear and why? Add the data for your site to the [online spreadsheet](https://docs.google.com/spreadsheets/d/129fkRd6_oI1KFyql8QunjKeDBx47WU1lduWMFms5N_s/edit?usp=sharing) so we can look at the whole data set - are there consistent relationships across WA? If not, explain the variation.
+
+## Linking rainfall and streamflow to climate variability {#E1_9 .unnumbered}
 
 Here we determine how rainfall correlates with known modes of climate variability (i.e. Indian Ocean Dipole (IOD) and El Nino Southern Oscillation (ENSO).
 
@@ -194,7 +190,7 @@ We will use the extremely useful [Climate Explorer](https://climexp.knmi.nl/star
 
 Now get the first climate index for the IOD called the DMI. Go to "**Monthly climate indices**" and then select DMI. Note any trend and variability in the index.
 
-To correlate the index and rainfall select "**Correlate with other time series**". And tick your previously saved rainfall timeseries and then press "**Correlate**" and copy the results into Table \@ref(tab:A2Atable2) and the appropriate tab in the [online spreadsheet](https://docs.google.com/spreadsheets/d/19UQ5b6LEEeE9qBFcsITmWKympP0YQ4No4-doKT93zfA/edit?usp=sharing).
+To correlate the index and rainfall select "**Correlate with other time series**". And tick your previously saved rainfall timeseries and then press "**Correlate**" and copy the results into Table \@ref(tab:A2Atable2) in the [online spreadsheet](https://docs.google.com/spreadsheets/d/129fkRd6_oI1KFyql8QunjKeDBx47WU1lduWMFms5N_s/edit?usp=sharing).
 
 <center>
 
@@ -234,7 +230,7 @@ kable(A2Atable2,"html", escape = F, align = rep('c', 5), caption = "Rainfall and
 
 <br>
 
-6)  Highlight any months that have a significant p-value (\<0.05). What relationships do you see between rainfall and climate mode and why? Do they correlate in specific seasons? How strong are these correlations really? How are they consistent or different across WA?
+Highlight any months that have a significant p-value (\<0.05). What relationships do you see between rainfall and climate mode and why? Do they correlate in specific seasons? How strong are these correlations really? How are they consistent or different across WA?
 
 We can do the same exercise except using gridded data (climate data divided into say 0.5 degree spacing using reanalysis information) to investigate the whole of Australia. Click on "**Monthly observations**" and go to **Precipitation CRU TS 0.5**.
 
@@ -250,12 +246,22 @@ We can do the same exercise except using gridded data (climate data divided into
 
 We then want to correlate each grid cell on the earth with our climate index (SOI and DMI) to see how the correlations very spatially. Click on "Correlate with a time series" and choose either SOI or DMI. Then click correlate at the bottom and wait (the calculations are being done online and the graph returned for viewing). Do the same for both SOI and DMI.
 
-7)  For DMI which month had the highest (negative) correlation (copy that plot to your results). What areas of Australia have significant correlations and what time of year? For SOI which month had the highest (positive) correlation (copy that plot to your results). What areas of Australia have significant correlations and what time of year? Does this match with your own rainfall station correlations?
+For DMI which month had the highest (negative) correlation (copy that plot to your results). What areas of Australia have significant correlations and what time of year? For SOI which month had the highest (positive) correlation (copy that plot to your results). What areas of Australia have significant correlations and what time of year? Does this match with your own rainfall station correlations?
 
+## Reporting on scientific data {#E1_10 .unnumbered}
 
+There are two common ways that scientific analysis is communicated in the workplace; through oral presentations and written reports. In this unit your will develop your skills in both of these communication styles. For this exercise, let's think about how these approaches might differ.
 
+Let's say you were asked to prepare a written report summarizing your analysis and findings.
 
+-   What would the sections of your report be?
 
-## Conclusions  {#E1B_6 -}
+-   How long do you think your report would end up being?
 
+-   What figures or tables would you include?
 
+Now let's think about a 15 minute presentation. How would this be different to your written report?
+
+-   What would the sections of your talk be?
+
+-   What figures or tables would you include?

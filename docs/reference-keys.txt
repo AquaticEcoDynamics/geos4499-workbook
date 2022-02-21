@@ -1,6 +1,6 @@
 tab:table4
-fig:A2Aimage1
 tab:A2Atable1
+fig:A2Aimage1
 eq:A2Aequation1
 tab:A2Atable2
 eq:exercise2-1
