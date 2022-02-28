@@ -1,4 +1,8 @@
-
+---
+editor_options: 
+  markdown: 
+    wrap: 72
+---
 
 # Assessment 3A - Groundwater and surface water interaction: A case study on the Helena River {#A2B-1 .unnumbered}
 
@@ -414,7 +418,7 @@ some guiding questions can help focus your analyses:
 ::: {.redbox2}
 Your report should include:
 
-Introduction [1 page maximum]
+Introduction [1 page ]
 
 -   Background and context -- why are we interested in this site?
 
@@ -422,7 +426,7 @@ Introduction [1 page maximum]
 
 -   Scope of the investigation -- what is this report about?
 
-Assessment methodology [1 page : be concise!]
+Assessment methodology [2 pages max: be concise!]
 
 -   Desktop assessment, historical data sources -- external data/info we
     referred to
@@ -430,7 +434,7 @@ Assessment methodology [1 page : be concise!]
 -   Data analysis approach, as relevant -- any processing or "higher"
     analysis we did to the data
 
-Results and findings [3 pages max]
+Results and findings [5 pages max ]
 
 -   Map of surface water salinity
 
@@ -440,13 +444,16 @@ Results and findings [3 pages max]
     consider all information in this, including past data and reports
     and nearmap imagery. Consider how summer may be different to winter!
 
-Discussion and conclusions [\<1 page]
+Discussion and conclusions [1 page]
 
 -   Interpretation of the above data in light of the observed
     tree-decline locations
 
 -   Suggestions for improved monitoring and further investigations;
     dot-points OK here.
+
+-   A brief conclusion that links back to the objective(s) you stated in
+    your introduction
 
 Your report will be assessed according to the marking rubric on LMS.
 Submissions not received by the due date will attract a late penalty.

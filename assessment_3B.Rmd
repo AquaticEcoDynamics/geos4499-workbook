@@ -375,15 +375,10 @@ modellers could carry out.
 
 ::: {.redbox2}
 Your submission is a single report based building on all three
-exercises, parts A, B and C listed above.
+exercises, parts A, B and C listed above. Use the questions in each part as a 
+guide to the ideas that should be included in your report. You can expect to end up with about 10 pages for this report.
 
-If you did not complete any of the individual exercises, you should
-still write the report, based on whatever you were able to complete. Use
-the questions in the exercise as a guide to the ideas that should be
-included in your discussion. There is no page limit, but it should be
-around eight pages.
-
-There are two main focuses for the report:
+Your report should address:
 
 • *the scientific aspects associated with catchment and lake
 assessment*, and
@@ -395,23 +390,24 @@ The structure of the report should be as follows:
 **Introduction** : Include just the background information that is
 necessary to understand your aim. This should relate to assessment of
 land-use change and climate change. Introduce all three exercises
-together in a nicely connected way within the one introduction Include
-an aim, and a hypothesis if you can Include conceptual diagrams if they
-help explain the background
+together in a nicely connected way within the one introduction. Include
+an aim, and a hypothesis if you can. Include conceptual diagrams if they
+help explain the background.
 
-**Methods** : Explain what you did, so that someone else could repeat it
-Separate the three exercises, within this one Methods section, using
-sub-sections for the catchment, lake and climate aspects Use the past
-tense, and a passive voice Show the model equations Show all parameters
-used, including sources for parameters or estimates found in the
-literature Include conceptual diagrams to help explain the methods
+**Methods** : Explain what you did so that someone else could repeat it
+Separate the three exercises within this one Methods section, using
+sub-sections for the catchment, lake and climate aspects. Use past
+tense and a passive voice. Show the model equations and define all parameters
+used. Including any sources for parameter values or estimates found in the
+literature. You can include conceptual diagrams to help explain the methods
 
 **Results** : Report the numbers, trends or other findings you
 calculated. Include figures if they help you explain the results, for
-example, time series. Separate the three exercises, within this one
-Results section. Remember to label all of your axes with the correct
-units, provide a legend only if necessary, and add a caption underneath
-the figure. Don't add a title on a figure (use a caption).
+example, time series. Large tables of results are often better placed in an 
+Appendix. Separate the three exercises within this one Results section. Remember 
+to label all of your axes with the correct units, provide a legend only if 
+necessary, and add a caption underneath the figure. Don't add a title on a 
+figure (use a caption).
 
 **Discussion** : Assess the ability of the model to capture this system.
 You may wish to consider - - The suitability of the conceptual model (is
@@ -419,107 +415,10 @@ it flawed or robust?) - The model equations - The software used - The
 uncertainty of the parameters - How managers could use this to help
 adapt to a changing climate
 
-Give a general conclusion of the three exercises Connect your results to
-your aims Connect your results to the rest of your background reading.
+**Conclusion** :Give a general conclusion of the three exercises Connect your 
+results to your aims. Connect your results to the rest of your background reading.
 
 **References** : Follow the unit style and use a consistent format
 throughout.
 :::
 
-### Optional: Add phosphorus concentrations to the model {#A3B_13 .unnumbered}
-
-For each sub-catchment, the phosphorus concentration, $P_{i}$ (g/m^3^),
-depends on how much flow there is (e.g. more flow = more fertilizer
-leaching) by assuming a simple power law fitted to the
-flow-concentration relationship computed for each land-use
-($P$\~$\alpha Q \beta$). This is averaged over the different land use
-fractions (denoted with the small $p$ index), using the land-use
-fraction $F_p$:
-
-<center>
-
-```{=tex}
-\begin{equation}
-P_{i}^{t} = \sum_{p=4}^{N_{p}} F_{p}\left (\color{#FF0000}{\alpha_{p} \left (\frac{Q_{i}^{t}}{A_{i}}  \right )^{\beta_{p}}+P_{0}}  \right )
-(\#eq:equationA3A3)
-\end{equation}
-```
-</center>
-
-```{block2, hintA3A_1, type='rmdnote2'}
-$\color{#FF0000}{\alpha_{p} \left (\frac{Q_{i}^{t}}{A_{i}}  \right )^{\beta_{p}}+P_{0}}$ is the flow dependent concentration of the *p*-th land use type.
-```
-
-Where alpha ($\alpha$) and beta ($\beta$) are variables that govern the
-stream $P_i$ concentration (g/m^3^) as a function of area-averaged flow
-rate ($Q/A$) and they depend on the dominant land use ($p$). $N_p$ is
-the number of land use classes being considered (4) and $P_0$ is the
-background concentration (g/m^3^) for that sub-catchment (i.e. the value
-of PO~4~ when flow tends to 0).
-
-The total $P$ export load is $P_{load}$ (g/day) and is the sum of the
-different sub catchment outputs (remember *load = flow x concentration*)
-with the assumed lag time:
-
-<center>
-
-```{=tex}
-\begin{equation}
-P_{load}^{t} = \color{#9BBB59}{P_{1}^{t} Q_{1}^{t}} + \color{#0070C0}{P_{2}^{t-1} Q_{2}^{t-1}} + \color{#F79646}{P_{3}^{t-2} Q_{3}^{t-2}}
-(\#eq:equationA3A4)
-\end{equation}
-```
-</center>
-
-<center>
-
-<video width="80%" height="80%" controls>
-
-<source src="images/assessment_3A/video1.mp4" type="video/mp4">
-
-</video>
-
-</center>
-
-Now let's work out the land-use specific stream $P$ concentrations:
-
-5)  Predict the sub catchment river $P$ concentrations and total river
-    basin $P$ export load. The best way to do this is first predict the
-    $P$ concentration of each land-use class ($F_p$) in each sub
-    catchment each as a column (i.e. Dairy $P$ concentration, Wheat $P$
-    concentration and so on), and then sum the 4 columns for $P_i$.
-
-<center>
-
-```{r tableA3A2, echo=FALSE, message=FALSE, warning=FALSE}
-# library(knitr)
-# library(kableExtra)
-# library(hablar)
-# library(dplyr)
-# #options(knitr.kable.NA = '')
-# tableA3A2 <- read.csv("tables/assessment_3A/table2.csv", check.names=FALSE)
-# kable(tableA3A2, format = "html", escape = F, align = "c", caption = "Phosphate parameters.") %>%
-#   kable_styling(full_width = F, position = "center") %>%
-#   column_spec(1, width_min = "25em") %>%
-#   column_spec(2, width_min = "11em") %>%
-#   column_spec(3, width_min = "11em") %>%
-#   #row_spec(1:12, background = '#ffffff00') %>%
-#   scroll_box(width = "100%", height = "235px",
-#              fixed_thead = FALSE)
-```
-
-</center>
-
-```{block2, hint7_5, type='rmdtip2'}
-See how dairy has the highest alpha? This means it produces the most $P$ of all 4 classes.
-```
-
-7)  If the irrigated dairy industry were made to contain their flows
-    (i.e. prevent high $P$ concentrations going to the stream), how
-    would this affect the overall concentration in the water at the
-    river basin outlet? They have to keep the total subcatchment $P$
-    concentration below 0.065 g m^3^.
-
-```{block2, hint7_3, type='rmdtip2'}
-Use an IF statement.
-```

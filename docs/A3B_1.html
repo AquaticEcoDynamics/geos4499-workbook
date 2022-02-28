@@ -240,10 +240,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="A3B_1.html"><a href="A3B_1.html#A3B_10"><i class="fa fa-check"></i>Assessing the model</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="A3B_1.html"><a href="A3B_1.html#A3B_11"><i class="fa fa-check"></i>C. Climate change impact assessment</a></li>
-<li class="chapter" data-level="" data-path="A3B_1.html"><a href="A3B_1.html#A2A_12"><i class="fa fa-check"></i>Submission</a>
-<ul>
-<li class="chapter" data-level="" data-path="A3B_1.html"><a href="A3B_1.html#A3B_13"><i class="fa fa-check"></i>Optional: Add phosphorus concentrations to the model</a></li>
-</ul></li>
+<li class="chapter" data-level="" data-path="A3B_1.html"><a href="A3B_1.html#A2A_12"><i class="fa fa-check"></i>Submission</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references-2.html"><a href="references-2.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -566,13 +563,9 @@ modellers could carry out.</p>
 <h2>Submission</h2>
 <div class="redbox2">
 <p>Your submission is a single report based building on all three
-exercises, parts A, B and C listed above.</p>
-<p>If you did not complete any of the individual exercises, you should
-still write the report, based on whatever you were able to complete. Use
-the questions in the exercise as a guide to the ideas that should be
-included in your discussion. There is no page limit, but it should be
-around eight pages.</p>
-<p>There are two main focuses for the report:</p>
+exercises, parts A, B and C listed above. Use the questions in each part as a
+guide to the ideas that should be included in your report. You can expect to end up with about 10 pages for this report.</p>
+<p>Your report should address:</p>
 <p>• <em>the scientific aspects associated with catchment and lake
 assessment</em>, and</p>
 <p>• <em>the technical and practical aspects of numerical modelling</em>.</p>
@@ -580,97 +573,33 @@ assessment</em>, and</p>
 <p><strong>Introduction</strong> : Include just the background information that is
 necessary to understand your aim. This should relate to assessment of
 land-use change and climate change. Introduce all three exercises
-together in a nicely connected way within the one introduction Include
-an aim, and a hypothesis if you can Include conceptual diagrams if they
-help explain the background</p>
-<p><strong>Methods</strong> : Explain what you did, so that someone else could repeat it
-Separate the three exercises, within this one Methods section, using
-sub-sections for the catchment, lake and climate aspects Use the past
-tense, and a passive voice Show the model equations Show all parameters
-used, including sources for parameters or estimates found in the
-literature Include conceptual diagrams to help explain the methods</p>
+together in a nicely connected way within the one introduction. Include
+an aim, and a hypothesis if you can. Include conceptual diagrams if they
+help explain the background.</p>
+<p><strong>Methods</strong> : Explain what you did so that someone else could repeat it
+Separate the three exercises within this one Methods section, using
+sub-sections for the catchment, lake and climate aspects. Use past
+tense and a passive voice. Show the model equations and define all parameters
+used. Including any sources for parameter values or estimates found in the
+literature. You can include conceptual diagrams to help explain the methods</p>
 <p><strong>Results</strong> : Report the numbers, trends or other findings you
 calculated. Include figures if they help you explain the results, for
-example, time series. Separate the three exercises, within this one
-Results section. Remember to label all of your axes with the correct
-units, provide a legend only if necessary, and add a caption underneath
-the figure. Don’t add a title on a figure (use a caption).</p>
+example, time series. Large tables of results are often better placed in an
+Appendix. Separate the three exercises within this one Results section. Remember
+to label all of your axes with the correct units, provide a legend only if
+necessary, and add a caption underneath the figure. Don’t add a title on a
+figure (use a caption).</p>
 <p><strong>Discussion</strong> : Assess the ability of the model to capture this system.
 You may wish to consider - - The suitability of the conceptual model (is
 it flawed or robust?) - The model equations - The software used - The
 uncertainty of the parameters - How managers could use this to help
 adapt to a changing climate</p>
-<p>Give a general conclusion of the three exercises Connect your results to
-your aims Connect your results to the rest of your background reading.</p>
+<p><strong>Conclusion</strong> :Give a general conclusion of the three exercises Connect your
+results to your aims. Connect your results to the rest of your background reading.</p>
 <p><strong>References</strong> : Follow the unit style and use a consistent format
 throughout.</p>
 </div>
-<div id="A3B_13" class="section level3 unnumbered">
-<h3>Optional: Add phosphorus concentrations to the model</h3>
-<p>For each sub-catchment, the phosphorus concentration, <span class="math inline">\(P_{i}\)</span> (g/m<sup>3</sup>),
-depends on how much flow there is (e.g. more flow = more fertilizer
-leaching) by assuming a simple power law fitted to the
-flow-concentration relationship computed for each land-use
-(<span class="math inline">\(P\)</span>~<span class="math inline">\(\alpha Q \beta\)</span>). This is averaged over the different land use
-fractions (denoted with the small <span class="math inline">\(p\)</span> index), using the land-use
-fraction <span class="math inline">\(F_p\)</span>:</p>
-<center>
-<span class="math display" id="eq:equationA3A3">\[\begin{equation}
-P_{i}^{t} = \sum_{p=4}^{N_{p}} F_{p}\left (\color{#FF0000}{\alpha_{p} \left (\frac{Q_{i}^{t}}{A_{i}}  \right )^{\beta_{p}}+P_{0}}  \right )
-\tag{19}
-\end{equation}\]</span>
-</center>
 
-<div class="rmdnote2">
-<span class="math inline">\(\color{#FF0000}{\alpha_{p} \left (\frac{Q_{i}^{t}}{A_{i}} \right )^{\beta_{p}}+P_{0}}\)</span> is the flow dependent concentration of the <em>p</em>-th land use type.
-</div>
-<p>Where alpha (<span class="math inline">\(\alpha\)</span>) and beta (<span class="math inline">\(\beta\)</span>) are variables that govern the
-stream <span class="math inline">\(P_i\)</span> concentration (g/m<sup>3</sup>) as a function of area-averaged flow
-rate (<span class="math inline">\(Q/A\)</span>) and they depend on the dominant land use (<span class="math inline">\(p\)</span>). <span class="math inline">\(N_p\)</span> is
-the number of land use classes being considered (4) and <span class="math inline">\(P_0\)</span> is the
-background concentration (g/m<sup>3</sup>) for that sub-catchment (i.e. the value
-of PO<sub>4</sub> when flow tends to 0).</p>
-<p>The total <span class="math inline">\(P\)</span> export load is <span class="math inline">\(P_{load}\)</span> (g/day) and is the sum of the
-different sub catchment outputs (remember <em>load = flow x concentration</em>)
-with the assumed lag time:</p>
-<center>
-<span class="math display" id="eq:equationA3A4">\[\begin{equation}
-P_{load}^{t} = \color{#9BBB59}{P_{1}^{t} Q_{1}^{t}} + \color{#0070C0}{P_{2}^{t-1} Q_{2}^{t-1}} + \color{#F79646}{P_{3}^{t-2} Q_{3}^{t-2}}
-\tag{20}
-\end{equation}\]</span>
-</center>
-<center>
-<video width="80%" height="80%" controls>
-<source src="images/assessment_3A/video1.mp4" type="video/mp4">
-</video>
-</center>
-<p>Now let’s work out the land-use specific stream <span class="math inline">\(P\)</span> concentrations:</p>
-<ol start="5" style="list-style-type: decimal">
-<li>Predict the sub catchment river <span class="math inline">\(P\)</span> concentrations and total river
-basin <span class="math inline">\(P\)</span> export load. The best way to do this is first predict the
-<span class="math inline">\(P\)</span> concentration of each land-use class (<span class="math inline">\(F_p\)</span>) in each sub
-catchment each as a column (i.e. Dairy <span class="math inline">\(P\)</span> concentration, Wheat <span class="math inline">\(P\)</span>
-concentration and so on), and then sum the 4 columns for <span class="math inline">\(P_i\)</span>.</li>
-</ol>
-<center>
-</center>
-
-<div class="rmdtip2">
-See how dairy has the highest alpha? This means it produces the most <span class="math inline">\(P\)</span> of all 4 classes.
-</div>
-<ol start="7" style="list-style-type: decimal">
-<li>If the irrigated dairy industry were made to contain their flows
-(i.e. prevent high <span class="math inline">\(P\)</span> concentrations going to the stream), how
-would this affect the overall concentration in the water at the
-river basin outlet? They have to keep the total subcatchment <span class="math inline">\(P\)</span>
-concentration below 0.065 g m<sup>3</sup>.</li>
-</ol>
-
-<div class="rmdtip2">
-Use an IF statement.
-</div>
-
-</div>
 </div>
 </div>
             </section>
