@@ -201,10 +201,10 @@ measured by using a differential GPS (DGPS). You also need to measure
 the 'wetted perimeter' ($P$) of the channel and the cross sectional area
 ($A$). The roughness coefficient ($n$) should be assumed from the
 literature, based on your observations or the stream and a table like
-the one below, or [here](https://pubs.usgs.gov/wsp/2339/report.pdf), or
-[here](https://www.agric.wa.gov.au/water-management/mannings-roughness-coefficient),
+the one below, or [here](https://pubs.usgs.gov/wsp/2339/report.pdf){target="_blank”}, or
+[here](https://www.agric.wa.gov.au/water-management/mannings-roughness-coefficient){target="_blank”},
 or
-[here](https://www.brisbane.qld.gov.au/sites/default/files/ncd_appendixc_part3.pdf).
+[here](https://www.brisbane.qld.gov.au/sites/default/files/ncd_appendixc_part3.pdf){target="_blank”}.
 
 <center>
 
@@ -237,11 +237,11 @@ you can solve Equation \@ref(eq:exercise2-2).
 The first step in any hydrologic data analysis project is to gather the
 data and relevant background information on your catchment of interest.
 In Western Australia the [WIR
-website](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx)
+website](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx){target="_blank”}
 contains all of the data and information you need, and we will use this
 in our future assignments. All states/countries have something similar;
 the USA has one of the best examples through the [USGS NWIS
-website](http://waterdata.usgs.gov/nwis).
+website](http://waterdata.usgs.gov/nwis){target="_blank”}.
 
 If you click the site information button, enter your gage name or
 number, and browse the available datasets for your river. For this
@@ -276,7 +276,7 @@ labelled axes, and a logarithmic y-axis. If you need help with
 formatting the graph in Excel, please don't hesitate to ask for help!
 
 **Activity:** Go to the [WIR web
-link](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx),
+link](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx){target="_blank”},
 and download the continuous flow data for the Swan River "Walyunga"
 gauge (616011). In Excel, explore the data. Create a hydrograph
 comparing discharge between a wet year and a dry year (i.e. plot two
@@ -501,6 +501,6 @@ Thus, the probability that a flood with a 10 year recurrence interval
 will occur in any year is 1/10 = 0.1 or 10%. What are the probabilities
 that a 50 year flood and a 100 year flood will occur in any given year?
 
-**Extra activity:** Repeat the above flood frequency analysis using the
+**Optional Extra:** Repeat the above flood frequency analysis using the
 616011 Walyunga data set that you downloaded in Excel (Hint, use a pivot
 table and the max option to get the annual maximum discharge).
