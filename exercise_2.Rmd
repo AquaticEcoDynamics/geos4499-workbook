@@ -6,8 +6,17 @@ editor_options:
 
 # Exercise 2 - Streamflow analysis {.unnumbered}
 
-In this module we understand how to generate streamflow data, and then
-how to use it charcaterise variability in stream discharge rates.
+In this exercise we understand how to generate streamflow data, and then
+how to use it characterise variability in stream discharge rates.
+
+
+## Learning Objectives {#E2_1 .unnumbered}
+
+By the end of this exercise learners will be able to:
+
+-   Describe and utilize standard approaches for measuring or estimating streamflow
+-   Characterize stream hydrology through the analysis of streamflow data
+
 
 ## Measuring Stream Velocity & Discharge {#E2_2 .unnumbered}
 
@@ -201,10 +210,10 @@ measured by using a differential GPS (DGPS). You also need to measure
 the 'wetted perimeter' ($P$) of the channel and the cross sectional area
 ($A$). The roughness coefficient ($n$) should be assumed from the
 literature, based on your observations or the stream and a table like
-the one below, or [here](https://pubs.usgs.gov/wsp/2339/report.pdf){target="_blank”}, or
-[here](https://www.agric.wa.gov.au/water-management/mannings-roughness-coefficient){target="_blank”},
+the one below, or [here](https://pubs.usgs.gov/wsp/2339/report.pdf), or
+[here](https://www.agric.wa.gov.au/water-management/mannings-roughness-coefficient),
 or
-[here](https://www.brisbane.qld.gov.au/sites/default/files/ncd_appendixc_part3.pdf){target="_blank”}.
+[here](https://www.brisbane.qld.gov.au/sites/default/files/ncd_appendixc_part3.pdf).
 
 <center>
 
@@ -237,24 +246,20 @@ you can solve Equation \@ref(eq:exercise2-2).
 The first step in any hydrologic data analysis project is to gather the
 data and relevant background information on your catchment of interest.
 In Western Australia the [WIR
-website](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx){target="_blank”}
+website](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx)
 contains all of the data and information you need, and we will use this
 in our future assignments. All states/countries have something similar;
 the USA has one of the best examples through the [USGS NWIS
 website](http://waterdata.usgs.gov/nwis){target="_blank”}.
 
-If you click the site information button, enter your gage name or
-number, and browse the available datasets for your river. For this
-analysis, you will need daily discharge data, peak streamflow, and the
-annual water data report. Other datasets may also be helpful for
-understanding the hydrologic behavior of your river.
+<!-- If you click the site information button, enter your gage name or -->
+<!-- number, and browse the available datasets for your river. For this -->
+<!-- analysis, you will need daily discharge data, peak streamflow, and the -->
+<!-- annual water data report. Other datasets may also be helpful for -->
+<!-- understanding the hydrologic behavior of your river. -->
 
-Hydrologic analyses are almost always conducted for "water years" not
-calendar years. In the Northern Hemisphere. A water year begins on
-October 1 and ends September 30 . In the Southern Hemisphere it Starts
-May 1 and ends April 30, though this can be region specific.
 
-### Daily Unit Discharge Hydrograph {#E2_6 .unnumbered}
+<!-- ### Daily Unit Discharge Hydrograph {#E2_6 .unnumbered} -->
 
 <center>
 
@@ -264,27 +269,34 @@ knitr::include_graphics("images/surface_hydrology/picture5.jpeg")
 
 </center>
 
-Unit discharge is the total discharge of the river divided by the
-watershed area. Thus, it has units of m^3^/s/km^2^. Unit discharge is
-very useful for comparing the hydrologic behaviour of catchments of
-different size (since discharge scales with area). Depending on your
-data source you will need to download data and do appropriate
-conversions in a spreadsheet.
+<!-- Unit discharge is the total discharge of the river divided by the -->
+<!-- watershed area. Thus, it has units of m^3^/s/km^2^. Unit discharge is -->
+<!-- very useful for comparing the hydrologic behaviour of catchments of -->
+<!-- different size (since discharge scales with area). Depending on your -->
+<!-- data source you will need to download data and do appropriate -->
+<!-- conversions in a spreadsheet. -->
 
-A properly formatted unit discharge hydrograph has a descriptive title,
-labelled axes, and a logarithmic y-axis. If you need help with
-formatting the graph in Excel, please don't hesitate to ask for help!
+<!-- A properly formatted unit discharge hydrograph has a descriptive title, -->
+<!-- labelled axes, and a logarithmic y-axis. If you need help with -->
+<!-- formatting the graph in Excel, please don't hesitate to ask for help! -->
+
+
+Hydrologic analyses are almost always conducted for "water years" not
+calendar years. In the Northern Hemisphere. A water year begins on
+October 1 and ends September 30 . In the Southern Hemisphere it Starts
+May 1 and ends April 30, though this can be region specific.
 
 **Activity:** Go to the [WIR web
-link](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx){target="_blank”},
+link](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx),
 and download the continuous flow data for the Swan River "Walyunga"
 gauge (616011). In Excel, explore the data. Create a hydrograph
 comparing discharge between a wet year and a dry year (i.e. plot two
 years on a common x-axis. Use "hydrologic years" rather than calendar
-years. Label accordingly. Repeat the exercise but this time creating a
-unit hydrograph - for this you will need to divide by the catchment
-area; refer to the above information and check units are consistent.
-This gauge is draining the Avon catchment
+years. Label accordingly. 
+<!-- Repeat the exercise but this time creating a -->
+<!-- unit hydrograph - for this you will need to divide by the catchment -->
+<!-- area; refer to the above information and check units are consistent. -->
+<!-- This gauge is draining the Avon catchment -->
 
 <center>
 
@@ -308,7 +320,7 @@ occurs or is exceeded some percent of the time (e.g., 80% of the time).
 #### How is it calculated? {#E2_9 .unnumbered}
 
 The basic time unit used in preparing a flow-duration curve will greatly
-affect its appearance. For most studies, mean daily discharges are used.
+affect its appearance. For most studies daily discharges are used.
 These will give a steep curve. When the mean flow over a long period is
 used (such as mean monthly flow), the resulting curve will be flatter
 due to averaging of short-term peaks with intervening smaller flows
@@ -316,7 +328,7 @@ during a month. Extreme values are averaged out more and more, as the
 time period gets larger (e.g., for a flow duration curve based on annual
 flows at a long-record station).
 
-**Step 1:** Sort (rank) average daily discharges for period of record
+**Step 1:** Sort (rank) daily discharges for period of record
 from the largest value to the smallest value, involving a total of $n$
 values.
 
@@ -360,7 +372,7 @@ indicates the type of flood regime the basin is likely to have, whereas,
 the shape of the low-flow region characterizes the ability of the basin
 to sustain low flows during dry seasons. A very steep curve (high flows
 for short periods) would be expected for rain-caused floods on small
-watersheds. Snowmelt floods, which last for several days, or regulation
+watersheds. Snow-melt floods, which last for several days, or regulation
 of floods with reservoir storage, will generally result in a much
 flatter curve near the upper limit. In the low-flow region, an
 intermittent stream would exhibit periods of no flow, whereas, a very

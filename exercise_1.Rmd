@@ -36,9 +36,9 @@ Now let's investigate what's happening with annual rainfall amounts. First, we w
 
 Now we have a "clean" dataset, we want to explore some statistics. Use the Data Analysis add-in to calculate descriptive statistics (mean annual rainfall, max annual rainfall, min annual rainfall, Standard deviation of annual rainfall, Skewness) for the whole data (you can install by going to *Tools-\>Add-ins-\>Analysis ToolPack*).  Describe the values you got and what they mean. How "useful" are these statistics for your understanding of the system? What if any assumptions are there about these statistics?
 
-#<!-- Old link: -->
-#
-#<!-- https://docs.google.com/spreadsheets/d/10mHrNWEHoqWif96e7SwvowfQ7sMg_qMxFtw6POr7#sG4/edit?usp=sharing -->
+<!-- #<!-- Old link: --> -->
+<!-- # -->
+<!-- #<!-- https://docs.google.com/spreadsheets/d/10mHrNWEHoqWif96e7SwvowfQ7sMg_qMxFtw6POr7#sG4/edit?usp=sharing --> -->
 
 Next, let's look at the distribution of the rainfall data. Do this by plotting a histogram of the rainfall data (you will need to decide on a reasonable bin size) and plotting the cumulative probability distribution (you can ask Excel to generate this automatically when it makes the histogram, or generate it manually -- each data point represents a probability of 1/\#data points). What do these plots tell you about the rainfall data? Are the data normally distributed?
 
@@ -120,7 +120,9 @@ knitr::include_graphics("images/assessment_2A/image2.png")
 
 ## Getting Streamflow Data {#E1_7 .unnumbered}
 
-Streamflow data is recently reported on the BOM website for some rivers, but the measurement of streamflow is a State Government responsibility. To get streamflow data, go the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx){target="_blank”} web site. Use this WIR tool to locate a gauging station near your rainfall site. Add the site to your cart and submit a data request - check that the data is being delivered as a "package of pre-computed reports". You will then be emailed a zip file of the station's data. Ensure the station has 10-20 years of available data for this exercise.
+Streamflow data is recently reported on the BOM website for some rivers, but the measurement of streamflow is a State Government responsibility. To get streamflow data, go the [Department of Water](http://wir.water.wa.gov.au/Pages/Water-Information-Reporting.aspx) web site. Use this WIR tool to locate a gauging station near your rainfall site. To filter the sites shown on the map you can choose "Stream Gauging" as your site category and "Water level-flow - TS archive" as the data category (TS stands for time-series) and click the "Apply" button. If you have multiple guages to choose from then check how much data is available by right-clicking on the point and then choosing "Basic site data availability summary". Ideally, your station would have 10-20 years of available data for this exercise. 
+
+Once you've chosen your the gauging station you want to use, then click on add the site to your cart and submit a data request. For streamflow data measured by a data logger (rather than manual measurements) you should request "Water levels/flow (continuous) for Site(s) cross-tabulated". You will then be emailed a zip file with the station's data. 
 
 <center>
 

@@ -3,7 +3,7 @@
 
 Understanding what our future climate might look like can be confusing. There are many models, emissions scenarios, time-windows of interest, and variables that we need to understand. Traditionally the output from Global Climate Models (GCM’s) is also very complicated and requires sophisticated data analysis scripts to load and process the spatio-temporal data to something able to be used in impact assessments. In this exercsie we aim to use the [CCIA](https://www.climatechangeinaustralia.gov.au/en/projections-tools/summary-data-explorer/) data tool, which provides a user-friendly interface that allows users to extract and interpret data in a simple way. 
 
-## Objectives {#E8_2 .unnumbered}
+## Learning Objectives {#E8_2 .unnumbered}
 
 To be able to source essential information on future climate conditions for a chosen area in Australia, and appreciate ways to compare future climate projects and communicate uncertainty.
 

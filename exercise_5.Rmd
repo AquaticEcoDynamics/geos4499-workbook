@@ -6,6 +6,14 @@ In this assignment you will look at simple iterative schemes for solving differe
 
 In this assignment we will look at a simple "bucket" storage model of how a lake level fluctuates through time. This is a modified version of an exercise from @wainwright2002environmental (see p38). Similar types of models have been used for paleo-environmental reconstructions [@bradley1999paleoclimatology] and in hillslope hydrology [@dunin1976infiltration], where the bucket represents the ability of soil to hold water. This type of approach can also be used to simulate solute concentrations, which is particularly useful for quantifying exchanges between surface water and groundwater [@cook2013estimating].
 
+## Learning Objectives { .unnumbered}
+
+By the end of this exercise learners will be able to:
+
+-   Understand the role of differential equations in decribing hydrologic systems
+-   Predict changes in lake water level using a simple bucket model.
+
+
 ## Defining the system {#E5_3 .unnumbered}
 
 In this first part of the assignment you will use a simple "bucket" storage model to simulate changes in lake water level through time. The depth of the lake increases due to rainfall and inflows and decreases due to evaporation and seepage (Figure \@ref(fig:E5image1)). There is also a maximum level to which the lake can be filled, $h_{\text{max}}$ (m), above which water will overflow from the lake, such that $0\le h\le h_{\text{max}}$. This simple system is described by the equation;
@@ -81,12 +89,12 @@ Now have a go at making your own rainfall boundary condition. You may choose to 
 
 ## References {.unnumbered}
 
-Bradley, Raymond S. 1999. *Paleoclimatology: Reconstructing Climates of the Quaternary*. Elsevier.
+<!-- Bradley, Raymond S. 1999. *Paleoclimatology: Reconstructing Climates of the Quaternary*. Elsevier. -->
 
-Cook, Peter G. 2013. "Estimating Groundwater Discharge to Rivers from River Chemistry Surveys."*Hydrological Processes* 27 (25): 3694--3707.
+<!-- Cook, Peter G. 2013. "Estimating Groundwater Discharge to Rivers from River Chemistry Surveys."*Hydrological Processes* 27 (25): 3694--3707. -->
 
-Dunin, Frank X. 1976. "Infiltration: Its Simulation for Field Conditions."
+<!-- Dunin, Frank X. 1976. "Infiltration: Its Simulation for Field Conditions." -->
 
-Wainwright, John, and Mark Mulligan. 2002. *Environmental Modelling: Finding Simplicity in Complexity*. Wiley Online Library.
+<!-- Wainwright, John, and Mark Mulligan. 2002. *Environmental Modelling: Finding Simplicity in Complexity*. Wiley Online Library. -->
 
-Winter, Thomas C, Judson William Harvey, O Lehn Franke, and William M Alley. 1998. *Ground Water and Surface Water: A Single Resource*. Vol. 1139. US geological Survey.
+<!-- Winter, Thomas C, Judson William Harvey, O Lehn Franke, and William M Alley. 1998. *Ground Water and Surface Water: A Single Resource*. Vol. 1139. US geological Survey. -->

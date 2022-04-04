@@ -32,7 +32,6 @@ fig:E5image1
 fig:E5image2
 tab:E6table1
 fig:image7-0
-fig:image7-2
 fig:map7-1
 fig:image7-3
 fig:image6-1

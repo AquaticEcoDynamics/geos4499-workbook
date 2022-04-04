@@ -1,6 +1,17 @@
 # Exercise 3A - Characterising soil moisture {#E3A_1 .unnumbered}
 
-During this exercise you will measure some of the key properties for soil hydrology. To do this, you will collect soil from different locations of your choosing to analyse. You will then calculate soil moisture content, porosity and field capacity. Importantly, you will finish by thinking about the meaning of your results. Let's start by remembering some key terms:
+ this exercise you will measure some of the key properties for soil hydrology. To do this, you will collect soil from different locations of your choosing to analyse. You will then calculate soil moisture content, porosity and field capacity. Importantly, you will finish by thinking about the meaning of your results.
+
+## Learning Objectives { .unnumbered}
+
+By the end of this exercise learners will be able to:
+
+-   Measure and compare key soil properties
+-   Interpret the implications of of soil properties for unsaturated zone hydrology.
+
+## Key terms in soil hydrology { .unnumbered}
+
+ Let's start by remembering some key terms:
 
 <!-- This ```{block2, hint05-1, type='bluebox'} chunk below creates a blue info box when rendered. Edit the text as usual inside it (note: text won't appear rendered in the visual editor mode) -->
 

@@ -1,6 +1,6 @@
 # Exercise 7 - Managed aquifer recharge {#E7_1 .unnumbered}
 
-## Objectives {#E7_2 .unnumbered}
+## Learning Objectives {#E7_2 .unnumbered}
 
 In this exercise students will consolidate their understanding of managed aquifer recharge, and the role it plays in securing water resources in a changing climate. At the end of this exercise students will be able to:
 
