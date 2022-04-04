@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>References | GEOS4499 Workbook</title>
   <meta name="description" content="References | GEOS4499 Workbook" />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="References | GEOS4499 Workbook" />
   <meta property="og:type" content="book" />
@@ -21,7 +21,7 @@
   
   
 
-<meta name="author" content="Matt Hipsey, Sarah Bourke, Jason Beringer and Giles Knight" />
+<meta name="author" content="Matt Hipsey, Sarah Bourke, Jason Beringer, Jim McCallum and Giles Knight" />
 
 
 
@@ -30,10 +30,11 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="A3A-1.html"/>
+<link rel="prev" href="A3B_1.html"/>
 
-<script src="libs/header-attrs-2.7/header-attrs.js"></script>
-<script src="libs/jquery-3.5.1/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,10 +50,11 @@
 
 
 
-
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <script src="libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
 <script src="libs/leaflet-1.3.1/leaflet.js"></script>
 <link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
@@ -62,14 +64,31 @@
 <script src="libs/leaflet-binding-2.0.4.1/leaflet.js"></script>
 <script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
 <script src="libs/leaflet-providers-plugin-2.0.4.1/leaflet-providers-plugin.js"></script>
-<script src="libs/plotly-binding-4.9.3/plotly.js"></script>
-<script src="libs/typedarray-0.1/typedarray.min.js"></script>
-<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
-<link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
-<script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
 
 
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
@@ -88,139 +107,143 @@
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
-<li class="part"><span><b>I Exercises</b></span></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html"><i class="fa fa-check"></i>Exercise 1A – Spatial rainfall variability</a>
+<li class="chapter" data-level="" data-path="exercise-1---understanding-rainfall-and-streamflow-data.html"><a href="exercise-1---understanding-rainfall-and-streamflow-data.html"><i class="fa fa-check"></i>Exercise 1 - Understanding rainfall and streamflow data</a>
 <ul>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_1"><i class="fa fa-check"></i>Introduction</a></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_2"><i class="fa fa-check"></i>Objective</a></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_3"><i class="fa fa-check"></i>Methods</a></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_7"><i class="fa fa-check"></i>Activity</a></li>
-<li class="chapter" data-level="" data-path="exercise-1a-spatial-rainfall-variability.html"><a href="exercise-1a-spatial-rainfall-variability.html#E1A_11"><i class="fa fa-check"></i>Conclusions</a></li>
+<li class="chapter" data-level="" data-path="exercise-1---understanding-rainfall-and-streamflow-data.html"><a href="exercise-1---understanding-rainfall-and-streamflow-data.html#E1_1"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="exercise-1---understanding-rainfall-and-streamflow-data.html"><a href="exercise-1---understanding-rainfall-and-streamflow-data.html#E1_2"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="exercise-1---understanding-rainfall-and-streamflow-data.html"><a href="exercise-1---understanding-rainfall-and-streamflow-data.html#E1_3"><i class="fa fa-check"></i>Getting Rainfall Data</a></li>
+<li class="chapter" data-level="" data-path="exercise-1---understanding-rainfall-and-streamflow-data.html"><a href="exercise-1---understanding-rainfall-and-streamflow-data.html#E1_4"><i class="fa fa-check"></i>Statistical Properties of Rainfall Data</a></li>
+<li class="chapter" data-level="" data-path="exercise-1---understanding-rainfall-and-streamflow-data.html"><a href="exercise-1---understanding-rainfall-and-streamflow-data.html#E1_5"><i class="fa fa-check"></i>Temporal trends in rainfall</a></li>
+<li class="chapter" data-level="" data-path="exercise-1---understanding-rainfall-and-streamflow-data.html"><a href="exercise-1---understanding-rainfall-and-streamflow-data.html#E1_6"><i class="fa fa-check"></i>Spatial patterns in rainfall</a></li>
+<li class="chapter" data-level="" data-path="exercise-1---understanding-rainfall-and-streamflow-data.html"><a href="exercise-1---understanding-rainfall-and-streamflow-data.html#E1_7"><i class="fa fa-check"></i>Getting Streamflow Data</a></li>
+<li class="chapter" data-level="" data-path="exercise-1---understanding-rainfall-and-streamflow-data.html"><a href="exercise-1---understanding-rainfall-and-streamflow-data.html#E1_8"><i class="fa fa-check"></i>Relationship between rainfall and streamflow</a></li>
+<li class="chapter" data-level="" data-path="exercise-1---understanding-rainfall-and-streamflow-data.html"><a href="exercise-1---understanding-rainfall-and-streamflow-data.html#E1_9"><i class="fa fa-check"></i>Linking rainfall and streamflow to climate variability</a></li>
+<li class="chapter" data-level="" data-path="exercise-1---understanding-rainfall-and-streamflow-data.html"><a href="exercise-1---understanding-rainfall-and-streamflow-data.html#E1_10"><i class="fa fa-check"></i>Reporting on scientific data</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="exercise-1b-sourcing-rainfall-and-flow-data.html"><a href="exercise-1b-sourcing-rainfall-and-flow-data.html"><i class="fa fa-check"></i>Exercise 1B - Sourcing rainfall and flow data</a>
+<li class="chapter" data-level="" data-path="exercise-2---streamflow-analysis.html"><a href="exercise-2---streamflow-analysis.html"><i class="fa fa-check"></i>Exercise 2 - Streamflow analysis</a>
 <ul>
-<li class="chapter" data-level="" data-path="exercise-1b-sourcing-rainfall-and-flow-data.html"><a href="exercise-1b-sourcing-rainfall-and-flow-data.html#E1B_1"><i class="fa fa-check"></i>Introduction</a></li>
-<li class="chapter" data-level="" data-path="exercise-1b-sourcing-rainfall-and-flow-data.html"><a href="exercise-1b-sourcing-rainfall-and-flow-data.html#E1B_2"><i class="fa fa-check"></i>Objective</a></li>
-<li class="chapter" data-level="" data-path="exercise-1b-sourcing-rainfall-and-flow-data.html"><a href="exercise-1b-sourcing-rainfall-and-flow-data.html#E1B_3"><i class="fa fa-check"></i>Getting Rainfall Data</a></li>
-<li class="chapter" data-level="" data-path="exercise-1b-sourcing-rainfall-and-flow-data.html"><a href="exercise-1b-sourcing-rainfall-and-flow-data.html#E1B_4"><i class="fa fa-check"></i>Statistical Properties of Rainfall Data</a></li>
-<li class="chapter" data-level="" data-path="exercise-1b-sourcing-rainfall-and-flow-data.html"><a href="exercise-1b-sourcing-rainfall-and-flow-data.html#E1B_5"><i class="fa fa-check"></i>Getting Streamflow Data</a></li>
-<li class="chapter" data-level="" data-path="exercise-1b-sourcing-rainfall-and-flow-data.html"><a href="exercise-1b-sourcing-rainfall-and-flow-data.html#E1B_6"><i class="fa fa-check"></i>Conclusions</a></li>
+<li class="chapter" data-level="" data-path="exercise-2---streamflow-analysis.html"><a href="exercise-2---streamflow-analysis.html#E2_1"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="exercise-2---streamflow-analysis.html"><a href="exercise-2---streamflow-analysis.html#E2_2"><i class="fa fa-check"></i>Measuring Stream Velocity &amp; Discharge</a>
+<ul>
+<li class="chapter" data-level="" data-path="exercise-2---streamflow-analysis.html"><a href="exercise-2---streamflow-analysis.html#E2_3"><i class="fa fa-check"></i>Flow Rate: Velocity-Area Method</a></li>
+<li class="chapter" data-level="" data-path="exercise-2---streamflow-analysis.html"><a href="exercise-2---streamflow-analysis.html#E2_4"><i class="fa fa-check"></i>Flow Rate: Manning’s Formula</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="exercise-2-streamflow-analysis.html"><a href="exercise-2-streamflow-analysis.html"><i class="fa fa-check"></i>Exercise 2 - Streamflow analysis</a>
+<li class="chapter" data-level="" data-path="exercise-2---streamflow-analysis.html"><a href="exercise-2---streamflow-analysis.html#E2_5"><i class="fa fa-check"></i>Making Sense of Streamflow Data</a>
 <ul>
-<li class="chapter" data-level="" data-path="exercise-2-streamflow-analysis.html"><a href="exercise-2-streamflow-analysis.html#E2_2"><i class="fa fa-check"></i>Measuring Stream Velocity &amp; Discharge</a>
-<ul>
-<li class="chapter" data-level="" data-path="exercise-2-streamflow-analysis.html"><a href="exercise-2-streamflow-analysis.html#E2_3"><i class="fa fa-check"></i>Flow Rate: Velocity-Area Method</a></li>
-<li class="chapter" data-level="" data-path="exercise-2-streamflow-analysis.html"><a href="exercise-2-streamflow-analysis.html#E2_4"><i class="fa fa-check"></i>Flow Rate: Manning’s Formula</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="exercise-2-streamflow-analysis.html"><a href="exercise-2-streamflow-analysis.html#E2_5"><i class="fa fa-check"></i>Making Sense of Streamflow Data</a>
-<ul>
-<li class="chapter" data-level="" data-path="exercise-2-streamflow-analysis.html"><a href="exercise-2-streamflow-analysis.html#E2_6"><i class="fa fa-check"></i>Daily Unit Discharge Hydrograph</a></li>
-<li class="chapter" data-level="" data-path="exercise-2-streamflow-analysis.html"><a href="exercise-2-streamflow-analysis.html#E2_7"><i class="fa fa-check"></i>Flow Duration Curves</a></li>
-<li class="chapter" data-level="" data-path="exercise-2-streamflow-analysis.html"><a href="exercise-2-streamflow-analysis.html#E2_11"><i class="fa fa-check"></i>Flood Frequency Analysis</a></li>
+<li class="chapter" data-level="" data-path="exercise-2---streamflow-analysis.html"><a href="exercise-2---streamflow-analysis.html#E2_7"><i class="fa fa-check"></i>Flow Duration Curves</a></li>
+<li class="chapter" data-level="" data-path="exercise-2---streamflow-analysis.html"><a href="exercise-2---streamflow-analysis.html#E2_11"><i class="fa fa-check"></i>Flood Frequency Analysis</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="E3A-1.html"><a href="E3A-1.html"><i class="fa fa-check"></i>Exercise 3A - Characterising soil moisture</a>
+<li class="chapter" data-level="" data-path="E3A_1.html"><a href="E3A_1.html"><i class="fa fa-check"></i>Exercise 3A - Characterising soil moisture</a>
 <ul>
-<li class="chapter" data-level="" data-path="E3A-1.html"><a href="E3A-1.html#sample-collection"><i class="fa fa-check"></i>Sample Collection</a></li>
-<li class="chapter" data-level="" data-path="E3A-1.html"><a href="E3A-1.html#E3A_2"><i class="fa fa-check"></i>Computing Soil Moisture and Soil Porosity</a></li>
-<li class="chapter" data-level="" data-path="E3A-1.html"><a href="E3A-1.html#estimating-field-capacity"><i class="fa fa-check"></i>Estimating Field Capacity</a></li>
-<li class="chapter" data-level="" data-path="E3A-1.html"><a href="E3A-1.html#what-did-we-learn"><i class="fa fa-check"></i>What did we learn?</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="E3B-1.html"><a href="E3B-1.html"><i class="fa fa-check"></i>Exercise 3B - Visualising groundwater</a>
+<li class="chapter" data-level="" data-path="E3A_1.html"><a href="E3A_1.html#learning-objectives"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="E3A_1.html"><a href="E3A_1.html#key-terms-in-soil-hydrology"><i class="fa fa-check"></i>Key terms in soil hydrology</a>
 <ul>
-<li class="chapter" data-level="" data-path="E3B-1.html"><a href="E3B-1.html#E3B_2"><i class="fa fa-check"></i>Groundwater flow rates</a></li>
-<li class="chapter" data-level="" data-path="E3B-1.html"><a href="E3B-1.html#E3B_3"><i class="fa fa-check"></i>Physical model of groundwater system</a></li>
-<li class="chapter" data-level="" data-path="E3B-1.html"><a href="E3B-1.html#E3B_4"><i class="fa fa-check"></i>Computer model of groundwater system</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html"><i class="fa fa-check"></i>Exercise 4 - Groundwater and surface water interaction</a>
-<ul>
-<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_2"><i class="fa fa-check"></i>Learning Objectives</a></li>
-<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#background"><i class="fa fa-check"></i>Background</a></li>
-<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#E4_3"><i class="fa fa-check"></i>Experimental Method</a></li>
-<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#data-analysis"><i class="fa fa-check"></i>Data Analysis</a></li>
-<li class="chapter" data-level="" data-path="E4-1.html"><a href="E4-1.html#interpretation-and-conclusions"><i class="fa fa-check"></i>Interpretation and conclusions</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="E5-1.html"><a href="E5-1.html"><i class="fa fa-check"></i>Exercise 5 - Simple lake model</a>
-<ul>
-<li class="chapter" data-level="" data-path="E5-1.html"><a href="E5-1.html#E5_2"><i class="fa fa-check"></i>Introduction</a></li>
-<li class="chapter" data-level="" data-path="E5-1.html"><a href="E5-1.html#E5_3"><i class="fa fa-check"></i>Defining the system</a></li>
-<li class="chapter" data-level="" data-path="E5-1.html"><a href="E5-1.html#E5_4"><i class="fa fa-check"></i>Simulating the system</a></li>
-<li class="chapter" data-level="" data-path="E5-1.html"><a href="E5-1.html#E5_5"><i class="fa fa-check"></i>Transient simulation</a></li>
-<li class="chapter" data-level="" data-path="E5-1.html"><a href="E5-1.html#E5_6"><i class="fa fa-check"></i>Rates of change</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html"><i class="fa fa-check"></i>Exercise 6 - Managed Aquifer Recharge</a>
-<ul>
-<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E7_2"><i class="fa fa-check"></i>Objectives</a>
-<ul>
-<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E7_2"><i class="fa fa-check"></i>What is Managed Aquifer Recharge</a></li>
-<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E7_3"><i class="fa fa-check"></i>How do we get the water into the aquifer?</a></li>
-<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E7_4"><i class="fa fa-check"></i>What are the benefits of managed aquifer recharge?</a></li>
-<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E7_5"><i class="fa fa-check"></i>What are the potential risks of MAR?</a></li>
-<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E7_6"><i class="fa fa-check"></i>Where is managed aquifer recharge happening</a></li>
-<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E7_7"><i class="fa fa-check"></i>What do you think about MAR?</a></li>
+<li class="chapter" data-level="" data-path="E3A_1.html"><a href="E3A_1.html#sample-collection"><i class="fa fa-check"></i>Sample Collection</a></li>
+<li class="chapter" data-level="" data-path="E3A_1.html"><a href="E3A_1.html#E3A_2"><i class="fa fa-check"></i>Computing Soil Moisture and Soil Porosity</a></li>
+<li class="chapter" data-level="" data-path="E3A_1.html"><a href="E3A_1.html#estimating-field-capacity"><i class="fa fa-check"></i>Estimating Field Capacity</a></li>
+<li class="chapter" data-level="" data-path="E3A_1.html"><a href="E3A_1.html#what-did-we-learn"><i class="fa fa-check"></i>What did we learn?</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="E7-1.html"><a href="E7-1.html"><i class="fa fa-check"></i>Exercise 7 - Assessing environmental flow impacts</a>
+<li class="chapter" data-level="" data-path="E3B_1.html"><a href="E3B_1.html"><i class="fa fa-check"></i>Exercise 3B - Visualising groundwater</a>
 <ul>
-<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E7_2"><i class="fa fa-check"></i>Objectives</a></li>
-<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E7_3"><i class="fa fa-check"></i>What are environmental flows?</a></li>
-<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E7_4"><i class="fa fa-check"></i>A - Classifying e-flow benefits case study : MDB</a></li>
-<li class="chapter" data-level="" data-path="E6-1.html"><a href="E6-1.html#E7_4"><i class="fa fa-check"></i>B - Flow diversion case study : Robe Lakes</a>
-<ul>
-<li class="chapter" data-level="" data-path="E7-1.html"><a href="E7-1.html#module-resources"><i class="fa fa-check"></i>Module resources</a></li>
-<li class="chapter" data-level="" data-path="E7-1.html"><a href="E7-1.html#categorising-flow-data"><i class="fa fa-check"></i>Categorising flow data</a></li>
-<li class="chapter" data-level="" data-path="E7-1.html"><a href="E7-1.html#flow-diversion-scenarios"><i class="fa fa-check"></i>Flow diversion scenarios</a></li>
-<li class="chapter" data-level="" data-path="E7-1.html"><a href="E7-1.html#assessing-impacts-on-lake-salinity"><i class="fa fa-check"></i>Assessing impacts on lake salinity</a></li>
+<li class="chapter" data-level="" data-path="E3B_1.html"><a href="E3B_1.html#E3B_2"><i class="fa fa-check"></i>Groundwater flow rates</a></li>
+<li class="chapter" data-level="" data-path="E3B_1.html"><a href="E3B_1.html#E3B_3"><i class="fa fa-check"></i>Physical model of groundwater system</a></li>
+<li class="chapter" data-level="" data-path="E3B_1.html"><a href="E3B_1.html#E3B_4"><i class="fa fa-check"></i>Computer model of groundwater system</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="E7-1.html"><a href="E7-1.html#E7_8"><i class="fa fa-check"></i>Conclusions</a></li>
-</ul></li>
-<li class="part"><span><b>II Assessments</b></span></li>
-<li class="chapter" data-level="" data-path="assessment-2-data-analysis.html"><a href="assessment-2-data-analysis.html"><i class="fa fa-check"></i>Assessment 2 - Data Analysis</a></li>
-<li class="chapter" data-level="" data-path="part-a-rainfall-and-streamflow-data-analysis.html"><a href="part-a-rainfall-and-streamflow-data-analysis.html"><i class="fa fa-check"></i>Part A - Rainfall and streamflow data analysis</a>
+<li class="chapter" data-level="" data-path="E4_1.html"><a href="E4_1.html"><i class="fa fa-check"></i>Exercise 4 - Groundwater and surface water interaction</a>
 <ul>
-<li class="chapter" data-level="" data-path="part-a-rainfall-and-streamflow-data-analysis.html"><a href="part-a-rainfall-and-streamflow-data-analysis.html#A2A_1"><i class="fa fa-check"></i>Objectives</a></li>
-<li class="chapter" data-level="" data-path="part-a-rainfall-and-streamflow-data-analysis.html"><a href="part-a-rainfall-and-streamflow-data-analysis.html#A2A_2"><i class="fa fa-check"></i>Temporal trends in rainfall</a></li>
-<li class="chapter" data-level="" data-path="part-a-rainfall-and-streamflow-data-analysis.html"><a href="part-a-rainfall-and-streamflow-data-analysis.html#A2A_3"><i class="fa fa-check"></i>Spatial patterns in rainfall</a></li>
-<li class="chapter" data-level="" data-path="part-a-rainfall-and-streamflow-data-analysis.html"><a href="part-a-rainfall-and-streamflow-data-analysis.html#A2A_4"><i class="fa fa-check"></i>Interannual variability in rainfall</a></li>
-<li class="chapter" data-level="" data-path="part-a-rainfall-and-streamflow-data-analysis.html"><a href="part-a-rainfall-and-streamflow-data-analysis.html#A2A_5"><i class="fa fa-check"></i>Relationship between rainfall and runoff</a></li>
-<li class="chapter" data-level="" data-path="part-a-rainfall-and-streamflow-data-analysis.html"><a href="part-a-rainfall-and-streamflow-data-analysis.html#A2A_6"><i class="fa fa-check"></i>Submission</a></li>
+<li class="chapter" data-level="" data-path="E4_1.html"><a href="E4_1.html#E4_2"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="E4_1.html"><a href="E4_1.html#background"><i class="fa fa-check"></i>Background</a></li>
+<li class="chapter" data-level="" data-path="E4_1.html"><a href="E4_1.html#E4_3"><i class="fa fa-check"></i>Experimental Method</a></li>
+<li class="chapter" data-level="" data-path="E4_1.html"><a href="E4_1.html#data-analysis"><i class="fa fa-check"></i>Data Analysis</a></li>
+<li class="chapter" data-level="" data-path="E4_1.html"><a href="E4_1.html#interpretation-and-conclusions"><i class="fa fa-check"></i>Interpretation and conclusions</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><i class="fa fa-check"></i>Part B - Groundwater and surface water interaction: A case study on the Helena River</a>
+<li class="chapter" data-level="" data-path="E5_1.html"><a href="E5_1.html"><i class="fa fa-check"></i>Exercise 5 - Simple lake model</a>
 <ul>
-<li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#learning-objectives"><i class="fa fa-check"></i>Learning Objectives</a></li>
-<li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#E4_14"><i class="fa fa-check"></i>Background</a></li>
-<li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#helena-river-study-site"><i class="fa fa-check"></i>Helena River Study Site</a></li>
-<li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#your-task"><i class="fa fa-check"></i>Your task</a></li>
-<li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#literature-review"><i class="fa fa-check"></i>Literature review</a></li>
-<li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#mapping-vegetation-change"><i class="fa fa-check"></i>Mapping vegetation change</a></li>
-<li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#E4_25"><i class="fa fa-check"></i>Mapping salinity (EC) in QGIS</a></li>
-<li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#time-series-data-for-assessing-groundwater-levels-and-salinity"><i class="fa fa-check"></i>Time-series data for assessing groundwater levels and salinity</a></li>
-<li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#conceptualising-surface-groundwater-interaction"><i class="fa fa-check"></i>Conceptualising Surface-Groundwater interaction</a></li>
-<li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#submission"><i class="fa fa-check"></i>Submission</a></li>
-<li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#references"><i class="fa fa-check"></i>References</a></li>
-<li class="chapter" data-level="" data-path="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html"><a href="part-b-groundwater-and-surface-water-interaction-a-case-study-on-the-helena-river.html#E4_15"><i class="fa fa-check"></i>Optional: Site visit to Helena River floodplain</a></li>
+<li class="chapter" data-level="" data-path="E5_1.html"><a href="E5_1.html#E5_2"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="E5_1.html"><a href="E5_1.html#learning-objectives-1"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="E5_1.html"><a href="E5_1.html#E5_3"><i class="fa fa-check"></i>Defining the system</a></li>
+<li class="chapter" data-level="" data-path="E5_1.html"><a href="E5_1.html#E5_4"><i class="fa fa-check"></i>Simulating the system</a></li>
+<li class="chapter" data-level="" data-path="E5_1.html"><a href="E5_1.html#E5_5"><i class="fa fa-check"></i>Transient simulation</a></li>
+<li class="chapter" data-level="" data-path="E5_1.html"><a href="E5_1.html#E5_6"><i class="fa fa-check"></i>Rates of change</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="A3A-1.html"><a href="A3A-1.html"><i class="fa fa-check"></i>Assessment 3 - Modelling catchment response to climate change</a>
+<li class="chapter" data-level="" data-path="E6_1.html"><a href="E6_1.html"><i class="fa fa-check"></i>Exercise 6 - Assessing impacts of environmental flows</a>
 <ul>
-<li class="chapter" data-level="" data-path="A3A-1.html"><a href="A3A-1.html#A3A_2"><i class="fa fa-check"></i>Objectives</a></li>
-<li class="chapter" data-level="" data-path="A3A-1.html"><a href="A3A-1.html#A3A_3"><i class="fa fa-check"></i>A. Catchment Model</a>
+<li class="chapter" data-level="" data-path="E6_1.html"><a href="E6_1.html#E6_2"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="E6_1.html"><a href="E6_1.html#E6_4"><i class="fa fa-check"></i>Classifying e-flow benefits: A case study in the Murray-Darling Basin</a></li>
+<li class="chapter" data-level="" data-path="E6_1.html"><a href="E6_1.html#E6_5"><i class="fa fa-check"></i>Flow diversion case study : Robe Lakes</a>
 <ul>
-<li class="chapter" data-level="" data-path="A3A-1.html"><a href="A3A-1.html#A3A_4"><i class="fa fa-check"></i>Module Resources</a></li>
-<li class="chapter" data-level="" data-path="A3A-1.html"><a href="A3A-1.html#A3A_5"><i class="fa fa-check"></i>Building the model</a></li>
-<li class="chapter" data-level="" data-path="A3A-1.html"><a href="A3A-1.html#A3A_7"><i class="fa fa-check"></i>Calibrating the model</a></li>
-<li class="chapter" data-level="" data-path="A3A-1.html"><a href="A3A-1.html#A3A_9"><i class="fa fa-check"></i>Land-use change scenario</a></li>
+<li class="chapter" data-level="" data-path="E6_1.html"><a href="E6_1.html#E6_6"><i class="fa fa-check"></i>Module resources</a></li>
+<li class="chapter" data-level="" data-path="E6_1.html"><a href="E6_1.html#E6_7"><i class="fa fa-check"></i>Categorising flow data</a></li>
+<li class="chapter" data-level="" data-path="E6_1.html"><a href="E6_1.html#E6_8"><i class="fa fa-check"></i>Flow diversion scenarios</a></li>
+<li class="chapter" data-level="" data-path="E6_1.html"><a href="E6_1.html#E6_9"><i class="fa fa-check"></i>Assessing impacts on lake salinity</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="A3A-1.html"><a href="A3A-1.html#A3A_3"><i class="fa fa-check"></i>B. Lake system model</a>
-<ul>
-<li class="chapter" data-level="" data-path="A3A-1.html"><a href="A3A-1.html#A3A_5"><i class="fa fa-check"></i>Building the model</a></li>
-<li class="chapter" data-level="" data-path="A3A-1.html"><a href="A3A-1.html#A3A_5"><i class="fa fa-check"></i>Assessing the model</a></li>
+<li class="chapter" data-level="" data-path="E6_1.html"><a href="E6_1.html#E6_10"><i class="fa fa-check"></i>Conclusions</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="A3A-1.html"><a href="A3A-1.html#A3A_3"><i class="fa fa-check"></i>C. Climate change impact assessment</a></li>
-<li class="chapter" data-level="" data-path="part-a-rainfall-and-streamflow-data-analysis.html"><a href="part-a-rainfall-and-streamflow-data-analysis.html#A2A_6"><i class="fa fa-check"></i>Submission</a>
+<li class="chapter" data-level="" data-path="E7_1.html"><a href="E7_1.html"><i class="fa fa-check"></i>Exercise 7 - Managed aquifer recharge</a>
 <ul>
-<li class="chapter" data-level="" data-path="A3A-1.html"><a href="A3A-1.html#A3A_8"><i class="fa fa-check"></i>Optional: Add phosphorus concentrations to the model</a></li>
+<li class="chapter" data-level="" data-path="E7_1.html"><a href="E7_1.html#E7_2"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="E7_1.html"><a href="E7_1.html#E7_3"><i class="fa fa-check"></i>What is managed aquifer recharge</a></li>
+<li class="chapter" data-level="" data-path="E7_1.html"><a href="E7_1.html#E7_4"><i class="fa fa-check"></i>How do we get the water into the aquifer?</a></li>
+<li class="chapter" data-level="" data-path="E7_1.html"><a href="E7_1.html#E7_5"><i class="fa fa-check"></i>What are the benefits of managed aquifer recharge?</a></li>
+<li class="chapter" data-level="" data-path="E7_1.html"><a href="E7_1.html#E7_6"><i class="fa fa-check"></i>What are the potential risks of MAR?</a></li>
+<li class="chapter" data-level="" data-path="E7_1.html"><a href="E7_1.html#E7_7"><i class="fa fa-check"></i>Where is managed aquifer recharge happening</a></li>
+<li class="chapter" data-level="" data-path="E7_1.html"><a href="E7_1.html#E7_8"><i class="fa fa-check"></i>What do you think about MAR?</a></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="E8_1.html"><a href="E8_1.html"><i class="fa fa-check"></i>Exercise 8 - Exploring future climate data projections</a>
+<ul>
+<li class="chapter" data-level="" data-path="E8_1.html"><a href="E8_1.html#E8_2"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="E8_1.html"><a href="E8_1.html#E8_3"><i class="fa fa-check"></i>Making a simple summary plot with the CCIA tool</a></li>
+<li class="chapter" data-level="" data-path="E8_1.html"><a href="E8_1.html#E8_8"><i class="fa fa-check"></i>Threshold exceedance</a></li>
+<li class="chapter" data-level="" data-path="E8_1.html"><a href="E8_1.html#E8_9"><i class="fa fa-check"></i>Spatial gradients in climate trends:</a></li>
+<li class="chapter" data-level="" data-path="E8_1.html"><a href="E8_1.html#E8_10"><i class="fa fa-check"></i>Climate trajectories:</a></li>
+<li class="chapter" data-level="" data-path="E8_1.html"><a href="E8_1.html#E8_11"><i class="fa fa-check"></i>Climate Futures Tool:</a></li>
+<li class="chapter" data-level="" data-path="E8_1.html"><a href="E8_1.html#E8_12"><i class="fa fa-check"></i>Conclusions</a></li>
+</ul></li>
+<li class="part"><span><b>I Assessments</b></span></li>
+<li class="chapter" data-level="" data-path="A1_1.html"><a href="A1_1.html"><i class="fa fa-check"></i>Assessment 1 - Online Quizzes</a>
+<ul>
+<li class="chapter" data-level="" data-path="A1_1.html"><a href="A1_1.html#learning-objective"><i class="fa fa-check"></i>Learning Objective</a></li>
+<li class="chapter" data-level="" data-path="A1_1.html"><a href="A1_1.html#learning-task"><i class="fa fa-check"></i>Learning Task</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="A2_1.html"><a href="A2_1.html"><i class="fa fa-check"></i>Assessment 2 - Presentation on hydroclimates</a>
+<ul>
+<li class="chapter" data-level="" data-path="A2_1.html"><a href="A2_1.html#A2_2"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="A2_1.html"><a href="A2_1.html#A2_3"><i class="fa fa-check"></i>Learning Task</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="A2B-1.html"><a href="A2B-1.html"><i class="fa fa-check"></i>Assessment 3A - Groundwater and surface water interaction: A case study on the Helena River</a>
+<ul>
+<li class="chapter" data-level="" data-path="A2B-1.html"><a href="A2B-1.html#A3A-1"><i class="fa fa-check"></i>Learning Objectives</a></li>
+<li class="chapter" data-level="" data-path="A2B-1.html"><a href="A2B-1.html#A3A-2"><i class="fa fa-check"></i>Background</a></li>
+<li class="chapter" data-level="" data-path="A2B-1.html"><a href="A2B-1.html#A3A-3"><i class="fa fa-check"></i>Helena River Study Site</a></li>
+<li class="chapter" data-level="" data-path="A2B-1.html"><a href="A2B-1.html#A3A-4"><i class="fa fa-check"></i>Your task</a></li>
+<li class="chapter" data-level="" data-path="A2B-1.html"><a href="A2B-1.html#A3A-5"><i class="fa fa-check"></i>Literature review</a></li>
+<li class="chapter" data-level="" data-path="A2B-1.html"><a href="A2B-1.html#A3A-6"><i class="fa fa-check"></i>Mapping vegetation change</a></li>
+<li class="chapter" data-level="" data-path="A2B-1.html"><a href="A2B-1.html#A3A-7"><i class="fa fa-check"></i>Mapping salinity (EC) in QGIS</a></li>
+<li class="chapter" data-level="" data-path="A2B-1.html"><a href="A2B-1.html#A3A-8"><i class="fa fa-check"></i>Time-series data for assessing groundwater levels and salinity</a></li>
+<li class="chapter" data-level="" data-path="A2B-1.html"><a href="A2B-1.html#A3A-9"><i class="fa fa-check"></i>Conceptualising Surface-Groundwater interaction</a></li>
+<li class="chapter" data-level="" data-path="A2B-1.html"><a href="A2B-1.html#submission"><i class="fa fa-check"></i>Submission</a></li>
+<li class="chapter" data-level="" data-path="A2B-1.html"><a href="A2B-1.html#references"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="A2B-1.html"><a href="A2B-1.html#A3A-10"><i class="fa fa-check"></i>Optional: Site visit to Helena River floodplain</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="A3B_1.html"><a href="A3B_1.html"><i class="fa fa-check"></i>Assessment 3B - Modelling catchment response to climate change</a>
+<ul>
+<li class="chapter" data-level="" data-path="A3B_1.html"><a href="A3B_1.html#A3B_2"><i class="fa fa-check"></i>Objectives</a></li>
+<li class="chapter" data-level="" data-path="A3B_1.html"><a href="A3B_1.html#A3B_3"><i class="fa fa-check"></i>A. Catchment Model</a>
+<ul>
+<li class="chapter" data-level="" data-path="A3B_1.html"><a href="A3B_1.html#A3B_4"><i class="fa fa-check"></i>Module Resources</a></li>
+<li class="chapter" data-level="" data-path="A3B_1.html"><a href="A3B_1.html#A3B_5"><i class="fa fa-check"></i>Building the model</a></li>
+<li class="chapter" data-level="" data-path="A3B_1.html"><a href="A3B_1.html#A3B_6"><i class="fa fa-check"></i>Calibrating the model</a></li>
+<li class="chapter" data-level="" data-path="A3B_1.html"><a href="A3B_1.html#A3B_7"><i class="fa fa-check"></i>Land-use change scenario</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="A3B_1.html"><a href="A3B_1.html#A3B_8"><i class="fa fa-check"></i>B. Lake system model</a>
+<ul>
+<li class="chapter" data-level="" data-path="A3B_1.html"><a href="A3B_1.html#A3B_9"><i class="fa fa-check"></i>Building the model</a></li>
+<li class="chapter" data-level="" data-path="A3B_1.html"><a href="A3B_1.html#A3B_10"><i class="fa fa-check"></i>Assessing the model</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="A3B_1.html"><a href="A3B_1.html#A3B_11"><i class="fa fa-check"></i>C. Climate change impact assessment</a></li>
+<li class="chapter" data-level="" data-path="A3B_1.html"><a href="A3B_1.html#A2A_12"><i class="fa fa-check"></i>Submission</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -247,19 +270,22 @@
 <h1>References</h1>
 
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-bradley1999paleoclimatology" class="csl-entry">
+<div class="csl-entry">
 Bradley, Raymond S. 1999. <em>Paleoclimatology: Reconstructing Climates of the Quaternary</em>. Elsevier.
 </div>
-<div id="ref-cook2013estimating" class="csl-entry">
+<div class="csl-entry">
 Cook, Peter G. 2013. <span>“Estimating Groundwater Discharge to Rivers from River Chemistry Surveys.”</span> <em>Hydrological Processes</em> 27 (25): 3694–3707.
 </div>
-<div id="ref-dunin1976infiltration" class="csl-entry">
+<div class="csl-entry">
+Dillon, P, P Stuyfzand, T Grischek, M Lluria, RDG Pyne, RC Jain, J Bear, et al. 2019. <span>“Sixty Years of Global Progress in Managed Aquifer Recharge.”</span> <em>Hydrogeology Journal</em> 27 (1): 1–30.
+</div>
+<div class="csl-entry">
 Dunin, Frank X. 1976. <span>“Infiltration: Its Simulation for Field Conditions.”</span>
 </div>
-<div id="ref-wainwright2002environmental" class="csl-entry">
+<div class="csl-entry">
 Wainwright, John, and Mark Mulligan. 2002. <em>Environmental Modelling: Finding Simplicity in Complexity</em>. Wiley Online Library.
 </div>
-<div id="ref-winter1998ground" class="csl-entry">
+<div class="csl-entry">
 Winter, Thomas C, Judson William Harvey, O Lehn Franke, and William M Alley. 1998. <em>Ground Water and Surface Water: A Single Resource</em>. Vol. 1139. US geological Survey.
 </div>
 </div>
@@ -269,12 +295,11 @@ Winter, Thomas C, Judson William Harvey, O Lehn Franke, and William M Alley. 199
           </div>
         </div>
       </div>
-<a href="A3A-1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="A3B_1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -293,6 +318,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": false
 },
 "fontsettings": {
@@ -312,11 +338,14 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": [["Exercise_1A_Answer_Sheet.docx", "Exercise 1A Answer Sheet"], ["Exercise_1B_Answer_Sheet.docx", "Exercise 1B Answer Sheet"], ["Helena_Data.zip", "Helena Data"], ["Exercise 4 Data.zip", "Exercise 4 Data"], ["Exercise 6.zip", "Exercise 6"], ["Exercise 7 Data.zip", "Exercise 7 Data"], ["Assessment 3 Spreadsheets.zip", "Assessment 3 Spreadsheets"], ["Exercise_7_eFlow_Table.docx", "Exercise 7 Template"]],
+"download": [["Helena_Data.zip", "Helena Data"], ["Exercise 4 Data.zip", "Exercise 4 Data"], ["Exercise 6.zip", "Exercise 6"], ["Exercise 7 Data.zip", "Exercise 7 Data"], ["Assessment 3 Spreadsheets.zip", "Assessment 3 Spreadsheets"], ["Exercise_7_eFlow_Table.docx", "Exercise 7 Template"]],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section"
 },
-"search": true,
 "info": true
 });
 });

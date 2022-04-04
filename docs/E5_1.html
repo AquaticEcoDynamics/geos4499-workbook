@@ -167,7 +167,6 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="E5_1.html"><a href="E5_1.html#E5_4"><i class="fa fa-check"></i>Simulating the system</a></li>
 <li class="chapter" data-level="" data-path="E5_1.html"><a href="E5_1.html#E5_5"><i class="fa fa-check"></i>Transient simulation</a></li>
 <li class="chapter" data-level="" data-path="E5_1.html"><a href="E5_1.html#E5_6"><i class="fa fa-check"></i>Rates of change</a></li>
-<li class="chapter" data-level="" data-path="E5_1.html"><a href="E5_1.html#references"><i class="fa fa-check"></i>References</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="E6_1.html"><a href="E6_1.html"><i class="fa fa-check"></i>Exercise 6 - Assessing impacts of environmental flows</a>
 <ul>
@@ -225,7 +224,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="A2B-1.html"><a href="A2B-1.html#A3A-8"><i class="fa fa-check"></i>Time-series data for assessing groundwater levels and salinity</a></li>
 <li class="chapter" data-level="" data-path="A2B-1.html"><a href="A2B-1.html#A3A-9"><i class="fa fa-check"></i>Conceptualising Surface-Groundwater interaction</a></li>
 <li class="chapter" data-level="" data-path="A2B-1.html"><a href="A2B-1.html#submission"><i class="fa fa-check"></i>Submission</a></li>
-<li class="chapter" data-level="" data-path="A2B-1.html"><a href="A2B-1.html#references-1"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="A2B-1.html"><a href="A2B-1.html#references"><i class="fa fa-check"></i>References</a></li>
 <li class="chapter" data-level="" data-path="A2B-1.html"><a href="A2B-1.html#A3A-10"><i class="fa fa-check"></i>Optional: Site visit to Helena River floodplain</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="A3B_1.html"><a href="A3B_1.html"><i class="fa fa-check"></i>Assessment 3B - Modelling catchment response to climate change</a>
@@ -246,7 +245,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="A3B_1.html"><a href="A3B_1.html#A3B_11"><i class="fa fa-check"></i>C. Climate change impact assessment</a></li>
 <li class="chapter" data-level="" data-path="A3B_1.html"><a href="A3B_1.html#A2A_12"><i class="fa fa-check"></i>Submission</a></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="references-2.html"><a href="references-2.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="references-1.html"><a href="references-1.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -271,8 +270,7 @@ div.csl-indent {
 <h1>Exercise 5 - Simple lake model</h1>
 <div id="E5_2" class="section level2 unnumbered">
 <h2>Introduction</h2>
-<p>In this assignment you will look at simple iterative schemes for solving differential equations as a means of modelling environmental systems. The most straightforward numerical approaches involve repetition or iteration of a calculation to evaluate how the system changes through time or space.</p>
-<p>In this assignment we will look at a simple “bucket” storage model of how a lake level fluctuates through time. This is a modified version of an exercise from <span class="citation"><a href="#ref-wainwright2002environmental" role="doc-biblioref">Wainwright and Mulligan</a> (<a href="#ref-wainwright2002environmental" role="doc-biblioref">2002</a>)</span> (see p38). Similar types of models have been used for paleo-environmental reconstructions <span class="citation">(<a href="#ref-bradley1999paleoclimatology" role="doc-biblioref">Bradley 1999</a>)</span> and in hillslope hydrology <span class="citation">(<a href="#ref-dunin1976infiltration" role="doc-biblioref">Dunin 1976</a>)</span>, where the bucket represents the ability of soil to hold water. This type of approach can also be used to simulate solute concentrations, which is particularly useful for quantifying exchanges between surface water and groundwater <span class="citation">(<a href="#ref-cook2013estimating" role="doc-biblioref">Cook 2013</a>)</span>.</p>
+<p>In this exercise you will use a simple “bucket” storage model of how a lake level fluctuates through time. You can use simple iterative schemes for solving differential equations as a means of modelling environmental systems. The most straightforward numerical approaches involve repetition or iteration of a calculation to evaluate how the system changes through time or space. Here we are completing a modified version of an exercise from <span class="citation"><a href="#ref-wainwright2002environmental" role="doc-biblioref">Wainwright and Mulligan</a> (<a href="#ref-wainwright2002environmental" role="doc-biblioref">2002</a>)</span> (see p38). Similar types of models have been used for paleo-environmental reconstructions <span class="citation">(<a href="#ref-bradley1999paleoclimatology" role="doc-biblioref">Bradley 1999</a>)</span> and in hillslope hydrology <span class="citation">(<a href="#ref-dunin1976infiltration" role="doc-biblioref">Dunin 1976</a>)</span>, where the bucket represents the ability of soil to hold water. This type of approach can also be used to simulate solute concentrations, which is particularly useful for quantifying exchanges between surface water and groundwater <span class="citation">(<a href="#ref-cook2013estimating" role="doc-biblioref">Cook 2013</a>)</span>.</p>
 </div>
 <div id="learning-objectives-1" class="section level2 unnumbered">
 <h2>Learning Objectives</h2>
@@ -284,7 +282,7 @@ div.csl-indent {
 </div>
 <div id="E5_3" class="section level2 unnumbered">
 <h2>Defining the system</h2>
-<p>In this first part of the assignment you will use a simple “bucket” storage model to simulate changes in lake water level through time. The depth of the lake increases due to rainfall and inflows and decreases due to evaporation and seepage (Figure <a href="E5_1.html#fig:E5image1">16</a>). There is also a maximum level to which the lake can be filled, <span class="math inline">\(h_{\text{max}}\)</span> (m), above which water will overflow from the lake, such that <span class="math inline">\(0\le h\le h_{\text{max}}\)</span>. This simple system is described by the equation;</p>
+<p>You will use a simple “bucket” storage model to simulate changes in lake water level through time. The depth of the lake increases due to rainfall and inflows and decreases due to evaporation and seepage (Figure <a href="E5_1.html#fig:E5image1">16</a>). There is also a maximum level to which the lake can be filled, <span class="math inline">\(h_{\text{max}}\)</span> (m), above which water will overflow from the lake, such that <span class="math inline">\(0\le h\le h_{\text{max}}\)</span>. This simple system is described by the equation;</p>
 <span class="math display" id="eq:E5equation1">\[\begin{equation}
 \frac{dh}{dt}= r+i-e-kh
 \tag{11}
@@ -435,11 +433,9 @@ m
 </div>
 <div id="E5_6" class="section level2 unnumbered">
 <h2>Rates of change</h2>
-<p>Now let’s look at the rate of change in lake level under each of these modelling scenarios. Plot <span class="math inline">\(\frac{dh}{dt}\)</span> vs time for each model (hint: remember that this is just the change in water level over time). How does this plot of <span class="math inline">\(\frac{dh}{dt}\)</span> vs time relate to Figure <a href="E5_1.html#fig:E5image2">17</a>? How long does it take for each model to reach “steady state?” How would the time it takes to reach steady state change if we used a different initial water level in our simulations?</p>
+<p>Now let’s look at the rate of change in lake level under each of these modelling scenarios. Plot <span class="math inline">\(\frac{dh}{dt}\)</span> vs time for each model (hint: remember that this is just the change in water level over time). How does this plot of <span class="math inline">\(\frac{dh}{dt}\)</span> vs time relate to Figure <a href="E5_1.html#fig:E5image2">17</a>? How long does it take for each model to reach “steady state?” How does the time it takes to reach steady state change if we used a different initial water level in our simulations?</p>
 <p>Now have a go at making your own rainfall boundary condition. You may choose to base it on a probability distribution, or a have it randomly varying through time. Plot both lake water level and <span class="math inline">\(\frac{dh}{dt}\)</span> vs time for your chosen rainfall distribution. How does this change your results?</p>
-</div>
-<div id="references" class="section level2 unnumbered">
-<h2>References</h2>
+<!-- ## References {.unnumbered} -->
 <!-- Bradley, Raymond S. 1999. *Paleoclimatology: Reconstructing Climates of the Quaternary*. Elsevier. -->
 <!-- Cook, Peter G. 2013. "Estimating Groundwater Discharge to Rivers from River Chemistry Surveys."*Hydrological Processes* 27 (25): 3694--3707. -->
 <!-- Dunin, Frank X. 1976. "Infiltration: Its Simulation for Field Conditions." -->

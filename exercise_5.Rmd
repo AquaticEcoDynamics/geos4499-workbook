@@ -2,9 +2,7 @@
 
 ## Introduction {#E5_2 .unnumbered}
 
-In this assignment you will look at simple iterative schemes for solving differential equations as a means of modelling environmental systems. The most straightforward numerical approaches involve repetition or iteration of a calculation to evaluate how the system changes through time or space.
-
-In this assignment we will look at a simple "bucket" storage model of how a lake level fluctuates through time. This is a modified version of an exercise from @wainwright2002environmental (see p38). Similar types of models have been used for paleo-environmental reconstructions [@bradley1999paleoclimatology] and in hillslope hydrology [@dunin1976infiltration], where the bucket represents the ability of soil to hold water. This type of approach can also be used to simulate solute concentrations, which is particularly useful for quantifying exchanges between surface water and groundwater [@cook2013estimating].
+In this exercise you will use a simple "bucket" storage model of how a lake level fluctuates through time. You can use simple iterative schemes for solving differential equations as a means of modelling environmental systems. The most straightforward numerical approaches involve repetition or iteration of a calculation to evaluate how the system changes through time or space. Here we are completing a modified version of an exercise from @wainwright2002environmental (see p38). Similar types of models have been used for paleo-environmental reconstructions [@bradley1999paleoclimatology] and in hillslope hydrology [@dunin1976infiltration], where the bucket represents the ability of soil to hold water. This type of approach can also be used to simulate solute concentrations, which is particularly useful for quantifying exchanges between surface water and groundwater [@cook2013estimating]. 
 
 ## Learning Objectives { .unnumbered}
 
@@ -16,7 +14,7 @@ By the end of this exercise learners will be able to:
 
 ## Defining the system {#E5_3 .unnumbered}
 
-In this first part of the assignment you will use a simple "bucket" storage model to simulate changes in lake water level through time. The depth of the lake increases due to rainfall and inflows and decreases due to evaporation and seepage (Figure \@ref(fig:E5image1)). There is also a maximum level to which the lake can be filled, $h_{\text{max}}$ (m), above which water will overflow from the lake, such that $0\le h\le h_{\text{max}}$. This simple system is described by the equation;
+You will use a simple "bucket" storage model to simulate changes in lake water level through time. The depth of the lake increases due to rainfall and inflows and decreases due to evaporation and seepage (Figure \@ref(fig:E5image1)). There is also a maximum level to which the lake can be filled, $h_{\text{max}}$ (m), above which water will overflow from the lake, such that $0\le h\le h_{\text{max}}$. This simple system is described by the equation;
 
 ```{=tex}
 \begin{equation}
@@ -83,11 +81,11 @@ If the lake is approximately circular, with a diameter of 50 m, what is the surf
 
 ## Rates of change {#E5_6 .unnumbered}
 
-Now let's look at the rate of change in lake level under each of these modelling scenarios. Plot $\frac{dh}{dt}$ vs time for each model (hint: remember that this is just the change in water level over time). How does this plot of $\frac{dh}{dt}$ vs time relate to Figure \@ref(fig:E5image2)? How long does it take for each model to reach "steady state"? How would the time it takes to reach steady state change if we used a different initial water level in our simulations?
+Now let's look at the rate of change in lake level under each of these modelling scenarios. Plot $\frac{dh}{dt}$ vs time for each model (hint: remember that this is just the change in water level over time). How does this plot of $\frac{dh}{dt}$ vs time relate to Figure \@ref(fig:E5image2)? How long does it take for each model to reach "steady state"? How does the time it takes to reach steady state change if we used a different initial water level in our simulations?
 
-Now have a go at making your own rainfall boundary condition. You may choose to base it on a probability distribution, or a have it randomly varying through time. Plot both lake water level and $\frac{dh}{dt}$ vs time for your chosen rainfall distribution. How does this change your results?
+Now have a go at making your own rainfall boundary condition. You may choose to base it on a probability distribution, or a have it randomly varying through time. Plot both lake water level and $\frac{dh}{dt}$ vs time for your chosen rainfall distribution. How does this compare to the previous results?
 
-## References {.unnumbered}
+<!-- ## References {.unnumbered} -->
 
 <!-- Bradley, Raymond S. 1999. *Paleoclimatology: Reconstructing Climates of the Quaternary*. Elsevier. -->
 
