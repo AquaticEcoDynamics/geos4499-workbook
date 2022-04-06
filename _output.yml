@@ -13,8 +13,8 @@ bookdown::gitbook:
               #["Exercise_1B_Answer_Sheet.docx", "Exercise 1B Answer Sheet"],
               ["Helena_Data.zip", 'Helena Data'],
               ["Exercise 4 Data.zip", 'Exercise 4 Data'],
-              #["Exercise 6.zip", 'Exercise 7'],
-              #["Exercise 7 Data.zip", 'Exercise 6 Data'],
+              ["Exercise 7 Data.zip", 'Exercise 6 Data'],
+               ["Exercise 6.zip", 'Exercise 7'],
               #['Assessment 3 Spreadsheets.zip', 'Assessment 3 Spreadsheets'],
               #['Exercise_7_eFlow_Table.docx', 'Exercise 7 Template']
               ]
