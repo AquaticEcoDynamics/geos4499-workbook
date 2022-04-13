@@ -54,3 +54,4 @@ fig:A3image2
 eq:equationA3A7
 eq:equationA3A8
 eq:equationA3A9
+fig:ass3-fig2
