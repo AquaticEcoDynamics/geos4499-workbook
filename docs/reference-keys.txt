@@ -46,6 +46,7 @@ fig:image04-18
 fig:image04-15
 eq:equationA3A1
 eq:equationA3A2
+tab:tableA3A1
 fig:A3image1
 eq:equationA3A5
 eq:equationA3A6

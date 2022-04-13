@@ -313,9 +313,132 @@ Q_{tot}^{t} = \color{#9BBB59}{Q_{1}^{t}} + \color{#0070C0}{Q_{2}^{t-1}} + \color
 <ol style="list-style-type: decimal">
 <li>Draw by hand the conceptual model of this system.</li>
 <li>Confirm what the indices are referring to in the above equations (<span class="math inline">\(t\)</span>, <span class="math inline">\(i\)</span>).</li>
-<li>Build the above model in Excel, to predict the individual sub-catchment flows and river basin total flow. Assume basic information as outlined in Table <a href="#tab:tableA3A1"><strong>??</strong></a> below and the supplied rainfall data for the 3 sub-catchments. Input a guessed value for <span class="math inline">\(c\)</span> within the range indicated for now.</li>
+<li>Build the above model in Excel, to predict the individual sub-catchment flows and river basin total flow. Assume basic information as outlined in Table <a href="A3B_1.html#tab:tableA3A1">7</a> below and the supplied rainfall data for the 3 sub-catchments. Input a guessed value for <span class="math inline">\(c\)</span> within the range indicated for now.</li>
 </ol>
 <center>
+<div style="border: 1px solid #ddd; padding: 5px; overflow-y: scroll; height:445px; overflow-x: scroll; width:100%; ">
+<table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:tableA3A1">Table 7: </span>Parameters for the individual catchments.
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+ï»¿Parameters for catchment model:
+</th>
+<th style="text-align:center;">
+<span style="color: #9BBB59;">Sub Catchment 1 (<span class="math inline">\(i\)</span>=1)</span>
+</th>
+<th style="text-align:center;">
+<span style="color: #0070C0;">Sub Catchment 2 (<span class="math inline">\(i\)</span>=2)</span>
+</th>
+<th style="text-align:center;">
+<span style="color: #F79646;">Sub catchment 3 (<span class="math inline">\(i\)</span>=3)</span>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+Sub catchment area, <span class="math inline">\(A\)</span> (km<sup>2</sup>)
+</td>
+<td style="text-align:center;">
+50
+</td>
+<td style="text-align:center;">
+100
+</td>
+<td style="text-align:center;">
+120
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Runoff coefficient, <span class="math inline">\(c\)</span> (range)
+</td>
+<td style="text-align:center;">
+0.2 to 0.5
+</td>
+<td style="text-align:center;">
+0.1 to 0.4
+</td>
+<td style="text-align:center;">
+0.1 to 0.3
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Initial loss threshold value, <span class="math inline">\(R_{crit}\)</span> (m)
+</td>
+<td style="text-align:center;">
+0.01
+</td>
+<td style="text-align:center;">
+0.025
+</td>
+<td style="text-align:center;">
+0.04
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Landuse fraction, <span class="math inline">\(F\)</span>: irrigated dairy
+</td>
+<td style="text-align:center;">
+0.1
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0.5
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Landuse fraction, <span class="math inline">\(F\)</span>: wheat
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0.8
+</td>
+<td style="text-align:center;">
+0.1
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Landuse fraction, <span class="math inline">\(F\)</span>: urban
+</td>
+<td style="text-align:center;">
+0.3
+</td>
+<td style="text-align:center;">
+0
+</td>
+<td style="text-align:center;">
+0.1
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Landuse fraction, <span class="math inline">\(F\)</span>: forest
+</td>
+<td style="text-align:center;">
+0.6
+</td>
+<td style="text-align:center;">
+0.2
+</td>
+<td style="text-align:center;">
+0.3
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </center>
 </div>
 <div id="A3B_6" class="section level3 unnumbered">
